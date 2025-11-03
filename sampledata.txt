@@ -1,4 +1,4 @@
-Lifter_ID,Lifter_Name,Gender,Bodyweight,Age,Equipment,Competition_ID,Competition_Name,Location,Date,Squat,Bench,Deadlift,Total,Dots
+--Lifter_ID,Lifter_Name,Gender,Bodyweight,Age,Equipment,Competition_ID,Competition_Name,Location,Date,Squat,Bench,Deadlift,Total,Dots--
 L001,John Doyle,M,83,25,Raw,C001,Irish Open,Dublin,2024-06-15,220,150,250,620,401.25
 L002,Sarah Kelly,F,63,28,Raw,C001,Irish Open,Dublin,2024-06-15,145,85,165,395,460.12
 L003,James Byrne,M,93,32,Single-Ply,C002,National Championships,Cork,2024-08-20,280,190,300,770,478.65
@@ -7,3 +7,4 @@ L005,Mark O'Neill,M,105,27,Multiply,C003,European Cup,Galway,2024-11-10,300,210,
 L006,Claire Murphy,F,57,30,Raw,C003,European Cup,Galway,2024-11-10,130,70,150,350,440.23
 L007,David Nolan,M,83,24,Raw,C004,Winter Classic,Limerick,2025-01-14,210,140,260,610,398.75
 L008,Aoife Ryan,F,63,21,Single-Ply,C004,Winter Classic,Limerick,2025-01-14,150,90,170,410,465.67
+
