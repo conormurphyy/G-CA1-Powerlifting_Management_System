@@ -1,0 +1,5 @@
+1,National West,Galway,16-05-25
+2,National South, Cork, 12-08-25
+3,National North, Donegal, 27-09-25
+4,National East, Kildare, 06-04-25
+5,National Dublin, Dublin 1, 12-10-25

@@ -1,0 +1,8 @@
+1,John Doyle,DPL,M,83,small,25,young,Raw,C001
+2,Sarah Kelly,DPL,F,63,small,28,young,Raw,C001
+3,James Byrne,DPL,M,93,small,32,young,Single-Ply,C002
+4,Emma Walsh,DPL,F,72,small,22,young,Raw,C002
+5,Mark O'Neill,DPL,M,105,small,27,young,Multiply,C003
+6,Claire Murphy,DPL,F,57,small,30,young,Raw,C003
+7,David Nolan,DPL,M,83,small,24,young,Raw,C004
+8,Aoife Ryan,DPL,F,63,small,21,young,Single-Ply,C004
