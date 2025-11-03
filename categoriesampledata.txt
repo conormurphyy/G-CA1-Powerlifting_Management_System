@@ -1,0 +1,5 @@
+u74,66,73.99,M,Junior
+u66,59,65.99.M,Sub-Junior
+u52,47,51.99,F,Open
+u84,76,83.99,F,Master 4
+
