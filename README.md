@@ -30,7 +30,7 @@ The "Lifter" entiy represents one lifter in a powerlifting competition. This cla
 ```
 #### 2.2: 
 Description goes here!
-
+---
 ### 3: Design Choices and Explanation
 #### 
 Description goes here!
