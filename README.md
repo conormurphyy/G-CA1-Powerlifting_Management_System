@@ -4,6 +4,6 @@
 ### Entity: Lifter
 
 | Field | Decription | Example |
-|:--|:--|:--|:--|:--|
+|:--|:--|:--|
 | id    | Unique ID for each lifter | 12 |
 
