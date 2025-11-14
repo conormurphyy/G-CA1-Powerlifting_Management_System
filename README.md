@@ -18,6 +18,7 @@ The "Lifter" entiy represents one lifter in a powerlifting competition. This cla
 | equiptmentUsedType | String [] | What equiptment type/brand used | "SBD Knee Sleeves","SBD Belt","A7 Wrist Wraps |
 | weightClass        | String    | Based of gender and weight      | "U-74KG Men"                                  |
 ---
+
 ### 2: Lifter Overview
 #### 2.1: Strucutre Tree of Lifter Folder
 ```
@@ -29,10 +30,13 @@ The "Lifter" entiy represents one lifter in a powerlifting competition. This cla
         LifterTest.java
 ```
 #### 2.2: 
-Description goes here!
+
 ---
 ### 3: Design Choices and Explanation
-#### 
-Description goes here!
+#### 3.1: Methods
+#### 3.2: Classes and Relationships
+#### 3.3 Lifter J-Unit Tests
+#### 3.4 
+---
 
 
