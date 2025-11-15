@@ -19,8 +19,8 @@ The "Lifter" entiy represents one lifter in a powerlifting competition. This cla
 | weightClass        | String    | Based of gender and weight      | "U-74KG Men"                                  |
 ---
 
-### 2: Lifter Overview
-#### :two: . :one:  :deciduous_tree: Strucutre Tree of Lifter Folder
+### :two: Lifter Overview
+#### :two:.:one:  :deciduous_tree: Strucutre Tree of Lifter Folder
 ```
 │
 │
