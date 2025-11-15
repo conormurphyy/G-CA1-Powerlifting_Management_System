@@ -1,5 +1,5 @@
 # G-CA1-Powerlifting_Management_System
-## Powerlifting Management System
+## :muscle: Powerlifting Management System
 
 ### 1: Entity: Lifter
 The "Lifter" entiy represents one lifter in a powerlifting competition. This class diagram describes the lifters personal details, physical details and compeition category.
