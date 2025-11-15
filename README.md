@@ -20,7 +20,7 @@ The "Lifter" entiy represents one lifter in a powerlifting competition. This cla
 ---
 
 ### 2: Lifter Overview
-#### 2.1: :deciduous_tree: Strucutre Tree of Lifter Folder
+#### :two: . :one: : :deciduous_tree: Strucutre Tree of Lifter Folder
 ```
 │
 │
