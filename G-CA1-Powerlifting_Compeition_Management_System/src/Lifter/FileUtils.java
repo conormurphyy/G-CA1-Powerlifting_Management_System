@@ -19,7 +19,7 @@ public class FileUtils {
                 String line = scanner.nextLine();
                 String [] parts = line.split(",");
                 int id = Integer.parseInt(parts[0]);
-                String name = parts[1];
+                String name = formatName(parts[1]);
                 String clubName = parts[2];
                 char gender = (parts[3]).charAt(0);
                 double bodyweight = Double.parseDouble(parts[4]);
@@ -43,5 +43,14 @@ public class FileUtils {
         }
 
         return lifters;
+    }
+    public static String formatName(String name){
+        name=name.trim().toLowerCase();
+        String[] parts =name.split("\\s+");
+        String finalName="";
+        for(String part:parts) {
+            finalName+= part.substring(0,1).toUpperCase()+ part.substring(1)+" ";
+        }
+        return finalName;
     }
 }
