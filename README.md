@@ -29,14 +29,14 @@ The "Lifter" entiy represents one lifter in a powerlifting competition. This cla
         Lifter.java
         LifterTest.java
 ```
-#### 2.2: 
+#### :two:.:two:: 
 
 ---
-### 3: Design Choices and Explanation
-#### 3.1: Methods
-#### 3.2: Classes and Relationships
-#### 3.3 Lifter J-Unit Tests
-#### 3.4 
+### :three: Design Choices and Explanation
+#### :three:.:one:: Methods
+#### :three:.:two:: Classes and Relationships
+#### :three:.:three:: Lifter J-Unit Tests
+#### :three:.:four:  
 ---
 
 
