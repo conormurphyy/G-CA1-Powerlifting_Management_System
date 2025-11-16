@@ -49,7 +49,7 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 
 <img src ="images/findWeightClassMethod.jpeg" alt ="findWeightClassMethod" title="findWeightClassMethod"  width="2000" height="2000">
 <img src ="images/assignedWeightClass.jpeg">
-This method assigns a weight class to a lifter based off their weight and gender.
+This method assigns a weight class to a lifter based off their weight and gender, this makes the information also more readable at a glance while also retaining crucuial function for the usecase.
 <img src="images/sortingLiftersReusable.png">
 This method takes in what the user wants to sort and the direction they want to sort it in , from the menu and uses it to display the sorted table. The options include : Name, Age, Club and Weight. This is as much as the user would likely need as you can discern the weight and age classes from the respective weight and ages of the lifters in the table. 
 
@@ -65,7 +65,7 @@ This is a class and relationships diagram, to show how the classes relate to one
 #### :three:.:three:: Lifter J-Unit Tests
 ---
 <img src="images/testImage.jpeg" alt ="26 tests passed" title="tests">
-Includes testing for the application of the weight and age classes<br/>
+Includes testing for the application of the weight and age classes, all of the tests passed under varying realistic and unrealistic parameters<br/></br>
 
 #### :three:.:four: Sample Outputs
 ---
