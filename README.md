@@ -40,7 +40,7 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 <img src ="images/findWeightClassMethod.jpeg" alt ="findWeightClassMethod" title="findWeightClassMethod"  width="2000" height="2000">
 This method assigns a weight class to a lifter based off their weight and gender.
 
-<img src ="i">
+<img src ="images/assignedWeightClass.jpeg">
 
 #### :three:.:two:: Classes and Relationships
 #### :three:.:three:: Lifter J-Unit Tests
