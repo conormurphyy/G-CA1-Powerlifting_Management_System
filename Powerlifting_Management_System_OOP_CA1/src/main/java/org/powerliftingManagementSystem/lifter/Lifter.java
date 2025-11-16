@@ -108,11 +108,11 @@ public class Lifter {
     //Find weight Class from gender and weight
     public static String findWeightClass(double weight, char gender) {
         String weightClass = "";
-        //Gender and weight dictate competing class.
-        int[] menMaxWeight = {59, 66, 74, 83, 93, 105, 120, 635};
+        //gender and weight match to each class
+        int[] menMaxWeight = {59, 66, 74, 83, 93, 105, 120, 635}; //https://en.wikipedia.org/wiki/Jon_Brower_Minnoch Heaviest Male Weight Ever Recorded
         String[] menClasses = {"U-59KG Men", "U-66KG Men", "U-74KG Men", "U-83KG Men", "U-93KG Men", "U-105KG Men", "U-120KG Men", "120KG+ Men"};
 
-        int[] womenMaxWeight = {47, 52, 59, 63, 69, 76, 84, 727};
+        int[] womenMaxWeight = {47, 52, 59, 63, 69, 76, 84, 727}; //https://en.wikipedia.org/wiki/Carol_Yager Heaviest Female Weight Ever Recorded
         String[] womenClasses = {"U-47KG Women", "U-52KG Women", "U-59KG Women", "U-63KG Women", "U-69KG Women", "U-76KG Women", "U-84KG Women", "84KG+ Women"};
 
         if (weight < 0) throw new IllegalArgumentException("Weight is invalid");
