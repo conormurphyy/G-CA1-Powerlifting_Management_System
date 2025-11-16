@@ -55,7 +55,7 @@ public class MenuUtil {
         +--------------------------+---------------------------+
         |    TYPE 1 TO SORT NAME   |    TYPE 2 TO SORT CLUB    | 
         +--------------------------+---------------------------+
-        |    TYPE 1 TO SORT AGE    |   TYPE 2 TO SORT WEIGHT   |
+        |    TYPE 3 TO SORT AGE    |   TYPE 4 TO SORT WEIGHT   |
         +--------------------------+---------------------------+
         """);
     }
