@@ -39,7 +39,7 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
             LifterSortingFiltering.java
             LifterTest.java
 ```
-#### :two:.:two:: 
+#### :two:.:two:: 📌 Purpose of this Class
 
 ---
 ### :three: 📚 Design Choices and Explanation
