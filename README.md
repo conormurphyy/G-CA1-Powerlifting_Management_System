@@ -43,7 +43,9 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 
 ---
 ### :three: Design Choices and Explanation
+---
 #### :three:.:one:: Methods
+---
 
 <img src ="images/findWeightClassMethod.jpeg" alt ="findWeightClassMethod" title="findWeightClassMethod"  width="2000" height="2000">
 <img src ="images/assignedWeightClass.jpeg">
@@ -60,10 +62,12 @@ This is a class and relationships diagram, to show how the classes relate to one
 <img src="images/EROOP.drawio.png" alt ="Relationship Diagram" title="Relationship Diagram">
 
 #### :three:.:three:: Lifter J-Unit Tests
+---
 <img src="images/testImage.jpeg" alt ="26 tests passed" title="tests">
 Includes testing for the application of the weight and age classes<br/>
 
 #### :three:.:four: Sample Outputs
+---
 <img src="images/output1.png" alt="Icon" title="Icon" width="4000" height="4000">
 <img src="images/output2.png" alt="Icon" title="Icon" width="4000" height="4000">
 <img src="images/output3.png" alt="Icon" title="Icon" width="4000" height="4000">
