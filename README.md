@@ -45,8 +45,11 @@ This method assigns a weight class to a lifter based off their weight and gender
 
 
 #### :three:.:two:: Classes and Relationships
+
+<img src="images/EROOP.drawio.png" alt ="Relationship Diagram" title="Relationship Diagram">
+
 #### :three:.:three:: Lifter J-Unit Tests
-<img src="images/testImage.jpeg" alt ="26 tests past" title="tests">
+<img src="images/testImage.jpeg" alt ="26 tests passed" title="tests">
 Includes testing for the application of the weight and age classes<br/>
 
 #### :three:.:four: Sample Outputs
