@@ -1,5 +1,5 @@
 package org.powerliftingManagementSystem.lifter;
 
-public class Filtering {
+public class Searching {
 
 }

@@ -2,11 +2,11 @@ package org.powerliftingManagementSystem.lifter;
 
 import java.util.Comparator;
 
-public class LifterSortingFilterBackwards implements Comparator<Lifter>
+public class LifterSortingDescending implements Comparator<Lifter>
 {
 
     private int choice;
-    public LifterSortingFilterBackwards(int choice){
+    public LifterSortingDescending(int choice){
         this.choice = choice;
     }
 

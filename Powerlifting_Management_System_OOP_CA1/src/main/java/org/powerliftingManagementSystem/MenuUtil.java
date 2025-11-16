@@ -72,12 +72,10 @@ public class MenuUtil {
     public static void filteringMenu1 () {
         System.out.println("""
         +------------------------------------------------------+
-        |                  OPTIONS: FILTERING                  |
-        +----------------------------+-------------------------+
-        |       TYPE 1: GENDER       |    TYPE 2: AGE CLASS    | 
-        +----------------------------+-------------------------+
-        |    TYPE 3: WEIGHT CLASS    |   TYPE 4: SPONSORSHIP   |
-        +----------------------------+-------------------------+
+        |                    OPTIONS: SEARCH                   |
+        +--------------------------+---------------------------+
+        |       TYPE 1: NAME       |        TYPE 2: CLUB       |
+        +--------------------------+---------------------------+
         """);
     }
 
@@ -85,6 +83,6 @@ public class MenuUtil {
 
     }
 
-    public
+
 }
 
