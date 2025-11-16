@@ -36,8 +36,8 @@ public class Menu {
         System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
         System.out.printf(
-                "%-20s  %-35s  %-6s  %-6s %-8s  %-13s  %-8s  %-5s  %-12s %n",
-                "Name", "Club Name", "Gender", "Body Weight", "",
+                "%-6s %-20s  %-35s  %-6s  %-6s %-8s  %-13s  %-8s  %-5s  %-12s %n",
+                "ID","Name", "Club Name", "Gender", "Body Weight", "",
                 "Weight Class", "Date of Birth", "Age", "Age Class"
         );
 
