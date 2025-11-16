@@ -82,6 +82,14 @@ Includes testing for the application of the weight and age classes, all of the t
 
 ---
 #### References 📘
+##### Code 💻
 CSV File Generation: www.chatgpt.com
+LocalDate formatting (turning string into LocalDate)://https://www.digitalocean.com/community/tutorials/java-simpledateformat-java-date-format
+LocalDate docs: //https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html
+##### General Research 🗺️
+Maximum Age Recorded: //https://www.washington.edu/news/2021/07/01/how-long-can-a-person-live-the-21st-century-may-see-a-record-breaker/
+Maximum Weight Recorded (Man) : //https://en.wikipedia.org/wiki/Jon_Brower_Minnoch
+Maximum Weight Recorded (Woman) : //https://en.wikipedia.org/wiki/Carol_Yager
+
 
 
