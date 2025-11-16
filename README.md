@@ -1,5 +1,6 @@
 # G-CA1-Powerlifting_Management_System
-<img src = "G-CA1-Powerlifting_Management_System/"/>
+<img src = "G-CA1-Powerlifting_Management_System/icon.png"/>
+
 ## :muscle: Powerlifting Management System
 
 ### :one: Entity: Lifter
