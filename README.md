@@ -2,7 +2,7 @@
 
 <img src="icon.png" alt="Logo" title="Logo" width="4000" height="4000">
 
-## :muscle: Powerlifting Management System
+## :muscle: G-CA1 Object-Oritented Programming: Conor Murphy & Conor McCracken
 
 ### :one: Entity: Lifter
 The "Lifter" entity represents each lifter in a powerlifting competition. This class diagram describes the lifters personal details, physical details and compeition category.
