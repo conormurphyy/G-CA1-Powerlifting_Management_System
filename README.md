@@ -3,7 +3,7 @@
 <img src="icon.png" alt="Logo" title="Logo" width="4000" height="4000">
 
 # :muscle: G-CA1 OOP: Conor Murphy & Conor McCracken
-## Stage 1: 
+## Stage 1 :
 ### :one: Entity: Lifter
 The "Lifter" entity represents each lifter in a powerlifting competition. This class diagram describes the lifters personal details, physical details and compeition category.
 
