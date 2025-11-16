@@ -52,7 +52,8 @@ This method assigns a weight class to a lifter based off their weight and gender
 
 
 #### :three:.:two:: Classes and Relationships
-This is a class and relationships diagram, to show how the classes relate to one and another and to show how parent classes relate to child classes. This made our development process easier to understand and carry out, it also created visualisation and gave us more insight into how the final result would look. Additionally it enhanced our ability to integrate defensive coding as we were able to go back and re-evaluate where our system could potentially fail. In summary, it created a broader outlook of the system and its output. <br/>
+This is a class and relationships diagram, to show how the classes relate to one and another and to show how parent classes relate to child classes. This made our development process easier to understand and carry out, it also created visualisation and gave us more insight into how the final result would look. Additionally it enhanced our ability to integrate defensive coding as we were able to go back and re-evaluate where our system could potentially fail. In summary, it created a broader outlook of the system and its output. 
+---
 <img src="images/EROOP.drawio.png" alt ="Relationship Diagram" title="Relationship Diagram">
 
 #### :three:.:three:: Lifter J-Unit Tests
