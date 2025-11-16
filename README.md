@@ -1,8 +1,11 @@
-# G-CA1-Powerlifting_Management_System
-## :muscle: Powerlifting Management System
 
+
+<img src="images/icon.png" alt="Icon" title="Icon" width="4000" height="4000">
+
+# :muscle: G-CA1 OOP: Conor Murphy & Conor McCracken
+## Stage 1 :
 ### :one: Entity: Lifter
-The "Lifter" entiy represents one lifter in a powerlifting competition. This class diagram describes the lifters personal details, physical details and compeition category.
+The "Lifter" entity represents each lifter in a powerlifting competition. This class diagram describes the lifters personal details, physical details and compeition category.
 
 | Field              | Type      |Decription                       | Example                                       |
 |:--                 |:--        |:--                              |:--                                            |
@@ -34,9 +37,21 @@ The "Lifter" entiy represents one lifter in a powerlifting competition. This cla
 ---
 ### :three: Design Choices and Explanation
 #### :three:.:one:: Methods
+<img src ="images/findWeightClassMethod.jpeg" alt ="findWeightClassMethod" title="findWeightClassMethod"  width="2000" height="2000">
+This method assigns a weight class to a lifter based off their weight and gender.
+
 #### :three:.:two:: Classes and Relationships
 #### :three:.:three:: Lifter J-Unit Tests
-#### :three:.:four:  
+<img src="images/testImage.jpeg" alt ="26 tests past" title="tests">
+Includes testing for the application of the weight and age classes<br/>
+
+#### :three:.:four: Sample Outputs
+<img src="images/output1.png" alt="Icon" title="Icon" width="4000" height="4000">
+<img src="images/output2.png" alt="Icon" title="Icon" width="4000" height="4000">
+<img src="images/output3.png" alt="Icon" title="Icon" width="4000" height="4000">
+<img src="images/output4.png" alt="Icon" title="Icon" width="4000" height="4000">
+
 ---
+
 
 
