@@ -41,7 +41,7 @@ public class MenuUtil {
         +------------------------------------------------------+
         |                      MAIN MENU                       |
         +--------------------------+---------------------------+
-        |      TYPE 1: SORTING     |     TYPE 2: FILTERING     |
+        |      TYPE 1: SORTING     |     TYPE 2: SEARCHING     |
         +--------------------------+---------------------------+
         
         """);
@@ -69,7 +69,7 @@ public class MenuUtil {
         """);
     }
 
-    public static void filteringMenu1 () {
+    public static void search () {
         System.out.println("""
         +------------------------------------------------------+
         |                    OPTIONS: SEARCH                   |
