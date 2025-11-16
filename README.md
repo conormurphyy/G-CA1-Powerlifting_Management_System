@@ -1,6 +1,6 @@
 
 
-<img src="icon.png" alt="Logo" title="Logo" width="4000" height="4000">
+<img src="images/icon.png" alt="Icon" title="Icon" width="4000" height="4000">
 
 # :muscle: G-CA1 OOP: Conor Murphy & Conor McCracken
 ## Stage 1 :
