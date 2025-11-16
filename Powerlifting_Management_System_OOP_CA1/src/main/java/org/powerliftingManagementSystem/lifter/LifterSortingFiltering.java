@@ -8,4 +8,8 @@ public class LifterSortingFiltering implements Comparator<Lifter> {
     public int compare(Lifter a, Lifter b) {
         return a.getName().compareTo(b.getName());
     }
+
+
+
+
 }
