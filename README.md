@@ -26,11 +26,18 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 #### :two:.:one:  :deciduous_tree: Strucutre Tree of Lifter Folder
 ```
 │
-│
-└───Lifter
-        FileUtils.java
-        Lifter.java
-        LifterTest.java
+└───src
+    │   Competition.java
+    │   CompetitionResult.java
+    │   Equipment.java
+    │   Main.java
+    │   Menu.java
+    │
+    └───Lifter
+            FileUtilsLifter.java
+            Lifter.java
+            LifterSortingFiltering.java
+            LifterTest.java
 ```
 #### :two:.:two:: 
 
