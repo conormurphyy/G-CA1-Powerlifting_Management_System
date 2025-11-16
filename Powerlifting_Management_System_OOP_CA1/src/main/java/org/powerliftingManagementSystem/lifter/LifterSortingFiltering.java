@@ -19,7 +19,8 @@ public class LifterSortingFiltering implements Comparator<Lifter>{
             case 4: return Double.compare(a.getBodyweight(), b.getBodyweight());
             default: return 0;
         }
-
     }
+
+
 }
 

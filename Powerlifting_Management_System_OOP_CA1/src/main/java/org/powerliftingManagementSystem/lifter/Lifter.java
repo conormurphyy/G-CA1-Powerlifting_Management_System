@@ -148,19 +148,6 @@ public class Lifter {
 
 
 
-    /*
-    - A-Z
-    - Z-A
-    - Lowest - highest bw
-    - Highest - Lowest bw
-    - age > / <
-    //Filtering
-    By Weight Class
-    By Age Class
-    By Age
-    By Gender
-    By club
-     */
 
 
 }
