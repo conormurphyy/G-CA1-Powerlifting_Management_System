@@ -1,6 +1,6 @@
 # G-CA1-Powerlifting_Management_System
 
-<img src="icon.png" alt="Logo" title="Logo" width="40" height="400">
+<img src="icon.png" alt="Logo" title="Logo" width="400" height="400">
 
 ## :muscle: Powerlifting Management System
 
