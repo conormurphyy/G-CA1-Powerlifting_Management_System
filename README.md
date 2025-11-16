@@ -37,6 +37,7 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 ---
 ### :three: Design Choices and Explanation
 #### :three:.:one:: Methods
+<img src ="images/findWeightClassMethod" alt ="findWeightClassMethod" title="findWeightClassMethod">
 #### :three:.:two:: Classes and Relationships
 #### :three:.:three:: Lifter J-Unit Tests
 <img src="images/testImage.jpeg" alt ="26 tests past" title="tests">
