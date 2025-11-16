@@ -79,12 +79,16 @@ Includes testing for the application of the weight and age classes, all of the t
 ---
 1st Menu <br/><br/>
 <img src="images/output1.png" alt="Icon" title="Icon" width="4000" height="4000">
+<br/><br/>
 2nd Menu <br/><br/>
 <img src="images/output2.png" alt="Icon" title="Icon" width="4000" height="4000">
+<br/><br/>
 3rd Menu <br/><br/>
 <img src="images/output3.png" alt="Icon" title="Icon" width="4000" height="4000">
+<br/><br/>
 4th Menu <br/><br/>
 <img src="images/output4.png" alt="Icon" title="Icon" width="4000" height="4000">
+<br/><br/>
 
 ---
 #### References 📘 <br/>
