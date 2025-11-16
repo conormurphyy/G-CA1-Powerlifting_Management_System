@@ -12,19 +12,23 @@ public class Menu {
     public static void menuOptions(ArrayList<Lifter> lifters) {
         Scanner scanner =  new Scanner(System.in);
         System.out.println("org.example.Menu");
-        System.out.println("1. Sort Lifters by top to bottom");
-        System.out.println("2. Sort Lifters by bottom to top");
+        System.out.println("1. Sort Lifters by A to Z");
+        System.out.println("2. Sort Lifters by Z to A");
         int choice =  scanner.nextInt();
         switch (choice) {
             case 1:
-                System.out.println("Sort Lifters");
-                lifters.sort(new LifterSortingFiltering());
+                System.out.println("Sort Lifters A-z");
+                System.out.println("Sort Name, Sort Club, Sort Age, Sort Bodyweight");
+                int choice1 =  scanner.nextInt();
+                lifters.sort(new LifterSortingFiltering(choice1));
                 printLifterTable(lifters);
+                break;
             case 2:
                 System.out.println("Sort Lifters");
-                lifters.sort(new LifterSortingFilterBackwards());
+                int  choice2 =  scanner.nextInt();
+                lifters.sort(new LifterSortingFilterBackwards(choice2));
                 printLifterTable(lifters);
-
+                break;
         }
     }
 
