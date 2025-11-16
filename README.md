@@ -36,7 +36,9 @@ The "Lifter" entiy represents one lifter in a powerlifting competition. This cla
 #### :three:.:one:: Methods
 #### :three:.:two:: Classes and Relationships
 #### :three:.:three:: Lifter J-Unit Tests
-#### :three:.:four:  
+#### :three:.:four: Sample Outputs
+
 ---
+
 
 
