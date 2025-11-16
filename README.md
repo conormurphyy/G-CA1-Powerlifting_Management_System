@@ -41,7 +41,7 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 ```
 #### :two:.:two:: 📌 Purpose of this Class
 ---
-The purpose of this class is to keep the lifters data read from an AI generated csv file (source: www.chatgpt.com). We initially read all the data from our FileUtils Class and this data is passed into the lifters class via and ArrayList<Lifter>. We then can use this information to sort lifters that match certain categories, ie. Filtering by name ascending. In the FileUtils Class we also read data from another csv file that reads a string array (String []) and then this information is inputed into the lifter.equipmentUsed as the original lifter information is being passed.
+The purpose of this class is to keep the lifters data read from an AI generated csv file from ChatGPT. We initially read all the data from our FileUtils Class and this data is passed into the lifters class via and ArrayList<Lifter>. We then can use this information to sort lifters that match certain categories, ie. Filtering by name ascending. In the FileUtils Class we also read data from another csv file that reads a string array (String []) and then this information is inputed into the lifter.equipmentUsed as the original lifter information is being passed.
 As we develop our project further this will eventually become a child class to Competition Results which will be a child class of Competitions.
 ---
 #### :two:.:three: 📃 CSV Files
@@ -81,6 +81,7 @@ Includes testing for the application of the weight and age classes, all of the t
 <img src="images/output4.png" alt="Icon" title="Icon" width="4000" height="4000">
 
 ---
-
+#### References 📘
+CSV File Generation: www.chatgpt.com
 
 
