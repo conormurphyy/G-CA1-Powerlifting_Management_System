@@ -40,6 +40,11 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
             LifterTest.java
 ```
 #### :two:.:two:: 📌 Purpose of this Class
+The purpose of this class is to keep the lifters data read from an AI generated csv file (source: www.chatgpt.com). We initially read all the data from our FileUtils Class and this data is passed into the lifters class via and ArrayList<Lifter>. We then can use this information to sort lifters that match certain categories, ie. Filtering by name ascending. In the FileUtils Class we also read data from another csv file that reads a string array (String []) and then this information is inputed into the lifter.equipmentUsed as the original lifter information is being passed.
+As we develop our project further this will eventually become a child class to Competition Results which will be a child class of Competitions.
+---
+#### :two:.:three: 📃 CSV Files
+As stated above both our liftersData.csv and lifterEquipment.csv were generated using chatGPT. This sped up the process as it would take a numerous amount of time to create these files with such a large dataset. This allows for a more "real world" scenerio and gives our methods more data to work off, showing there true functionality. We prompted chatGPT to create inconsistencies within the capitalisation and spacing between the strings name and clubName. This allowed us to create error handling, to make these more readable, again preparing for human error in a "real world" scenario.
 
 ---
 ### :three: 📚 Design Choices and Explanation
