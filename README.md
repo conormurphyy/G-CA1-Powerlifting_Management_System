@@ -4,7 +4,7 @@
 
 # :muscle: G-CA1 OOP: Conor Murphy & Conor McCracken
 ## Stage 1 :
-### :one: Entity: Lifter
+### :one: 🏋️‍♂️ Entity: Lifter
 The "Lifter" entity represents each lifter in a powerlifting competition. This class diagram describes the lifters personal details, physical details and compeition category.
 
 | Field              | Type      |Decription                       | Example                                       |
@@ -22,7 +22,7 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 | weightClass        | String    | Based of gender and weight      | "U-74KG Men"                                  |
 ---
 
-### :two: Lifter Overview
+### :two: 🔍 Lifter Overview
 #### :two:.:one:  :deciduous_tree: Strucutre Tree of Lifter Folder
 ```
 │
@@ -42,9 +42,9 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 #### :two:.:two:: 
 
 ---
-### :three: Design Choices and Explanation
+### :three: 📚 Design Choices and Explanation
 ---
-#### :three:.:one:: Methods
+#### :three:.:one:: :Methods
 ---
 
 <img src ="images/findWeightClassMethod.jpeg" alt ="findWeightClassMethod" title="findWeightClassMethod"  width="2000" height="2000">
@@ -54,7 +54,7 @@ This method assigns a weight class to a lifter based off their weight and gender
 This method takes in what the user wants to sort and the direction they want to sort it in , from the menu and uses it to display the sorted table. The options include : Name, Age, Club and Weight. This is as much as the user would likely need as you can discern the weight and age classes from the respective weight and ages of the lifters in the table. 
 
 
-#### :three:.:two:: Classes and Relationships
+#### :three:.:two:: 🤝 Classes and Relationships
 ---
 
 This is a class and relationships diagram, to show how the classes relate to one and another and to show how parent classes relate to child classes. This made our development process easier to understand and carry out, it also created visualisation and gave us more insight into how the final result would look. Additionally it enhanced our ability to integrate defensive coding as we were able to go back and re-evaluate where our system could potentially fail. In summary, it created a broader outlook of the system and its output. 
