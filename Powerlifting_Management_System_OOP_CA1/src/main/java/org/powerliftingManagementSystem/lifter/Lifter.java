@@ -143,7 +143,7 @@ public class Lifter {
         return weightClass;
     }
 
-    //sorting
+
 
 
 
