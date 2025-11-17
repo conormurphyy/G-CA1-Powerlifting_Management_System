@@ -51,7 +51,7 @@ As stated above both our liftersData.csv and lifterEquipment.csv were generated 
 
 ---
 ### :three: 📚 Design Choices and Explanation
----
+
 #### :three:.:one:: :Methods
 ---
 
