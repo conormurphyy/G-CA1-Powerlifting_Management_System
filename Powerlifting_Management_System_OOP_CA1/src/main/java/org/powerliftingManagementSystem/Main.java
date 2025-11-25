@@ -1,6 +1,7 @@
 package org.powerliftingManagementSystem;
 
 import org.powerliftingManagementSystem.lifter.Lifter;
+import org.powerliftingManagementSystem.menu.Menu;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package org.powerliftingManagementSystem;
+package org.powerliftingManagementSystem.menu;
 
 import org.powerliftingManagementSystem.lifter.Lifter;
 

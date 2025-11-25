@@ -8,8 +8,6 @@ import java.util.Scanner;
 
 public class FileUtilsLifter {
 
-
-
     public static ArrayList<Lifter> readLiftersData(String fileName, String delimiter) {
         ArrayList<Lifter> lifters = new ArrayList<>();
 
