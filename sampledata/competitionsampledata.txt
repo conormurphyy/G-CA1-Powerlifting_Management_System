@@ -1,5 +1,10 @@
-1,National West,Galway,16-05-25
-2,National South, Cork, 12-08-25
-3,National North, Donegal, 27-09-25
-4,National East, Kildare, 06-04-25
-5,National Dublin, Dublin 1, 12-10-25
+1,Galway Open,Galway,16-05-2025
+2,Nationals, Cork, 12-08-2025
+3,September Open, Donegal, 27-09-2025
+4,National East, Kildare, 06-04-2025
+5,National Dublin, Dublin, 12-10-2025
+6,Belfast Open, Belfast, 11-11-2025
+7,June Open, Dublin, 02-06-2025
+8,Christmas Clash, Louth, 23-12-2025
+9,SBD Open, Cork, 02-11-2025
+10,January Open, 03-01-2025
