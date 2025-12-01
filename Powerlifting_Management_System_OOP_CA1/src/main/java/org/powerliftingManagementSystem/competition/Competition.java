@@ -13,7 +13,7 @@ public class Competition {
     private ArrayList<Lifter> lifters;
     //#endregion
     //#region Constructor
-    public Competition(int id, String name, String location, String date, Lifter [] lifters) {
+    public Competition(int id, String name, String location, String date, ArrayList<Lifter> lifters) {
         this.id = id;
         this.name = name;
         this.location = location;

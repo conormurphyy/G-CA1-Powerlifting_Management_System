@@ -1,5 +1,6 @@
 package org.powerliftingManagementSystem.menu;
 
+import org.powerliftingManagementSystem.competition.Competition;
 import org.powerliftingManagementSystem.lifter.Lifter;
 import org.powerliftingManagementSystem.lifter.LifterSortingDescending;
 import org.powerliftingManagementSystem.lifter.LifterSortingAscending;
