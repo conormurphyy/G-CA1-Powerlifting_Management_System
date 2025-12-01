@@ -1,8 +1,10 @@
 package org.powerliftingManagementSystem.menu;
 
+import org.powerliftingManagementSystem.competition.Competition;
 import org.powerliftingManagementSystem.lifter.Lifter;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MenuUtil {
     public static void printLifterTable(ArrayList<Lifter> lifters) {
@@ -21,7 +23,7 @@ public class MenuUtil {
 
         for (Lifter l : lifters) {
             System.out.printf(
-                    "%-5d %-20s  %-35s  %-6c  %-6.2f %-8s  %-18s  %-15s  %-5d  %-12s %n",
+                    "%-5d %-20s  %-35s  %-6c  %-6.2f %-8s  %-18s  %-15s  %-5d  %-12s %-25s %n",
                     l.getId(),
                     l.getName(),
                     l.getClubName(),
@@ -30,7 +32,8 @@ public class MenuUtil {
                     l.getWeightClass(),
                     l.getDateOfBirth(),
                     l.getAge(),
-                    l.getAgeClass()
+                    l.getAgeClass(),
+                    Arrays.toString(l.getEquipmentUsedType())
             );
         }
 
@@ -81,6 +84,17 @@ public class MenuUtil {
 
     public static void filteringMenuGender () {
 
+    }
+
+    public static void printCompetitionsTable(ArrayList<Competition> competitions) {
+        for (Competition c : competitions) {
+            System.out.printf(
+                              "%-10d %-10s %-10s %-10s",
+                    c.getId(),
+                    c.getName(),
+                    c.getLocation(),
+                    c.getDate());
+        }
     }
 
 

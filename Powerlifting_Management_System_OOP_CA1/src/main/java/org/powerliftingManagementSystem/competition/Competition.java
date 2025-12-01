@@ -64,4 +64,14 @@ public class Competition {
         return lifters;
     }
     //#endregion
+    public static void assignLiftersToCompetition(ArrayList<Lifter> lifters, ArrayList<Competition> competitions) {
+        for (int i = 0; i< lifters.size(); i++) {
+            int compIndex = i / 100;
+            competitions.get(compIndex).getLifters().add(lifters.get(i));
+        }
+    }
+
+
+
+
 }
