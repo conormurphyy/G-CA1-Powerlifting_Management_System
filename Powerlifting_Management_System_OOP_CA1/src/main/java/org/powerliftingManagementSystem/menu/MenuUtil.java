@@ -89,7 +89,7 @@ public class MenuUtil {
     public static void printCompetitionsTable(ArrayList<Competition> competitions) {
         for (Competition c : competitions) {
             System.out.printf(
-                      "%-10d %-10s %-10s %-10s %-100s",
+                      "%-10d %-10s %-10s %-10s %-100s\n",
                     c.getId(),
                     c.getName(),
                     c.getLocation(),
