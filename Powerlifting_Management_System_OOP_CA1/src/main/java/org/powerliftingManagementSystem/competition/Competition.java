@@ -18,7 +18,7 @@ public class Competition {
         this.name = name;
         this.location = location;
         this.date = date;
-        this.lifters = new ArrayList<>();
+        this.lifters = lifters;
     }
     //#endregion
 
@@ -65,9 +65,14 @@ public class Competition {
     }
     //#endregion
     public static void assignLiftersToCompetition(ArrayList<Lifter> lifters, ArrayList<Competition> competitions) {
-        for (int i = 0; i< lifters.size(); i++) {
-            int compIndex = i / 100;
-            competitions.get(compIndex).getLifters().add(lifters.get(i));
+        int lifterIndex = 0;
+        for (Competition comp : competitions) {
+            int count = 0;
+            while(count < 100 && lifterIndex < lifters.size()) {
+                comp.getLifters().add(lifters.get(lifterIndex));
+                lifterIndex++;
+                count++;
+            }
         }
     }
 

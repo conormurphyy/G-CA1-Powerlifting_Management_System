@@ -100,10 +100,9 @@ public class FileUtils {
                 String name = parts[1];
                 String location = parts[2];
                 String date = parts[3];
-                ArrayList<Lifter> liftersComp = new ArrayList<>();
-                Competition.assignLiftersToCompetition(liftersComp, competitions);
 
-                Competition comp = new Competition(id,name,location,date,liftersComp);
+
+                Competition comp = new Competition(id,name,location,date,new ArrayList<>());
                 competitions.add(comp);
             }
         }

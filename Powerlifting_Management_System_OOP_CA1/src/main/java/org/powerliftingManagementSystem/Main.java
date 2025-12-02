@@ -16,7 +16,9 @@ public class Main {
         ArrayList<Lifter> lifters = readLiftersData("liftersData.csv",",");
         //Menu.menuOptions(lifters);
         ArrayList<Competition> competitions = readCompetitionsData("competitionsampledata.csv", ",");
-        MenuUtil.printCompetitionsTable(competitions);
 
+        Competition.assignLiftersToCompetition(lifters, competitions);
+
+        MenuUtil.printCompetitionsTable(competitions);
     }
 }
