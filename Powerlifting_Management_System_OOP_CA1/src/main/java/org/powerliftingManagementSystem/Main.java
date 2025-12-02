@@ -1,6 +1,7 @@
 package org.powerliftingManagementSystem;
 
 import org.powerliftingManagementSystem.competition.Competition;
+import org.powerliftingManagementSystem.competition.CompetitionResult;
 import org.powerliftingManagementSystem.lifter.Lifter;
 import org.powerliftingManagementSystem.menu.Menu;
 import org.powerliftingManagementSystem.menu.MenuUtil;
@@ -8,8 +9,7 @@ import org.powerliftingManagementSystem.menu.MenuUtil;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
-import static org.powerliftingManagementSystem.FileUtils.readCompetitionsData;
-import static org.powerliftingManagementSystem.FileUtils.readLiftersData;
+import static org.powerliftingManagementSystem.FileUtils.*;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
@@ -19,6 +19,10 @@ public class Main {
 
         Competition.assignLiftersToCompetition(lifters, competitions);
 
-        MenuUtil.printCompetitionsTable(competitions);
+        ArrayList<CompetitionResult> lifterResult = readCompetitionResults("lifterResults.csv", ",");
+
+        Lifter.assignResultsToLifter(lifterResult, lifters);
+        MenuUtil.printLiftersInCompTable(competitions,2);
+
     }
 }

@@ -1,6 +1,7 @@
 package org.powerliftingManagementSystem.menu;
 
 import org.powerliftingManagementSystem.competition.Competition;
+import org.powerliftingManagementSystem.competition.CompetitionResult;
 import org.powerliftingManagementSystem.lifter.Lifter;
 
 import java.util.ArrayList;
@@ -33,7 +34,8 @@ public class MenuUtil {
                     l.getDateOfBirth(),
                     l.getAge(),
                     l.getAgeClass(),
-                    Arrays.toString(l.getEquipmentUsedType())
+                    CompetitionResult.calculateDots()
+                    //Arrays.toString(l.getEquipmentUsedType())
             );
         }
 
@@ -97,6 +99,18 @@ public class MenuUtil {
                     c.getLifters());
 
         }
+    }
+
+    public static void printLiftersInCompTable(ArrayList<Competition> competitions, int selection) {
+        for (Competition comp : competitions) {
+            if(comp.getId() == selection) {
+                System.out.println(comp.getName()+", "+comp.getLocation());
+
+                printLifterTable(comp.getLifters());
+
+            }
+        }
+
     }
 
 

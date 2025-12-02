@@ -1,8 +1,12 @@
 package org.powerliftingManagementSystem.lifter;
 
+import org.powerliftingManagementSystem.competition.Competition;
+import org.powerliftingManagementSystem.competition.CompetitionResult;
+
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 
@@ -21,6 +25,21 @@ public class Lifter {
     private String[] equipmentUsedType;
     private String weightClass;
     //endregion
+
+    public Lifter(int id, String name, String clubName, char gender, double bodyweight, LocalDate dateOfBirth, boolean isSponsored, int age, String ageClass, String[] equipmentUsedType, String weightClass) {
+        this.id = id;
+        this.name = name;
+        this.clubName = clubName;
+        this.gender = gender;
+        this.bodyweight = bodyweight;
+        this.dateOfBirth = dateOfBirth;
+        this.isSponsored = isSponsored;
+        this.age = age;
+        this.ageClass = ageClass;
+        this.equipmentUsedType = equipmentUsedType;
+        this.weightClass = weightClass;
+    }
+
     //#region Getters
     public int getId() {return id;}
     public String getName() {return name;}
@@ -143,6 +162,19 @@ public class Lifter {
         return weightClass;
     }
 
+    public static void assignResultsToLifter(ArrayList<CompetitionResult> competitionResults, ArrayList<Lifter> lifters) {
+        for (CompetitionResult cr : competitionResults){
+                int lifterId = cr.getId();
+
+                for(Lifter l : lifters){
+                    if(l.getId() == lifterId){
+                        competitionResults.get(lifterId).setLifter(l);
+                        break;
+                    }
+                }
+            }
+        }
+    }
 
 
 
@@ -150,7 +182,8 @@ public class Lifter {
 
 
 
-}
+
+
 
 
 

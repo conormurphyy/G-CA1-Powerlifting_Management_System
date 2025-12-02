@@ -4,28 +4,36 @@ import org.powerliftingManagementSystem.lifter.Lifter;
 
 public class CompetitionResult {
     //#region Fields
-    private Lifter lifter;
-    private Competition competition;
-    private double squat;
-    private double bench;
-    private double deadlift;
+    private static Lifter lifter;
+    private int id;
+    private static double squat;
+    private static double bench;
+    private static double deadlift;
     //endregion
     //#region Constructor
-    public CompetitionResult(Lifter lifter, Competition competition, double squat, double bench, double deadlift) {
+    public CompetitionResult(Lifter lifter, double squat, double bench, double deadlift) {
         this.lifter = lifter;
-        this.competition = competition;
         this.squat = squat;
         this.bench = bench;
         this.deadlift = deadlift;
     }
+
+    public CompetitionResult(int id, double squat, double bench, double deadlift) {
+        this.id = id;
+        this.squat = squat;
+        this.bench = bench;
+        this.deadlift = deadlift;
+    }
+
+
     //#endregion
     //#region Getters
     public Lifter getLifter() {
         return lifter;
     }
 
-    public Competition getCompetition() {
-        return competition;
+    public int getId() {
+        return id;
     }
 
     public double getSquat() {
@@ -45,10 +53,6 @@ public class CompetitionResult {
         this.lifter = lifter;
     }
 
-    public void setCompetition(Competition competition) {
-        this.competition = competition;
-    }
-
     public void setSquat(double squat) {
         this.squat = squat;
     }
@@ -63,12 +67,12 @@ public class CompetitionResult {
     //#endregion
 
     // Calculate Total
-    public double getTotal() {
+    public static double getTotal() {
         return squat + bench + deadlift;
     }
 
     // Calculate Dots
-    public double calculateDots() {
+    public static double calculateDots() {
         double bodyweight = lifter.getBodyweight();
         double total = getTotal();
         double dots = total * 500 / bodyweight;
