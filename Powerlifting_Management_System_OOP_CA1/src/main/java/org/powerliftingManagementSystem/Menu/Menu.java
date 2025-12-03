@@ -1,15 +1,14 @@
-package org.powerliftingManagementSystem.menu;
+package org.powerliftingManagementSystem.Menu;
 
-import org.powerliftingManagementSystem.competition.Competition;
-import org.powerliftingManagementSystem.lifter.Lifter;
-import org.powerliftingManagementSystem.lifter.LifterSortingDescending;
-import org.powerliftingManagementSystem.lifter.LifterSortingAscending;
+import org.powerliftingManagementSystem.Lifter.Lifter;
+import org.powerliftingManagementSystem.Lifter.LifterSortingDescending;
+import org.powerliftingManagementSystem.Lifter.LifterSortingAscending;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import static org.powerliftingManagementSystem.menu.MenuUtil.printLifterTable;
+import static org.powerliftingManagementSystem.Menu.MenuUtil.printLifterTable;
 
 public class Menu {
 

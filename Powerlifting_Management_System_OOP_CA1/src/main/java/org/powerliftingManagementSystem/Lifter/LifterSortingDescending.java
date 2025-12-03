@@ -1,4 +1,4 @@
-package org.powerliftingManagementSystem.lifter;
+package org.powerliftingManagementSystem.Lifter;
 
 import java.util.Comparator;
 

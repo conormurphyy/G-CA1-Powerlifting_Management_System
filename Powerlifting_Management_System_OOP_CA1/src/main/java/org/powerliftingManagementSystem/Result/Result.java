@@ -1,8 +1,8 @@
-package org.powerliftingManagementSystem.competition;
+package org.powerliftingManagementSystem.Result;
 
-import org.powerliftingManagementSystem.lifter.Lifter;
+import org.powerliftingManagementSystem.Lifter.Lifter;
 
-public class CompetitionResult {
+public class Result {
     //#region Fields
     private Lifter lifter;
     private int id;
@@ -13,7 +13,7 @@ public class CompetitionResult {
     private double dots;
     //endregion
     //#region Constructor
-    public CompetitionResult(Lifter lifter, double squat, double bench, double deadlift, double total, double dots) {
+    public Result(Lifter lifter, double squat, double bench, double deadlift, double total, double dots) {
         this.lifter = lifter;
         this.squat = squat;
         this.bench = bench;
@@ -22,7 +22,7 @@ public class CompetitionResult {
         this.dots = 0;
     }
 
-    public CompetitionResult(int id, double squat, double bench, double deadlift) {
+    public Result(int id, double squat, double bench, double deadlift) {
         this.id = id;
         this.squat = squat;
         this.bench = bench;

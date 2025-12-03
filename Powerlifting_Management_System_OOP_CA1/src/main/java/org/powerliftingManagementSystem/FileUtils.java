@@ -1,8 +1,8 @@
 package org.powerliftingManagementSystem;
 
-import org.powerliftingManagementSystem.competition.Competition;
-import org.powerliftingManagementSystem.competition.CompetitionResult;
-import org.powerliftingManagementSystem.lifter.Lifter;
+import org.powerliftingManagementSystem.Competition.Competition;
+import org.powerliftingManagementSystem.Lifter.Lifter;
+import org.powerliftingManagementSystem.Result.Result;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileUtils {
-    public static String [] readLiftersEquipment(String fileName, String delimiter, int lifterID) {
+    public static String[] readLiftersEquipment(String fileName, String delimiter, int lifterID) {
         //reads equiptment based on id
 
         String[] equipment = {};
@@ -47,12 +47,12 @@ public class FileUtils {
             while (scanner.hasNextLine()) {
 
                 String line = scanner.nextLine();
-                if(line.isEmpty()) continue;
+                if (line.isEmpty()) continue;
 
                 String[] parts = line.split(delimiter);
 
                 int id = Integer.parseInt(parts[0]);
-                String [] equipmentUsed = readLiftersEquipment("lifterEquipment.csv", ",",id);
+                String[] equipmentUsed = readLiftersEquipment("lifterEquipment.csv", ",", id);
                 String name = formatName(parts[1]);
                 String clubName = formatName(parts[2]);
                 char gender = parts[3].charAt(0);
@@ -65,7 +65,7 @@ public class FileUtils {
                 String ageClass = Lifter.findAgeClass(age);
                 String weightClass = Lifter.findWeightClass(bodyweight, gender);
 
-                Lifter lifter = new Lifter(id,name,clubName,gender,bodyweight,dob,isSponsored,age,weightClass,equipmentUsed,ageClass);
+                Lifter lifter = new Lifter(id, name, clubName, gender, bodyweight, dob, isSponsored, age, weightClass, equipmentUsed, ageClass);
 
                 lifters.add(lifter);
             }
@@ -83,7 +83,7 @@ public class FileUtils {
         try (Scanner scanner = new Scanner(new File(filename))) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
-                if(line.isEmpty()) continue;
+                if (line.isEmpty()) continue;
                 String[] parts = line.split(delimiter);
                 int id = Integer.parseInt(parts[0]);
                 String name = formatName(parts[1]);
@@ -91,42 +91,41 @@ public class FileUtils {
                 String date = parts[3];
 
 
-                Competition comp = new Competition(id, name, location, date,new ArrayList<>());
+                Competition comp = new Competition(id, name, location, date, new ArrayList<>());
 
                 competitions.add(comp);
             }
-        }
-        catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             System.out.println("File not found: " + filename);
         }
         return competitions;
     }
 
-    public static ArrayList<CompetitionResult> readCompetitionResults(String filename, String delimiter) throws FileNotFoundException {
-        ArrayList<CompetitionResult> competitionResults = new ArrayList<>();
+    public static ArrayList<Result> readCompetitionResults(String filename, String delimiter) throws FileNotFoundException {
+        ArrayList<Result> competitionResults = new ArrayList<>();
         try (Scanner scanner = new Scanner(new File(filename))) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
-                if(line.isEmpty()) continue;
+                if (line.isEmpty()) continue;
                 String[] parts = line.split(delimiter);
                 int id = Integer.parseInt(parts[0]);
                 double squat = Double.parseDouble(parts[1]);
                 double bench = Double.parseDouble(parts[2]);
                 double deadlift = Double.parseDouble(parts[3]);
-                CompetitionResult lifterResult = new CompetitionResult(id,squat,bench,deadlift);
+                Result lifterResult = new Result(id, squat, bench, deadlift);
 
                 competitionResults.add(lifterResult);
             }
         }
-        return  competitionResults;
+        return competitionResults;
     }
 
-    public static String formatName(String name){
-        name=name.trim().toLowerCase();
-        String[] parts =name.split("\\s+");
-        String finalName="";
-        for(String part:parts) {
-            finalName+= part.substring(0,1).toUpperCase()+ part.substring(1)+" ";
+    public static String formatName(String name) {
+        name = name.trim().toLowerCase();
+        String[] parts = name.split("\\s+");
+        String finalName = "";
+        for (String part : parts) {
+            finalName += part.substring(0, 1).toUpperCase() + part.substring(1) + " ";
         }
         return finalName;
     }

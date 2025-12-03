@@ -1,7 +1,6 @@
-package org.powerliftingManagementSystem.lifter;
+package org.powerliftingManagementSystem.Lifter;
 
-import org.powerliftingManagementSystem.competition.Competition;
-import org.powerliftingManagementSystem.competition.CompetitionResult;
+import org.powerliftingManagementSystem.Result.Result;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -41,30 +40,95 @@ public class Lifter {
     }
 
     //#region Getters
-    public int getId() {return id;}
-    public String getName() {return name;}
-    public String getClubName() {return clubName;}
-    public char getGender() {return gender;}
-    public double getBodyweight() {return bodyweight;}
-    public String getWeightClass() {return weightClass;}
-    public LocalDate getDateOfBirth() {return dateOfBirth;}
-    public boolean isSponsored() {return isSponsored;}
-    public int getAge() {return age;}
-    public String getAgeClass() {return ageClass;}
-    public String[] getEquipmentUsedType() {return equipmentUsedType;}
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getClubName() {
+        return clubName;
+    }
+
+    public char getGender() {
+        return gender;
+    }
+
+    public double getBodyweight() {
+        return bodyweight;
+    }
+
+    public String getWeightClass() {
+        return weightClass;
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public boolean isSponsored() {
+        return isSponsored;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getAgeClass() {
+        return ageClass;
+    }
+
+    public String[] getEquipmentUsedType() {
+        return equipmentUsedType;
+    }
+
     //#endregion
     //#region Setters
-    public void setId(int id) {this.id = id;}
-    public void setName(String name) {this.name = name;}
-    public void setClubName(String clubName) {this.clubName = clubName;}
-    public void setGender(char gender) {this.gender = gender;}
-    public void setBodyweight(double bodyweight) {this.bodyweight = bodyweight;}
-    public void setWeightClass(String weightClass) {this.weightClass = weightClass;}
-    public void setDateOfBirth(LocalDate dateOfBirth) {this.dateOfBirth =  dateOfBirth;}
-    public void setSponsored(boolean sponsored) {isSponsored = sponsored;}
-    public void setAge(int age) {this.age = age;}
-    public void setAgeClass(String ageClass) {this.ageClass = ageClass;}
-    public void setEquipmentUsedType(String[] equipmentUsedType) {this.equipmentUsedType = equipmentUsedType;}
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setClubName(String clubName) {
+        this.clubName = clubName;
+    }
+
+    public void setGender(char gender) {
+        this.gender = gender;
+    }
+
+    public void setBodyweight(double bodyweight) {
+        this.bodyweight = bodyweight;
+    }
+
+    public void setWeightClass(String weightClass) {
+        this.weightClass = weightClass;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public void setSponsored(boolean sponsored) {
+        isSponsored = sponsored;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setAgeClass(String ageClass) {
+        this.ageClass = ageClass;
+    }
+
+    public void setEquipmentUsedType(String[] equipmentUsedType) {
+        this.equipmentUsedType = equipmentUsedType;
+    }
 
     //#endregion
     //#region ToString()
@@ -142,14 +206,12 @@ public class Lifter {
         if (gender == 'M') {
             maxWeight = menMaxWeight;
             classes = menClasses;
-            if(weight > 635) throw new IllegalArgumentException("Impossible Weight");
-        }
-        else if (gender == 'F') {
+            if (weight > 635) throw new IllegalArgumentException("Impossible Weight");
+        } else if (gender == 'F') {
             maxWeight = womenMaxWeight;
             classes = womenClasses;
-            if(weight > 727) throw new IllegalArgumentException("Impossible Weight");
-        }
-        else {
+            if (weight > 727) throw new IllegalArgumentException("Impossible Weight");
+        } else {
             throw new IllegalArgumentException("Invalid Gender");
         }
 
@@ -162,19 +224,19 @@ public class Lifter {
         return weightClass;
     }
 
-    public static void assignResultsToLifter(ArrayList<CompetitionResult> competitionResults, ArrayList<Lifter> lifters) {
-        for (CompetitionResult cr : competitionResults){
-                int lifterId = cr.getId();
+    public static void assignResultsToLifter(ArrayList<Result> competitionResults, ArrayList<Lifter> lifters) {
+        for (Result cr : competitionResults) {
+            int lifterId = cr.getId();
 
-                for(Lifter l : lifters){
-                    if(l.getId() == lifterId){
-                        cr.setLifter(l);
-                        break;
-                    }
+            for (Lifter l : lifters) {
+                if (l.getId() == lifterId) {
+                    cr.setLifter(l);
+                    break;
                 }
             }
         }
     }
+}
 
 
 

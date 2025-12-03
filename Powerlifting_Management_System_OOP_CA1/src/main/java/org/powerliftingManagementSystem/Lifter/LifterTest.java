@@ -1,4 +1,4 @@
-package org.powerliftingManagementSystem.lifter;
+package org.powerliftingManagementSystem.Lifter;
 
 import org.junit.jupiter.api.Test;
 

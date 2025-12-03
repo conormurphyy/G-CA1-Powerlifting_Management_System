@@ -1,8 +1,7 @@
-package org.powerliftingManagementSystem.competition;
+package org.powerliftingManagementSystem.Competition;
 
-import org.powerliftingManagementSystem.lifter.Lifter;
+import org.powerliftingManagementSystem.Lifter.Lifter;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Competition {
@@ -12,6 +11,7 @@ public class Competition {
     private String location;
     private String date;
     private ArrayList<Lifter> lifters;
+
     //#endregion
     //#region Constructor
     public Competition(int id, String name, String location, String date, ArrayList<Lifter> lifters) {
@@ -43,6 +43,7 @@ public class Competition {
     public ArrayList<Lifter> getLifters() {
         return lifters;
     }
+
     //#endregion
     //#region Setters
     public void setId(int id) {
@@ -64,20 +65,19 @@ public class Competition {
     public ArrayList<Lifter> setLifters() {
         return lifters;
     }
+
     //#endregion
     public static void assignLiftersToCompetition(ArrayList<Lifter> lifters, ArrayList<Competition> competitions) {
         int lifterIndex = 0;
         for (Competition comp : competitions) {
             int count = 0;
-            while(count < 100 && lifterIndex < lifters.size()) {
+            while (count < 100 && lifterIndex < lifters.size()) {
                 comp.getLifters().add(lifters.get(lifterIndex));
                 lifterIndex++;
                 count++;
             }
         }
     }
-
-
 
 
 }
