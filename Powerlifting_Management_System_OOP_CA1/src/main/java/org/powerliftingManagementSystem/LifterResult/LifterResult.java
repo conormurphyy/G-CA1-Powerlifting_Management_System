@@ -1,8 +1,8 @@
-package org.powerliftingManagementSystem.Result;
+package org.powerliftingManagementSystem.LifterResult;
 
 import org.powerliftingManagementSystem.Lifter.Lifter;
 
-public class Result {
+public class LifterResult {
     //#region Fields
     private Lifter lifter;
     private int id;
@@ -13,7 +13,7 @@ public class Result {
     private double dots;
     //endregion
     //#region Constructor
-    public Result(Lifter lifter, double squat, double bench, double deadlift, double total, double dots) {
+    public LifterResult(Lifter lifter, double squat, double bench, double deadlift, double total, double dots) {
         this.lifter = lifter;
         this.squat = squat;
         this.bench = bench;
@@ -22,13 +22,12 @@ public class Result {
         this.dots = 0;
     }
 
-    public Result(int id, double squat, double bench, double deadlift) {
+    public LifterResult(int id, double squat, double bench, double deadlift) {
         this.id = id;
         this.squat = squat;
         this.bench = bench;
         this.deadlift = deadlift;
     }
-
 
     //#endregion
     //#region Getters

@@ -1,10 +1,9 @@
-package org.powerliftingManagementSystem.Menu;
+package org.powerliftingManagementSystem.Menu.MenuUtil;
 
 import org.powerliftingManagementSystem.Competition.Competition;
-import org.powerliftingManagementSystem.Result.Result;
-import org.powerliftingManagementSystem.Leaderboard.sortLifterDots;
+import org.powerliftingManagementSystem.LifterResult.LifterResult;
 import org.powerliftingManagementSystem.Lifter.Lifter;
-import org.powerliftingManagementSystem.Result.LifterResultSort;
+import org.powerliftingManagementSystem.LifterResult.LifterResultSort;
 
 import java.util.ArrayList;
 
@@ -115,7 +114,7 @@ public class MenuUtil {
 
     }
 
-    public static void printLiftersInCompResults(ArrayList<Result> results) {
+    public static void printLiftersInCompResults(ArrayList<LifterResult> results) {
 
         System.out.println("Lifter Table");
 
@@ -129,7 +128,7 @@ public class MenuUtil {
 
         System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
-        for (Result r : results) {
+        for (LifterResult r : results) {
             System.out.printf(
                     "%-5d %-20s  %-35s  %-6c  %-6.2f %-8s  %-18s  %-15s  %-5d  %-12s %-25s %n",
                     r.getLifter().getId(),
@@ -149,9 +148,9 @@ public class MenuUtil {
         System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
     }
 
-    public static void printTop3Dots(ArrayList<Result> results) {
+    public static void printTop3Dots(ArrayList<LifterResult> results) {
 
-        results.sort(new sortLifterDots());
+        results.sort(LifterResultSort.byDotsOverall);
 
 // print top 3
         System.out.println("Top 3 Lifters by DOTS");
@@ -160,7 +159,7 @@ public class MenuUtil {
                 "ID", "Name", "Club", "Gender", "Weight", "DOTS"
         );
         for (int i = 0; i < results.size() && i < 3; i++) {
-            Result res = results.get(i);
+            LifterResult res = results.get(i);
 
             System.out.printf(
                     "%-6d %-20s %-20s %-6c %-10.2f %-10.2f%n",
@@ -176,7 +175,7 @@ public class MenuUtil {
 
     }
 
-    public static void printTop3DeadLift(ArrayList<Result> results) {
+    public static void printTop3DeadLift(ArrayList<LifterResult> results) {
 
         results.sort(LifterResultSort.byDeadliftOverall);
 
@@ -187,7 +186,7 @@ public class MenuUtil {
                 "ID", "Name", "Club", "Gender", "Weight", "Deadlift"
         );
         for (int i = 0; i < results.size() && i < 3; i++) {
-            Result res = results.get(i);
+            LifterResult res = results.get(i);
 
             System.out.printf(
                     "%-6d %-20s %-20s %-6c %-10.2f %-4.1f %-2s%n",

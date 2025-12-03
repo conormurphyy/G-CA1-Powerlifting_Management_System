@@ -1,6 +1,6 @@
 package org.powerliftingManagementSystem.Lifter;
 
-import org.powerliftingManagementSystem.Result.Result;
+import org.powerliftingManagementSystem.LifterResult.LifterResult;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -224,8 +224,8 @@ public class Lifter {
         return weightClass;
     }
 
-    public static void assignResultsToLifter(ArrayList<Result> competitionResults, ArrayList<Lifter> lifters) {
-        for (Result cr : competitionResults) {
+    public static void assignResultsToLifter(ArrayList<LifterResult> competitionResults, ArrayList<Lifter> lifters) {
+        for (LifterResult cr : competitionResults) {
             int lifterId = cr.getId();
 
             for (Lifter l : lifters) {

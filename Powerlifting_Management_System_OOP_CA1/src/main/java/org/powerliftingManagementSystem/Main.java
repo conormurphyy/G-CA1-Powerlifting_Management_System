@@ -1,15 +1,14 @@
 package org.powerliftingManagementSystem;
 
 import org.powerliftingManagementSystem.Competition.Competition;
-import org.powerliftingManagementSystem.Leaderboard.sortLifterDots;
 import org.powerliftingManagementSystem.Lifter.Lifter;
-import org.powerliftingManagementSystem.Menu.MenuUtil;
-import org.powerliftingManagementSystem.Result.Result;
+import org.powerliftingManagementSystem.Menu.MenuUtil.MenuUtil;
+import org.powerliftingManagementSystem.LifterResult.LifterResult;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
-import static org.powerliftingManagementSystem.FileUtils.*;
+import static org.powerliftingManagementSystem.FileUtil.FileUtils.*;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
@@ -19,13 +18,12 @@ public class Main {
 
         Competition.assignLiftersToCompetition(lifters, competitions);
 
-        ArrayList<Result> lifterResult = readCompetitionResults("lifterResults.csv", ",");
+        ArrayList<LifterResult> lifterResult = readCompetitionResults("lifterResults.csv", ",");
 
         Lifter.assignResultsToLifter(lifterResult, lifters);
 
         MenuUtil.printLiftersInCompResults(lifterResult);
 
-        lifterResult.sort(new sortLifterDots());
         MenuUtil.printTop3Dots(lifterResult);
         MenuUtil.printTop3DeadLift(lifterResult);
 

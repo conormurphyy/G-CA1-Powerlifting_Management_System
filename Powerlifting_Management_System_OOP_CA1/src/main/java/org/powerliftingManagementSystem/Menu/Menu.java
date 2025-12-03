@@ -3,12 +3,13 @@ package org.powerliftingManagementSystem.Menu;
 import org.powerliftingManagementSystem.Lifter.Lifter;
 import org.powerliftingManagementSystem.Lifter.LifterSortingDescending;
 import org.powerliftingManagementSystem.Lifter.LifterSortingAscending;
+import org.powerliftingManagementSystem.Menu.MenuUtil.MenuUtil;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import static org.powerliftingManagementSystem.Menu.MenuUtil.printLifterTable;
+import static org.powerliftingManagementSystem.Menu.MenuUtil.MenuUtil.printLifterTable;
 
 public class Menu {
 

@@ -1,8 +1,8 @@
-package org.powerliftingManagementSystem;
+package org.powerliftingManagementSystem.FileUtil;
 
 import org.powerliftingManagementSystem.Competition.Competition;
 import org.powerliftingManagementSystem.Lifter.Lifter;
-import org.powerliftingManagementSystem.Result.Result;
+import org.powerliftingManagementSystem.LifterResult.LifterResult;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -101,8 +101,8 @@ public class FileUtils {
         return competitions;
     }
 
-    public static ArrayList<Result> readCompetitionResults(String filename, String delimiter) throws FileNotFoundException {
-        ArrayList<Result> competitionResults = new ArrayList<>();
+    public static ArrayList<LifterResult> readCompetitionResults(String filename, String delimiter) throws FileNotFoundException {
+        ArrayList<LifterResult> competitionResults = new ArrayList<>();
         try (Scanner scanner = new Scanner(new File(filename))) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
@@ -112,7 +112,7 @@ public class FileUtils {
                 double squat = Double.parseDouble(parts[1]);
                 double bench = Double.parseDouble(parts[2]);
                 double deadlift = Double.parseDouble(parts[3]);
-                Result lifterResult = new Result(id, squat, bench, deadlift);
+                LifterResult lifterResult = new LifterResult(id, squat, bench, deadlift);
 
                 competitionResults.add(lifterResult);
             }
