@@ -114,6 +114,8 @@ public class FileUtils {
                 double bench = Double.parseDouble(parts[2]);
                 double deadlift = Double.parseDouble(parts[3]);
                 CompetitionResult lifterResult = new CompetitionResult(id,squat,bench,deadlift);
+
+                competitionResults.add(lifterResult);
             }
         }
         return  competitionResults;

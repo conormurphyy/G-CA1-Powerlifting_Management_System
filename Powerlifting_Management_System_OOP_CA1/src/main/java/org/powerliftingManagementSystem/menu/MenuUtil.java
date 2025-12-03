@@ -5,10 +5,10 @@ import org.powerliftingManagementSystem.competition.CompetitionResult;
 import org.powerliftingManagementSystem.lifter.Lifter;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class MenuUtil {
     public static void printLifterTable(ArrayList<Lifter> lifters) {
+
 
         System.out.println("Lifter Table");
 
@@ -24,7 +24,7 @@ public class MenuUtil {
 
         for (Lifter l : lifters) {
             System.out.printf(
-                    "%-5d %-20s  %-35s  %-6c  %-6.2f %-8s  %-18s  %-15s  %-5d  %-12s %-25s %n",
+                    "%-5d %-20s  %-35s  %-6c  %-6.2f %-8s  %-18s  %-15s  %-5d  %-12s %n",
                     l.getId(),
                     l.getName(),
                     l.getClubName(),
@@ -33,8 +33,8 @@ public class MenuUtil {
                     l.getWeightClass(),
                     l.getDateOfBirth(),
                     l.getAge(),
-                    l.getAgeClass(),
-                    CompetitionResult.calculateDots()
+                    l.getAgeClass()
+                    //dots
                     //Arrays.toString(l.getEquipmentUsedType())
             );
         }
@@ -106,11 +106,44 @@ public class MenuUtil {
             if(comp.getId() == selection) {
                 System.out.println(comp.getName()+", "+comp.getLocation());
 
-                printLifterTable(comp.getLifters());
 
             }
         }
 
+    }
+
+    public static void printLiftersInCompResults(ArrayList<CompetitionResult> results) {
+
+        System.out.println("Lifter Table");
+
+        System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+
+        System.out.printf(
+                "%-6s %-20s  %-35s  %-6s  %-6s %-8s  %-13s  %-8s  %-5s  %-12s %n",
+                "ID","Name", "Club Name", "Gender", "Body Weight", "",
+                "Weight Class", "Date of Birth", "Age", "Age Class"
+        );
+
+        System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+
+        for (CompetitionResult r : results) {
+            System.out.printf(
+                    "%-5d %-20s  %-35s  %-6c  %-6.2f %-8s  %-18s  %-15s  %-5d  %-12s %-25s %n",
+                    r.getLifter().getId(),
+                    r.getLifter().getName(),
+                    r.getLifter().getClubName(),
+                    r.getLifter().getGender(),
+                    r.getLifter().getBodyweight(),"KG",
+                    r.getLifter().getWeightClass(),
+                    r.getLifter().getDateOfBirth(),
+                    r.getLifter().getAge(),
+                    r.getLifter().getAgeClass(),
+                    r.calculateDots()
+                    //Arrays.toString(l.getEquipmentUsedType())
+            );
+        }
+
+        System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
     }
 
 

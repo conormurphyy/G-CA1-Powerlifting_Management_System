@@ -22,7 +22,8 @@ public class Main {
         ArrayList<CompetitionResult> lifterResult = readCompetitionResults("lifterResults.csv", ",");
 
         Lifter.assignResultsToLifter(lifterResult, lifters);
-        MenuUtil.printLiftersInCompTable(competitions,2);
+
+        MenuUtil.printLiftersInCompResults(lifterResult);
 
     }
 }

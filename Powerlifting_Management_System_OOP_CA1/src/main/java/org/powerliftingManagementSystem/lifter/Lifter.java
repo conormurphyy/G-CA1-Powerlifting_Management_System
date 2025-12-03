@@ -168,7 +168,7 @@ public class Lifter {
 
                 for(Lifter l : lifters){
                     if(l.getId() == lifterId){
-                        competitionResults.get(lifterId).setLifter(l);
+                        cr.setLifter(l);
                         break;
                     }
                 }
