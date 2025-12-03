@@ -1,4 +1,4 @@
-package org.powerliftingManagementSystem.LifterResult;
+package org.powerliftingManagementSystem.Menu.MenuUtil.LifterResultTest;
 
 import org.junit.jupiter.api.Test;
 

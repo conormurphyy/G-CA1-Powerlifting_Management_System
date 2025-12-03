@@ -1,4 +1,4 @@
-package org.powerliftingManagementSystem.FileUtil;
+package org.powerliftingManagementSystem.Menu.MenuUtil.FileUtilTest;
 
 import org.junit.jupiter.api.Test;
 

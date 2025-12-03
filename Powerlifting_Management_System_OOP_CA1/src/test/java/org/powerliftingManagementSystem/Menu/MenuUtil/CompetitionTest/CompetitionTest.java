@@ -1,4 +1,4 @@
-package org.powerliftingManagementSystem.Competition;
+package org.powerliftingManagementSystem.Menu.MenuUtil.CompetitionTest;
 
 import org.junit.jupiter.api.Test;
 
