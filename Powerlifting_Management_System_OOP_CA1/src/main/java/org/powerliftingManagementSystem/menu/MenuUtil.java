@@ -6,6 +6,7 @@ import org.powerliftingManagementSystem.leaderboard.Leaderboard;
 import org.powerliftingManagementSystem.leaderboard.sortLifterDeadlift;
 import org.powerliftingManagementSystem.leaderboard.sortLifterDots;
 import org.powerliftingManagementSystem.lifter.Lifter;
+import org.powerliftingManagementSystem.lifter.LifterSort;
 
 import java.util.ArrayList;
 
@@ -179,7 +180,7 @@ public class MenuUtil {
     }
     public static void printTop3DeadLift(ArrayList<CompetitionResult> results) {
 
-        results.sort(new sortLifterDeadlift());
+        results.sort(LifterSort.byDeadliftOverall);
 
 // print top 3
         System.out.println("Top 3 Lifters by DeadLift");
