@@ -2,6 +2,8 @@ package org.powerliftingManagementSystem.menu;
 
 import org.powerliftingManagementSystem.competition.Competition;
 import org.powerliftingManagementSystem.competition.CompetitionResult;
+import org.powerliftingManagementSystem.leaderboard.Leaderboard;
+import org.powerliftingManagementSystem.leaderboard.sortLifterDots;
 import org.powerliftingManagementSystem.lifter.Lifter;
 
 import java.util.ArrayList;
@@ -144,6 +146,35 @@ public class MenuUtil {
         }
 
         System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+    }
+    public static void printTop3Dots(ArrayList<CompetitionResult> results) {
+
+        results.sort(new sortLifterDots());
+
+// print top 3
+        System.out.println("Top 3 Lifters by DOTS");
+        System.out.printf(
+                "%-6s %-20s %-20s %-6s %-10s %-10s%n",
+                "ID", "Name", "Club", "Gender", "Weight", "DOTS"
+        );
+        for (int i = 0; i < results.size() && i < 3; i++) {
+            CompetitionResult res = results.get(i);
+
+            System.out.printf(
+                    "%-6d %-20s %-20s %-6c %-10.2f %-10.2f%n",
+                    res.getLifter().getId(),
+                    res.getLifter().getName(),
+                    res.getLifter().getClubName(),
+                    res.getLifter().getGender(),
+                    res.getLifter().getBodyweight(),
+                    res.getDots()
+            );
+        }
+
+
+
+
+
     }
 
 
