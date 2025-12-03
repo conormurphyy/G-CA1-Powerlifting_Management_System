@@ -2,6 +2,7 @@ package org.powerliftingManagementSystem.competition;
 
 import org.powerliftingManagementSystem.lifter.Lifter;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Competition {

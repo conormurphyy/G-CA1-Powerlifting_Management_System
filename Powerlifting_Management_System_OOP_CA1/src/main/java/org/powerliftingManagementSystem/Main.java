@@ -28,6 +28,7 @@ public class Main {
 
         lifterResult.sort(new sortLifterDots());
         MenuUtil.printTop3Dots(lifterResult);
+        MenuUtil.printTop3DeadLift(lifterResult);
 
     }
 }
