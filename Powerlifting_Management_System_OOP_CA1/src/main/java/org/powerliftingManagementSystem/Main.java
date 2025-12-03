@@ -25,8 +25,9 @@ public class Main {
         Lifter.assignResultsToLifter(lifterResult, lifters);
 
         MenuUtil.printLiftersInCompResults(lifterResult);
-        lifterResult.sort(new sortLifterDots());
 
+        lifterResult.sort(new sortLifterDots());
         MenuUtil.printTop3Dots(lifterResult);
+
     }
 }

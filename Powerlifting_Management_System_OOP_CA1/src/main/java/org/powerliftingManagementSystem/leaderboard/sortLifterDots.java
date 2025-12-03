@@ -14,4 +14,5 @@ public class sortLifterDots  implements Comparator<CompetitionResult>
     }
 
 
+
 }
