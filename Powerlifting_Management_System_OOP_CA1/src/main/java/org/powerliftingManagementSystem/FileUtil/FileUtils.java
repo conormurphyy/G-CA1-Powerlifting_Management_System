@@ -1,6 +1,7 @@
 package org.powerliftingManagementSystem.FileUtil;
 
 import org.powerliftingManagementSystem.Competition.Competition;
+import org.powerliftingManagementSystem.Equiptment.Equipment;
 import org.powerliftingManagementSystem.Lifter.Lifter;
 import org.powerliftingManagementSystem.LifterResult.LifterResult;
 
@@ -129,4 +130,8 @@ public class FileUtils {
         }
         return finalName;
     }
+    /*
+    public static ArrayList<Equipment> readEquipmentsData(String filename, String delimiter) throws FileNotFoundException {
+        Equipment lifterEquiptment = new Equipment(formatName(parts[1]);,formatName(parts[1]);,formatName(parts[1]);,formatName(parts[1]);)
+    }*/
 }
