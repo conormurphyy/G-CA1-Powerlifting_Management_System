@@ -33,7 +33,7 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 | socks              | String    | Lifter's socks                                      | "SBD Socks"                                   |
 | deadliftSocks      | String    | Lifter's deadlift socks                             | "SBD Deadlift Socks"                          |
 | shoes              | String    | Lifter's shoes                                      | "Notorious Lift"                              |
-
+---
 ## :three: 🥇 Entity: Competition
 | Field              | Type                  |Decription                                           | Example                          |
 |:--                 |:--                    |:--                                                  |:--                               |
@@ -42,7 +42,7 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 | location           | String                | Name of competition's location                      | "Cork"                           |
 | date               | String                | Date of competition                                 | "12-12-25"                       |
 | lifters            | ArrayList<Lifter      | All lifters in the compeition                       | [{"John Murphy}{"Conor Adams"}   |
-
+---
 ## :four: 🏋️ Entity: Lifter Result
 | Field              | Type                  |Decription                                                 | Example                          |
 |:--                 |:--                    |:--                                                        |:--                               |
@@ -53,7 +53,7 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 | deadlift           | double                | Lifter's deadlift result                                  | 245.0                            |
 | total              | double                | Lifter's total result: squat + bench + deadlift           | 577.5                            |
 | dots               | double                | Lifter's dots result: Calulated with bodyweight and total | 452.00                           |
-
+---
 ### :two: 🔍 Lifter Overview
 #### :two:.:one:  :deciduous_tree: Strucutre Tree of Lifter Folder
 ```
