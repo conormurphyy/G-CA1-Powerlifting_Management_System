@@ -1,5 +1,6 @@
 package org.powerliftingManagementSystem.Menu.MenuUtil;
 
+import org.powerliftingManagementSystem.Equipment.Equipment;
 import org.powerliftingManagementSystem.Lifter.Lifter;
 import org.powerliftingManagementSystem.LifterResult.LifterResult;
 
@@ -34,7 +35,7 @@ public class LifterMenuUtil {
             System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
         }
 
-        public static void PrintLiftersEquipment(ArrayList<Lifter> lifters) {
+        public static void PrintLiftersEquipment(ArrayList<Lifter> lifters, ArrayList <Equipment> equipments) {
             System.out.println("Lifter Equipment Table");
             System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
             System.out.printf(
@@ -43,20 +44,23 @@ public class LifterMenuUtil {
             );
             System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
             for (Lifter l : lifters) {
+                for (Equipment e : equipments) {
                 System.out.printf(
                         "%-6d %-20s  %-35s  %-6c  %-6.2f %-8s  %-18s  %-15s  %-5d  %-12s %n",
                         l.getId(),
                         l.getName(),
-                        l.getClubName(),
-                        l.getGender(),
-                        l.getBodyweight(), "KG",
-                        l.getWeightClass(),
-                        l.getDateOfBirth(),
-                        l.getAge(),
-                        l.getAgeClass()
+                        e.getBelt(),
+                        e.getSinglet(),
+                        e.getCompTee(),
+                        e.getWristWraps(),
+                        e.getKneeSleeves(),
+                        e.getSocks(),
+                        e.getDeadliftSocks(),
+                        e.getShoes()
+
                         //Arrays.toString(l.getEquipmentUsedType())
                 );
-            }
+            }}
             System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
         }
