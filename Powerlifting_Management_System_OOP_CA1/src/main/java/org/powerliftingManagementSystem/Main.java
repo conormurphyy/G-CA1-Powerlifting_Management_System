@@ -23,9 +23,9 @@ public class Main {
 
         Lifter.assignResultsToLifter(lifterResult, lifters);
 
-        MenuUtil.printLiftersInCompResults(lifterResult);
+        LifterResultMenuUtil.printLiftersInCompResults(lifterResult);
 
-        MenuUtil.printTop3Dots(lifterResult);
+        LifterResultMenuUtil.printTop3Dots(lifterResult);
         LifterResultMenuUtil.printTop3DeadLift(lifterResult);
 
     }
