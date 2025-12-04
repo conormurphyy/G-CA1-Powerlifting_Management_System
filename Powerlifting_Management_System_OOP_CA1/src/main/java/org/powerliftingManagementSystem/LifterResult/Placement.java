@@ -63,6 +63,7 @@ public class Placement {
                         category,
                         r.getTotal(),
                         r.getPlacement());
+
             }
         }
     }
