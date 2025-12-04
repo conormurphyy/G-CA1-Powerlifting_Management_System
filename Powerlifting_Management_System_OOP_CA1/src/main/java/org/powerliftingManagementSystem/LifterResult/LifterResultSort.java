@@ -4,31 +4,61 @@ package org.powerliftingManagementSystem.LifterResult;
 import java.util.Comparator;
 
 public enum LifterResultSort implements Comparator<LifterResult> {
-    byDotsOverall {
+    byDotsDesc {
         @Override
         public  int compare(LifterResult a, LifterResult b) {
             return Double.compare(b.getDots(), a.getDots());
         }
     },
-    bySquatOverall {
+    bySquatAsc {
+        @Override
+        public  int compare(LifterResult a, LifterResult b) {
+            return Double.compare(a.getSquat(), b.getSquat());
+        }
+    },
+    byBenchAsc {
+        @Override
+        public  int compare(LifterResult a, LifterResult b) {
+            return Double.compare(a.getBench(), b.getBench());
+        }
+    },
+    byDeadliftAsc{
+        @Override
+        public  int compare(LifterResult a, LifterResult b) {
+            return Double.compare(a.getDeadlift(), b.getDeadlift());
+        }
+    },
+    byTotalAsc {
+        @Override
+        public  int compare(LifterResult a, LifterResult b) {
+            return Double.compare(a.getTotal(), b.getTotal());
+        }
+    },
+    byDotsAsc {
+        @Override
+        public  int compare(LifterResult a, LifterResult b) {
+            return Double.compare(a.getDots(), b.getDots());
+        }
+    },
+    bySquatDesc {
         @Override
         public  int compare(LifterResult a, LifterResult b) {
             return Double.compare(b.getSquat(), a.getSquat());
         }
     },
-    byBenchOverall {
+    byBenchDesc {
         @Override
         public  int compare(LifterResult a, LifterResult b) {
             return Double.compare(b.getBench(), a.getBench());
         }
     },
-    byDeadliftOverall{
+    byDeadliftDesc{
         @Override
         public  int compare(LifterResult a, LifterResult b) {
             return Double.compare(b.getDeadlift(), a.getDeadlift());
         }
     },
-    byTotalOverall {
+    byTotalDesc {
         @Override
         public  int compare(LifterResult a, LifterResult b) {
             return Double.compare(b.getTotal(), a.getTotal());

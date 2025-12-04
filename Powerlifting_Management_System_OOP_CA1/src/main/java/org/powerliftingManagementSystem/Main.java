@@ -3,6 +3,7 @@ package org.powerliftingManagementSystem;
 import org.powerliftingManagementSystem.Competition.Competition;
 import org.powerliftingManagementSystem.Lifter.Lifter;
 import org.powerliftingManagementSystem.Menu.LifterMenu;
+import org.powerliftingManagementSystem.Menu.LifterResultMenu;
 import org.powerliftingManagementSystem.Menu.MenuUtil.LifterMenuUtil;
 import org.powerliftingManagementSystem.Menu.MenuUtil.LifterResultMenuUtil;
 import org.powerliftingManagementSystem.Menu.MenuUtil.MenuUtil;
@@ -30,7 +31,6 @@ public class Main {
         //LifterResultMenuUtil.printTop3DeadLift(lifterResult);
 
         //LifterMenuUtil.printLiftersEquipment(lifters);
-        LifterMenu.run();
-
+        LifterResultMenu.run();
     }
 }

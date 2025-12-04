@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class LifterResultMenuUtil {
     public static void printTop3DeadLift(ArrayList<LifterResult> results) {
 
-        results.sort(LifterResultSort.byDeadliftOverall);
+        results.sort(LifterResultSort.byDeadliftDesc);
 
 // print top 3
         System.out.println("Top 3 Lifters by DeadLift");
@@ -34,7 +34,7 @@ public class LifterResultMenuUtil {
     }
     public static void printTop3Dots(ArrayList<LifterResult> results) {
 
-        results.sort(LifterResultSort.byDotsOverall);
+        results.sort(LifterResultSort.byDotsDesc);
 
 // print top 3
         System.out.println("Top 3 Lifters by DOTS");
