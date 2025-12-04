@@ -44,15 +44,15 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 | lifters            | ArrayList<Lifter      | All lifters in the compeition                       | [{"John Murphy}{"Conor Adams"}   |
 
 ## :four: 🏋️ Entity: Lifter Result
-| Field              | Type                  |Decription                                           | Example                          |
-|:--                 |:--                    |:--                                                  |:--                               |
-| lifter             | lifter                | Unique ID for each lifters list of equiptmnet       | 1                                |
-| id                 | int                   | Unique ID for each lifters list of equiptmnet       | 1                                |
-| squat              | String                | Name of competition                                 | "Open Nationals"                 |
-| bench              | String                | Name of competition's location                      | "Cork"                           |
-| deadliftr          | String                | Date of competition                                 | "12-12-25"                       |
-| total              | ArrayList<Lifter      | All lifters in the compeition                       | [{"John Murphy}{"Conor Adams"}   |
-| dots               | int                   | Unique ID for each lifters list of equiptmnet       | 1                                |
+| Field              | Type                  |Decription                                                 | Example                          |
+|:--                 |:--                    |:--                                                        |:--                               |
+| lifter             | Lifter                | Each Lifter                                               | Lifter lifter1                   |
+| id                 | int                   | Unique ID for each lifters list of equiptmnet             | 1                                |
+| squat              | double                | Lifter's squat result                                     | 212.5                            |
+| bench              | double                | Lifter's bench result                                     | 110.0                            |
+| deadlift           | double                | Lifter's deadlift result                                  | 245.0                            |
+| total              | double                | Lifter's total result: squat + bench + deadlift           | 577.5                            |
+| dots               | double                | Lifter's dots result: Calulated with bodyweight and total | 452.00                           |
 
 ### :two: 🔍 Lifter Overview
 #### :two:.:one:  :deciduous_tree: Strucutre Tree of Lifter Folder
