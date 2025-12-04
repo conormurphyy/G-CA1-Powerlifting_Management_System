@@ -1,8 +1,6 @@
 package org.powerliftingManagementSystem.Menu;
 
 import org.powerliftingManagementSystem.Lifter.Lifter;
-import org.powerliftingManagementSystem.Lifter.LifterSortingDescending;
-import org.powerliftingManagementSystem.Lifter.LifterSortingAscending;
 import org.powerliftingManagementSystem.Menu.MenuUtil.MenuUtil;
 
 import java.util.ArrayList;

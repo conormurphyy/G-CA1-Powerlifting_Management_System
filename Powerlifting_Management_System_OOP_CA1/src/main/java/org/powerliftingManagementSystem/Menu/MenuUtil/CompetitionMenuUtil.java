@@ -16,12 +16,16 @@ public class CompetitionMenuUtil {
 
     }
     public static void printCompetitionsTable(ArrayList<Competition> competitions) {
+        System.out.printf("%-10s %-18s %-20s %-12s \n",
+                "ID", "Name", "Location", "Date ");
         for (Competition c : competitions) {
             System.out.printf(
-                    "%-10d %-18s %-18s %-12s \n",
+                    "%-10d %-18s %-20s %-12s \n",
                     c.getId(),
                     c.getName(),
                     c.getLocation(),
-                    c.getDate());}
+                    c.getDate()
+            );
+        }
     }
 }
