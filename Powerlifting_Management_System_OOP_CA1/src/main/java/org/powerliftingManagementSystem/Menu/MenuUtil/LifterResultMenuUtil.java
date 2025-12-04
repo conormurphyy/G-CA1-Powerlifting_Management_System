@@ -74,7 +74,7 @@ public class LifterResultMenuUtil {
 
         for (LifterResult r : results) {
             System.out.printf(
-                    "%-5d %-20s  %-35s  %-6c  %-6.2f %-8s  %-18s  %-15s  %-5d  %-12s %-25s %n",
+                    "%-5d %-20s  %-35s  %-6c  %-6.2f %-8s  %-18s  %-15s  %-5d  %-12s %-25s  %n",
                     r.getLifter().getId(),
                     r.getLifter().getName(),
                     r.getLifter().getClubName(),
@@ -84,7 +84,12 @@ public class LifterResultMenuUtil {
                     r.getLifter().getDateOfBirth(),
                     r.getLifter().getAge(),
                     r.getLifter().getAgeClass(),
+                    r.getSquat(),
+                    r.getBench(),
+                    r.getDeadlift(),
+                    r.getTotal(),
                     r.calculateDots()
+
                     //Arrays.toString(l.getEquipmentUsedType())
             );
         }
