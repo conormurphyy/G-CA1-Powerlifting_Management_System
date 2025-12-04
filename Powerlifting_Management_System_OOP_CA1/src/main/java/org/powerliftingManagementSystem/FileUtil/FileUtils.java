@@ -1,6 +1,7 @@
 package org.powerliftingManagementSystem.FileUtil;
 
 import org.powerliftingManagementSystem.Competition.Competition;
+import org.powerliftingManagementSystem.Equipment.Equipment;
 import org.powerliftingManagementSystem.Lifter.Lifter;
 import org.powerliftingManagementSystem.LifterResult.LifterResult;
 
@@ -11,32 +12,32 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileUtils {
-    public static String[] readLiftersEquipment(String fileName, String delimiter, int lifterID) {
+    public static Equipment readLiftersEquipment(String fileName, String delimiter, int lifterID) throws FileNotFoundException {
         //reads equiptment based on id
-
-        String[] equipment = {};
         try (Scanner scanner = new Scanner(new File(fileName))) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 String[] parts = line.split(delimiter);
 
                 if (Integer.parseInt(parts[0]) == lifterID) {
-                    equipment = new String[]{
-                            parts[0],
+                    return new Equipment(
+                            lifterID,
                             parts[1],
                             parts[2],
                             parts[3],
                             parts[4],
                             parts[5],
                             parts[6],
-                            parts[7]
-                    };
+                            parts[7],
+                            parts[8]
+                    );
+                    }
                 }
             }
-        } catch (FileNotFoundException e) {
+        catch (FileNotFoundException e) {
             System.out.println("File not found");
         }
-        return equipment;
+        return null;
     }
 
     public static ArrayList<Lifter> readLiftersData(String fileName, String delimiter) {
@@ -52,7 +53,7 @@ public class FileUtils {
                 String[] parts = line.split(delimiter);
 
                 int id = Integer.parseInt(parts[0]);
-                String[] equipmentUsed = readLiftersEquipment("lifterEquipment.csv", ",", id);
+                Equipment equipment = readLiftersEquipment("lifterEquipment.csv", ",", id);
                 String name = formatName(parts[1]);
                 String clubName = formatName(parts[2]);
                 char gender = parts[3].charAt(0);
@@ -65,9 +66,10 @@ public class FileUtils {
                 String ageClass = Lifter.findAgeClass(age);
                 String weightClass = Lifter.findWeightClass(bodyweight, gender);
 
-                Lifter lifter = new Lifter(id, name, clubName, gender, bodyweight, dob, isSponsored, age, weightClass, equipmentUsed, ageClass);
+                Lifter lifter = new Lifter(id, name, clubName, gender, bodyweight, dob, isSponsored, age, weightClass, equipment, ageClass);
 
                 lifters.add(lifter);
+
             }
 
         } catch (FileNotFoundException e) {

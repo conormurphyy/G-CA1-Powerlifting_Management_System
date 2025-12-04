@@ -2,6 +2,7 @@ package org.powerliftingManagementSystem;
 
 import org.powerliftingManagementSystem.Competition.Competition;
 import org.powerliftingManagementSystem.Lifter.Lifter;
+import org.powerliftingManagementSystem.Menu.MenuUtil.LifterMenuUtil;
 import org.powerliftingManagementSystem.Menu.MenuUtil.LifterResultMenuUtil;
 import org.powerliftingManagementSystem.Menu.MenuUtil.MenuUtil;
 import org.powerliftingManagementSystem.LifterResult.LifterResult;
@@ -20,13 +21,14 @@ public class Main {
         Competition.assignLiftersToCompetition(lifters, competitions);
 
         ArrayList<LifterResult> lifterResult = readCompetitionResults("lifterResults.csv", ",");
-
         Lifter.assignResultsToLifter(lifterResult, lifters);
 
-        LifterResultMenuUtil.printLiftersInCompResults(lifterResult);
+        //LifterResultMenuUtil.printLiftersInCompResults(lifterResult);
 
-        LifterResultMenuUtil.printTop3Dots(lifterResult);
-        LifterResultMenuUtil.printTop3DeadLift(lifterResult);
+        //LifterResultMenuUtil.printTop3Dots(lifterResult);
+        //LifterResultMenuUtil.printTop3DeadLift(lifterResult);
+
+        LifterMenuUtil.printLiftersEquipment(lifters);
 
     }
 }

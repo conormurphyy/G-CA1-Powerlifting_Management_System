@@ -35,32 +35,31 @@ public class LifterMenuUtil {
             System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
         }
 
-        public static void PrintLiftersEquipment(ArrayList<Lifter> lifters, ArrayList <Equipment> equipments) {
+        public static void printLiftersEquipment(ArrayList<Lifter> lifters) {
             System.out.println("Lifter Equipment Table");
             System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
             System.out.printf(
-                    "%-6s %-20s %-12s %n",
-                    "ID", "Name", "Equipment Used"
+                    "%-6s %-20s %-20s %-25s %-25s %-30s %-30s %-25s %-32s %-25s%n",
+                    "ID", "Name", "Belt", "Singlet","Comp Tee","Wrist Wraps", "Knee Sleeves", "Socks", "Deadlift Socks","Shoes"
             );
             System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
             for (Lifter l : lifters) {
-                for (Equipment e : equipments) {
                 System.out.printf(
-                        "%-6d %-20s  %-35s  %-6c  %-6.2f %-8s  %-18s  %-15s  %-5d  %-12s %n",
+                        "%-6d %-20s %-20s %-25s %-25s %-30s %-30s %-25s %-32s %-25s%n",
                         l.getId(),
                         l.getName(),
-                        e.getBelt(),
-                        e.getSinglet(),
-                        e.getCompTee(),
-                        e.getWristWraps(),
-                        e.getKneeSleeves(),
-                        e.getSocks(),
-                        e.getDeadliftSocks(),
-                        e.getShoes()
+                        l.getEquipment().getBelt(),
+                        l.getEquipment().getSinglet(),
+                        l.getEquipment().getCompTee(),
+                        l.getEquipment().getWristWraps(),
+                        l.getEquipment().getKneeSleeves(),
+                        l.getEquipment().getSocks(),
+                        l.getEquipment().getDeadliftSocks(),
+                        l.getEquipment().getShoes()
 
                         //Arrays.toString(l.getEquipmentUsedType())
                 );
-            }}
+            }
             System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
         }

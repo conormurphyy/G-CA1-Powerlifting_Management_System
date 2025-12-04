@@ -1,5 +1,6 @@
 package org.powerliftingManagementSystem.Lifter;
 
+import org.powerliftingManagementSystem.Equipment.Equipment;
 import org.powerliftingManagementSystem.LifterResult.LifterResult;
 
 import java.time.LocalDate;
@@ -23,9 +24,10 @@ public class Lifter {
     private String ageClass;
     private String[] equipmentUsedType;
     private String weightClass;
+    private Equipment equipment;
     //endregion
 
-    public Lifter(int id, String name, String clubName, char gender, double bodyweight, LocalDate dateOfBirth, boolean isSponsored, int age, String ageClass, String[] equipmentUsedType, String weightClass) {
+    public Lifter(int id, String name, String clubName, char gender, double bodyweight, LocalDate dateOfBirth, boolean isSponsored, int age, String ageClass, Equipment equipment, String weightClass) {
         this.id = id;
         this.name = name;
         this.clubName = clubName;
@@ -35,7 +37,7 @@ public class Lifter {
         this.isSponsored = isSponsored;
         this.age = age;
         this.ageClass = ageClass;
-        this.equipmentUsedType = equipmentUsedType;
+        this.equipment = equipment;
         this.weightClass = weightClass;
     }
 
@@ -84,6 +86,10 @@ public class Lifter {
         return equipmentUsedType;
     }
 
+    public Equipment getEquipment() {
+        return equipment;
+    }
+
     //#endregion
     //#region Setters
     public void setId(int id) {
@@ -128,6 +134,10 @@ public class Lifter {
 
     public void setEquipmentUsedType(String[] equipmentUsedType) {
         this.equipmentUsedType = equipmentUsedType;
+    }
+
+    public void setEquipment(Equipment equipment) {
+        this.equipment = equipment;
     }
 
     //#endregion
