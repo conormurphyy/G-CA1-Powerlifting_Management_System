@@ -1,6 +1,6 @@
-package org.powerliftingManagementSystem.Equiptment;
+package org.powerliftingManagementSystem.Equipment;
 
-public enum EquiptmentType {
+public enum EquipmentType {
     belt,
     singlet,
     compTee,

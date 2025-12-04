@@ -1,4 +1,4 @@
-package org.powerliftingManagementSystem.Equiptment;
+package org.powerliftingManagementSystem.Equipment;
 
 public class Equipment {
     //#region Fields

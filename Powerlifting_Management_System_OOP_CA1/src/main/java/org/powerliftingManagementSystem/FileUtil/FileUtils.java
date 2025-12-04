@@ -1,7 +1,6 @@
 package org.powerliftingManagementSystem.FileUtil;
 
 import org.powerliftingManagementSystem.Competition.Competition;
-import org.powerliftingManagementSystem.Equiptment.Equipment;
 import org.powerliftingManagementSystem.Lifter.Lifter;
 import org.powerliftingManagementSystem.LifterResult.LifterResult;
 

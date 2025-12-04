@@ -1,5 +1,5 @@
 package org.powerliftingManagementSystem.Menu.MenuUtil;
 
-public class EquiptmentMenuUtil {
+public class EquipmentMenuUtil {
 
 }
