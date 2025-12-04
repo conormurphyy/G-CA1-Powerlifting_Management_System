@@ -34,6 +34,14 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 | deadliftSocks      | String    | Lifter's deadlift socks                             | "SBD Deadlift Socks"                          |
 | shoes              | String    | Lifter's shoes                                      | "Notorious Lift"                              |
 
+## :three: 🥇 Entity: Competition
+| Field              | Type                  |Decription                                           | Example                          |
+|:--                 |:--                    |:--                                                  |:--                               |
+| id                 | int                   | Unique ID for each lifters list of equiptmnet       | 1                                |
+| name               | String                | Name of competition                                 | "Open Nationals"                 |
+| location           | String                | Name of competition's location                      | "Cork"                           |
+| date               | String                | Date of competition                                 | "12-12-25"                       |
+| lifters            | ArrayList<Lifter      | All lifters in the compeition                       | [{"John Murphy}{"Conor Adams"}   |
 
 
 ### :two: 🔍 Lifter Overview
