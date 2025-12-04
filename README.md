@@ -57,19 +57,45 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 ### :two: 🔍 Lifter Overview
 #### :two:.:one:  :deciduous_tree: Strucutre Tree of Lifter Folder
 ```
-│
-└───src
-    │   Competition.java
-    │   CompetitionResult.java
-    │   Equipment.java
-    │   Main.java
-    │   Menu.java
-    │
-    └───Lifter
-            FileUtilsLifter.java
-            Lifter.java
-            LifterSortingFiltering.java
-            LifterTest.java
+\-powerliftingManagementSystem
+             |   Main.java
+             |
+             +---Competition
+             |       Competition.java
+             |       CompetitionSort.java
+             |
+             +---Equipment
+             |       Equipment.java
+             |       EquipmentType.java
+             |
+             +---FileUtil
+             |       FileUtils.java
+             |
+             +---Leaderboard
+             |       Leaderboard.java
+             |
+             +---Lifter
+             |       Lifter.java
+             |       LifterSort.java
+             |
+             +---LifterResult
+             |       LifterResult.java
+             |       LifterResultSort.java
+             |
+             \---Menu
+                 |   CompetitionMenu.java
+                 |   LeaderboardMenu.java
+                 |   LifterMenu.java
+                 |   LifterResultMenu.java
+                 |   MainMenu.java
+                 |
+                 \---MenuUtil
+                         CompetitionMenuUtil.java
+                         LifterMenuUtil.java
+                         LifterResultMenuUtil.java
+                         MainMenuUtil.java
+                         MenuUtil.java
+
 ```
 #### :two:.:two:: 📌 Purpose of this Class
 ---
