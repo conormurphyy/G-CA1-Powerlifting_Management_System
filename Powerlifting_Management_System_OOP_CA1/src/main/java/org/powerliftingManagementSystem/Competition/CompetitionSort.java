@@ -26,7 +26,7 @@ public enum CompetitionSort implements Comparator<Competition> {
     sortIdDescending {
         @Override
         public int compare(Competition a, Competition b) {
-            return Integer.compare(a.getId(), b.getId());
+            return Integer.compare(b.getId(), a.getId());
         }
     },
     sortNameDescending {
@@ -38,7 +38,7 @@ public enum CompetitionSort implements Comparator<Competition> {
     sortDateDescending {
         @Override
         public int compare(Competition a, Competition b) {
-            return a.getDate().compareTo(b.getDate());
+            return b.getDate().compareTo(a.getDate());
         }
     }
 }

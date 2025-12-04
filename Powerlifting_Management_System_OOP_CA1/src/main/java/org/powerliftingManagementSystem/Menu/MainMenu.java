@@ -59,7 +59,7 @@ public class MainMenu {
                                 scanner.nextLine();
                                 break;
                             }
-                            lifters.sort(new LifterSortingAscending(sortChoiceIn));
+                            //lifters.sort(new LifterSortingAscending(sortChoiceIn));
                             printLifterTable(lifters);
                             break;
                         case 2:
@@ -74,7 +74,7 @@ public class MainMenu {
                                 scanner.nextLine();
                                 break;
                             }
-                            lifters.sort(new LifterSortingDescending(sortChoiceIn2));
+                           // lifters.sort(new LifterSortingDescending(sortChoiceIn2));
                             printLifterTable(lifters);
                             break;
 
