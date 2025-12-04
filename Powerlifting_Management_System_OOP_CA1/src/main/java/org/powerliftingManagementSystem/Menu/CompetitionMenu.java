@@ -16,6 +16,7 @@ public class CompetitionMenu {
     public static void run() throws FileNotFoundException {
         new CompetitionMenu().start();
     }
+
     private void start() throws FileNotFoundException {
         ArrayList<Competition> competitions = readCompetitionsData("competitionsampledata.csv", ",");
         CompetitionMenuUtil.printCompetitionsTable(competitions);
@@ -29,31 +30,28 @@ public class CompetitionMenu {
 
                 switch (input) {
                     case 1:
-                        boolean ascDescMenu=true;
+                        boolean ascDescMenu = true;
                         while (ascDescMenu) {
-                            try{
+                            try {
                                 MenuUtil.sortingMenu1();
                                 int inputName = keyboard.nextInt();
-                                handleID(competitions,inputName);
-                            }
-                            catch (Exception e){
+                                handleID(competitions, inputName);
+                            } catch (Exception e) {
                                 System.out.println("Invalid Input");
                                 keyboard.nextLine();
                             }
 
                         }
-                    break;
+                        break;
                     case 2:
                         boolean ascDescMenu2 = true;
                         while (ascDescMenu2) {
-                            try{
+                            try {
                                 MenuUtil.sortingMenu1();
                                 int inputName = keyboard.nextInt();
-                                handleName(competitions,inputName);
+                                handleName(competitions, inputName);
                                 break;
-                            }
-                            catch (Exception e)
-                            {
+                            } catch (Exception e) {
                                 System.out.println("Invalid Input");
                                 keyboard.nextLine();
                             }
@@ -63,10 +61,10 @@ public class CompetitionMenu {
                     case 3:
                         boolean ascDescMenu3 = true;
                         while (ascDescMenu3) {
-                            try{
+                            try {
                                 MenuUtil.sortingMenu1();
                                 int inputName = keyboard.nextInt();
-                                handleDate(competitions,inputName);
+                                handleDate(competitions, inputName);
                                 break;
                             } catch (Exception e) {
                                 System.out.println("Invalid Input");
@@ -79,22 +77,18 @@ public class CompetitionMenu {
                         System.out.println("Exit");
                         isRunning = false;
 
-                        default:
-                            System.out.println("Invalid Input");
+                    default:
+                        System.out.println("Invalid Input");
                 }
-
-                break;
-
-            }
-            catch (Exception e) {
+            } catch (Exception e) {
                 System.out.println("Error");
                 keyboard.nextLine();
             }
         }
     }
-    private void handleID(ArrayList<Competition> competitions, int ascDesc)
-    {
-        switch(ascDesc) {
+
+    private void handleID(ArrayList<Competition> competitions, int ascDesc) {
+        switch (ascDesc) {
             case 1:
                 competitions.sort(CompetitionSort.sortIdAscending);
                 CompetitionMenuUtil.printCompetitionsTable(competitions);
@@ -105,22 +99,22 @@ public class CompetitionMenu {
                 break;
         }
     }
-    private void handleName(ArrayList <Competition> competitions, int ascDesc)
-    {
-        switch(ascDesc) {
+
+    private void handleName(ArrayList<Competition> competitions, int ascDesc) {
+        switch (ascDesc) {
             case 1:
-            competitions.sort(CompetitionSort.sortNameAscending);
-            CompetitionMenuUtil.printCompetitionsTable(competitions);
-            break;
+                competitions.sort(CompetitionSort.sortNameAscending);
+                CompetitionMenuUtil.printCompetitionsTable(competitions);
+                break;
             case 2:
-            competitions.sort(CompetitionSort.sortNameDescending);
-            CompetitionMenuUtil.printCompetitionsTable(competitions);
-            break;
+                competitions.sort(CompetitionSort.sortNameDescending);
+                CompetitionMenuUtil.printCompetitionsTable(competitions);
+                break;
         }
     }
-    private void handleDate(ArrayList<Competition> competitions, int ascDesc)
-    {
-        switch(ascDesc) {
+
+    private void handleDate(ArrayList<Competition> competitions, int ascDesc) {
+        switch (ascDesc) {
             case 1:
                 competitions.sort(CompetitionSort.sortDateAscending);
                 CompetitionMenuUtil.printCompetitionsTable(competitions);
