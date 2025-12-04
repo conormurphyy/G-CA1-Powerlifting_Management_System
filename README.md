@@ -3,7 +3,7 @@
 <img src="images/icon.png" alt="Icon" title="Icon" width="4000" height="4000">
 
 # :muscle: G-CA1 OOP: Conor Murphy & Conor McCracken
-## Stage 1 :
+## Entities :
 ### :one: 🏋️‍♂️ Entity: Lifter
 The "Lifter" entity represents each lifter in a powerlifting competition. This class diagram describes the lifters personal details, physical details and compeition category.
 
@@ -21,6 +21,38 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 | equiptmentUsedType | String [] | What equiptment type/brand used | "SBD Knee Sleeves","SBD Belt","A7 Wrist Wraps |
 | weightClass        | String    | Based of gender and weight      | "U-74KG Men"                                  |
 ---
+### :two: :gear: Entity: Equiptment
+| Field              | Type      |Decription                                           | Example                                       |
+|:--                 |:--        |:--                                                  |:--                                            |
+| id                 | int       | Unique ID for each lifters list of equiptmnet       | 12                                            |
+| belt               | String    | Lifter's belt                                       | "A7 Belt"                                     |
+| singlet            | String    | Lifter's singlet                                    | "SBD Singlet"                                 |
+| compTee            | String    | Lifter's comp t-shirt                               | "Strength Shop T-Shirt"                       |
+| wristWraps         | String    | Lifter's wrist wraps                                | "SBD Wrist Wraps                              |
+| kneeSleeves        | String    | Lifter's knee sleeves                               | "A7 Knee Sleeves"                             |
+| socks              | String    | Lifter's socks                                      | "SBD Socks"                                   |
+| deadliftSocks      | String    | Lifter's deadlift socks                             | "SBD Deadlift Socks"                          |
+| shoes              | String    | Lifter's shoes                                      | "Notorious Lift"                              |
+
+## :three: 🥇 Entity: Competition
+| Field              | Type                  |Decription                                           | Example                          |
+|:--                 |:--                    |:--                                                  |:--                               |
+| id                 | int                   | Unique ID for each lifters list of equiptmnet       | 1                                |
+| name               | String                | Name of competition                                 | "Open Nationals"                 |
+| location           | String                | Name of competition's location                      | "Cork"                           |
+| date               | String                | Date of competition                                 | "12-12-25"                       |
+| lifters            | ArrayList<Lifter      | All lifters in the compeition                       | [{"John Murphy}{"Conor Adams"}   |
+
+## :four: 🏋️ Entity: Lifter Result
+| Field              | Type                  |Decription                                           | Example                          |
+|:--                 |:--                    |:--                                                  |:--                               |
+| lifter             | lifter                   | Unique ID for each lifters list of equiptmnet       | 1                                |
+| id                 | int                   | Unique ID for each lifters list of equiptmnet       | 1                                |
+| squat               | String                | Name of competition                                 | "Open Nationals"                 |
+| bench          | String                | Name of competition's location                      | "Cork"                           |
+| deadliftr              | String                | Date of competition                                 | "12-12-25"                       |
+| total            | ArrayList<Lifter      | All lifters in the compeition                       | [{"John Murphy}{"Conor Adams"}   |
+| dots                 | int                   | Unique ID for each lifters list of equiptmnet       | 1                                |
 
 ### :two: 🔍 Lifter Overview
 #### :two:.:one:  :deciduous_tree: Strucutre Tree of Lifter Folder
