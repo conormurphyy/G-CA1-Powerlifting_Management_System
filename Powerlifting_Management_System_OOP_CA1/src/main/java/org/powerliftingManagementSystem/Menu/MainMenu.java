@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 import static org.powerliftingManagementSystem.Menu.MenuUtil.MenuUtil.printLifterTable;
 
-public class Menu {
+public class MainMenu {
 
     public static void menuOptions(ArrayList<Lifter> lifters) {
         Scanner scanner = new Scanner(System.in);
