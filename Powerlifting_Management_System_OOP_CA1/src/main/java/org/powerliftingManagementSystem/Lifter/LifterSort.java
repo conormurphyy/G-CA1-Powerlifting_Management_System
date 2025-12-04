@@ -13,7 +13,7 @@ public enum LifterSort implements Comparator<Lifter> {
     sortClubNameAscending() {
         @Override
         public int compare(Lifter a, Lifter b) {
-            return a.getName().compareTo(b.getName());
+            return a.getClubName().compareTo(b.getClubName());
         }
     },
     sortAgeAscending() {
@@ -32,25 +32,25 @@ public enum LifterSort implements Comparator<Lifter> {
     sortNameDescending() {
         @Override
         public int compare(Lifter a, Lifter b) {
-            return a.getName().compareTo(b.getName());
+            return b.getName().compareTo(a.getName());
         }
     },
     sortClubNameDescending() {
         @Override
         public int compare(Lifter a, Lifter b) {
-            return a.getName().compareTo(b.getName());
+            return b.getClubName().compareTo(a.getClubName());
         }
     },
     sortAgeDescending() {
         @Override
         public int compare(Lifter a, Lifter b) {
-            return Integer.compare(a.getAge(), b.getAge());
+            return Integer.compare(b.getAge(), a.getAge());
         }
     },
     sortBodyweightDescending() {
         @Override
         public int compare(Lifter a, Lifter b) {
-            return Double.compare(a.getBodyweight(), b.getBodyweight());
+            return Double.compare(b.getBodyweight(), a.getBodyweight());
         }
     }
 }
