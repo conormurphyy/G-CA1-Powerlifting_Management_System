@@ -35,13 +35,13 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 | shoes              | String    | Lifter's shoes                                      | "Notorious Lift"                              |
 
 ## :three: 🥇 Entity: Competition
-| Field              | Type                  |Decription                                           | Example                          |
-|:--                 |:--                    |:--                                                  |:--                               |
-| id                 | int                   | Unique ID for each lifters list of equiptmnet       | 1                                |
-| name               | String                | Name of competition                                 | "Open Nationals"                 |
-| location           | String                | Name of competition's location                      | "Cork"                           |
-| date               | String                | Date of competition                                 | "12-12-25"                       |
-| lifters            | ArrayList<Lifter      | All lifters in the compeition                       | [{"John Murphy}{"Conor Adams"}   |
+| Field     | Type                 |Decription                                           | Example                          |
+|:----------|:---------------------|:--                                                  |:--                               |
+| id        | int                  | Unique ID for each lifters list of equiptmnet       | 1                                |
+| name      | String               | Name of competition                                 | "Open Nationals"                 |
+| location  | String               | Name of competition's location                      | "Cork"                           |
+| date      | String               | Date of competition                                 | "12-12-25"                       |
+| lifters   | ArrayList<Lifter     | All lifters in the compeition                       | [{"John Murphy}{"Conor Adams"}   |
 
 ## :four: 🏋️ Entity: Lifter Result
 | Field              | Type                  |Decription                                           | Example                          |

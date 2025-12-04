@@ -11,6 +11,7 @@ public class LifterResult {
     private double deadlift;
     private double total;
     private double dots;
+    private int placement;
     //endregion
     //#region Constructor
     public LifterResult(Lifter lifter, double squat, double bench, double deadlift, double total, double dots) {
@@ -54,6 +55,8 @@ public class LifterResult {
     public double getTotal() {return total;}
 
     public double getDots() {return dots;}
+
+    public int getPlacement() {return placement;}
     //#endregion
     //#region Setters
     public void setLifter(Lifter lifter) {
@@ -72,6 +75,10 @@ public class LifterResult {
 
     public void setDeadlift(double deadlift) {
         this.deadlift = deadlift;
+    }
+
+    public void setPlacement(int placement) {
+        this.placement = placement;
     }
     //#endregion
 
@@ -102,4 +109,6 @@ public class LifterResult {
         return dots;
 
     }
+
+
 }
