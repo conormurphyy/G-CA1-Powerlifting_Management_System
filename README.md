@@ -43,6 +43,16 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 | date               | String                | Date of competition                                 | "12-12-25"                       |
 | lifters            | ArrayList<Lifter      | All lifters in the compeition                       | [{"John Murphy}{"Conor Adams"}   |
 
+## :four: 🏋️ Entity: Lifter Result
+| Field              | Type                  |Decription                                           | Example                          |
+|:--                 |:--                    |:--                                                  |:--                               |
+| lifter             | lifter                   | Unique ID for each lifters list of equiptmnet       | 1                                |
+| id                 | int                   | Unique ID for each lifters list of equiptmnet       | 1                                |
+| squat               | String                | Name of competition                                 | "Open Nationals"                 |
+| bench          | String                | Name of competition's location                      | "Cork"                           |
+| deadliftr              | String                | Date of competition                                 | "12-12-25"                       |
+| total            | ArrayList<Lifter      | All lifters in the compeition                       | [{"John Murphy}{"Conor Adams"}   |
+| dots                 | int                   | Unique ID for each lifters list of equiptmnet       | 1                                |
 
 ### :two: 🔍 Lifter Overview
 #### :two:.:one:  :deciduous_tree: Strucutre Tree of Lifter Folder
