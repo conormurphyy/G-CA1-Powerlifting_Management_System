@@ -65,32 +65,26 @@ public class LifterResultMenuUtil {
         System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
         System.out.printf(
-                "%-6s %-20s  %-35s  %-6s  %-6s %-8s  %-13s  %-8s  %-5s  %-12s %n",
-                "ID", "Name", "Club Name", "Gender", "Body Weight", "",
-                "Weight Class", "Date of Birth", "Age", "Age Class"
+                "%-4s %-30s %-35s %-7s %-20s %-15s %10s %10s %10s %10s %10s%n",
+                "ID", "Name", "Club", "Gender", "Weight Class", "Age Class", "Squat", "Bench", "Deadlift", "Total", "DOTS"
         );
 
-        System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------------------------------------------------------------------------------");
 
         for (LifterResult r : results) {
             System.out.printf(
-                    "%-5d %-20s  %-35s  %-6c  %-6.2f %-8s  %-18s  %-15s  %-5d  %-12s %-25s  %n",
+                    "%-4d %-30s %-35s %-7c %-20s %-15s %10.1f %10.1f %10.1f %10.1f %10.2f%n",
                     r.getLifter().getId(),
                     r.getLifter().getName(),
                     r.getLifter().getClubName(),
                     r.getLifter().getGender(),
-                    r.getLifter().getBodyweight(), "KG",
                     r.getLifter().getWeightClass(),
-                    r.getLifter().getDateOfBirth(),
-                    r.getLifter().getAge(),
                     r.getLifter().getAgeClass(),
                     r.getSquat(),
                     r.getBench(),
                     r.getDeadlift(),
                     r.getTotal(),
                     r.calculateDots()
-
-                    //Arrays.toString(l.getEquipmentUsedType())
             );
         }
 
