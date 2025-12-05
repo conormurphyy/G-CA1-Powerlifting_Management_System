@@ -7,6 +7,7 @@ import org.powerliftingManagementSystem.LifterResult.LifterResult;
 import java.util.ArrayList;
 
 public class LifterMenuUtil {
+    //#region Lifter Tables
     public static void printLifters(ArrayList<Lifter> lifters) {
 
             System.out.println("Lifter Table");
@@ -63,4 +64,21 @@ public class LifterMenuUtil {
             System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
         }
+    //#endregion
+
+    public static void lifterMenu() {
+        System.out.println("""
+        ++=========================================================================++
+        ||                               LIFTER MENU                               ||
+        ++-------------------------------------------------------------------------++
+        ||                      Select one of the following options:               ||
+        ++-------------------------------------+-----------------------------------++
+        ||              Name: "1"              |          Club Name: "2"           ||
+        ++-------------------------------------+-----------------------------------++
+        ||           Bodyweight: "3"           |             Age: "4"              ||
+        ++-------------------------------------------------------------------------++
+        ||                             Exit The Program: "0"                       ||
+        ++=========================================================================++
+        """);
+    }
 }

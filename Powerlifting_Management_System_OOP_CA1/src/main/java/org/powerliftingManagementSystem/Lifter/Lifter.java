@@ -41,6 +41,14 @@ public class Lifter {
         this.weightClass = weightClass;
     }
 
+    //FOR JUNIT TESTING
+    public Lifter(int id, String name, char gender, double bodyweight) {
+        this.id = id;
+        this.name = name;
+        this.gender = gender;
+        this.bodyweight = bodyweight;
+    }
+
     //#region Getters
     public int getId() {
         return id;

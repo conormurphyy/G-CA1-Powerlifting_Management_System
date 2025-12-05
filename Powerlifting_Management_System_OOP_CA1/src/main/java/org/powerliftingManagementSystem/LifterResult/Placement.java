@@ -67,4 +67,25 @@ public class Placement {
             }
         }
     }
+
+    public static void leaderBoardDots(ArrayList<Competition> competitions, ArrayList<LifterResult> results) {
+            results.sort(LifterResultSort.byDotsDesc);
+
+            System.out.println("");
+            System.out.printf(
+                    "%-6s %-20s %-20s %-6s %-10s %-10s%n",
+                    "ID", "Name", "Club", "Gender", "Weight", "DOTS"
+            );
+        for (LifterResult res : results) {
+            System.out.printf(
+                    "%-6d %-20s %-20s %-6c %-10.2f %-10.2f%n",
+                    res.getLifter().getId(),
+                    res.getLifter().getName(),
+                    res.getLifter().getClubName(),
+                    res.getLifter().getGender(),
+                    res.getLifter().getBodyweight(),
+                    res.getDots()
+            );
+        }
+    }
 }

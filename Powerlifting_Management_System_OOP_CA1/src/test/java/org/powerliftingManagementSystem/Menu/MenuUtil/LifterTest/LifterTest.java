@@ -16,7 +16,7 @@ class LifterTest {
     void findAge_validAge() {
         LocalDate dateOfBirth = LocalDate.of(2006, 5, 1); // //https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html
         int expectedAge = Period.between(dateOfBirth, LocalDate.now()).getYears(); // //https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html
-        Assertions.assertEquals(expectedAge, Lifter.calculateAge(dateOfBirth));
+        assertEquals(expectedAge, Lifter.calculateAge(dateOfBirth));
     }
     //#endregion
 

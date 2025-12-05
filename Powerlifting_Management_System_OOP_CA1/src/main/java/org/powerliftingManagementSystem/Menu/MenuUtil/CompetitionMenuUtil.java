@@ -5,6 +5,7 @@ import org.powerliftingManagementSystem.Competition.Competition;
 import java.util.ArrayList;
 
 public class CompetitionMenuUtil {
+    //#region Competition Tables
     public static void printLiftersInCompTable(ArrayList<Competition> competitions, int selection) {
         for (Competition comp : competitions) {
             if (comp.getId() == selection) {
@@ -28,4 +29,21 @@ public class CompetitionMenuUtil {
             );
         }
     }
+    //#endregion
+
+    public static void competitionsMenu() {
+        System.out.println("""
+        ++=========================================================================++
+        ||                             COMPETITION MENU                            ||
+        ++-------------------------------------------------------------------------++
+        ||                      Select one of the following options:               ||
+        ++-------------------------------------+-----------------------------------++
+        ||           Competition ID: "1"       |       Competition Name: "2"       ||
+        ++-------------------------------------+-----------------------------------++
+        ||           Competition Date: "3"     |     Exit Competition Menu: "4"    ||
+        ++=========================================================================++
+       
+        """);
+    }
+
 }

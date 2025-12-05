@@ -6,6 +6,7 @@ import org.powerliftingManagementSystem.LifterResult.LifterResultSort;
 import java.util.ArrayList;
 
 public class LifterResultMenuUtil {
+    //#region Lifter Result Tables
     public static void printTop3DeadLift(ArrayList<LifterResult> results) {
 
         results.sort(LifterResultSort.byDeadliftDesc);
@@ -89,5 +90,22 @@ public class LifterResultMenuUtil {
         }
 
         System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+    }
+    //#endregion
+
+    public static void lifterResultMenu() {
+        System.out.println("""
+        ++=========================================================================++
+        ||                            LIFTER RESULT MENU                           ||
+        ++-------------------------------------------------------------------------++
+        ||                      Select one of the following options:               ||
+        ++-------------------------------------+-----------------------------------++
+        ||            Dots Score: "1"          |             Total: "2"            ||
+        ++-------------------------------------+-----------------------------------++
+        ||               Squat: "3"            |             Bench: "4"            ||
+        ++-------------------------------------------------------------------------++
+        ||             Deadlift: "5"           |    Exit Lifter Result Menu: "0"   ||
+        ++=========================================================================++
+        """);
     }
 }

@@ -27,7 +27,8 @@ public class LifterResultMenu {
         boolean isRunning = true;
         while (isRunning) {
             try{
-                System.out.println("Enter Option");
+                LifterResultMenuUtil.lifterResultMenu();
+                System.out.print("Enter Option: ");
                 int input  = Keyboard.nextInt();
 
                 switch (input)
@@ -36,7 +37,7 @@ public class LifterResultMenu {
                         boolean ascDescMenu = true;
                         while (ascDescMenu) {
                             try{
-                                MenuUtil.sortingMenu1();
+                                MenuUtil.sortingAscDec();
                                 int inputName = Keyboard.nextInt();
                                 handleDots(lifterResult,inputName);
                                 break;
@@ -51,7 +52,7 @@ public class LifterResultMenu {
                         boolean ascDescMenu2 = true;
                         while (ascDescMenu2) {
                             try{
-                                MenuUtil.sortingMenu1();
+                                MenuUtil.sortingAscDec();
                                 int inputName = Keyboard.nextInt();
                                 handleTotal(lifterResult,inputName);
                                 break;
@@ -67,7 +68,7 @@ public class LifterResultMenu {
                         boolean ascDescMenu3 = true;
                         while (ascDescMenu3) {
                             try{
-                                MenuUtil.sortingMenu1();
+                                MenuUtil.sortingAscDec();
                                 int inputName = Keyboard.nextInt();
                                 handleSquat(lifterResult,inputName);
                                 break;
@@ -82,7 +83,7 @@ public class LifterResultMenu {
                         boolean ascDescMenu4 = true;
                         while (ascDescMenu4) {
                             try{
-                                MenuUtil.sortingMenu1();
+                                MenuUtil.sortingAscDec();
                                 int inputName = Keyboard.nextInt();
                                 handleBench(lifterResult,inputName);
                                 break;
@@ -97,7 +98,7 @@ public class LifterResultMenu {
                         boolean ascDescMenu5 = true;
                         while (ascDescMenu5) {
                             try{
-                                MenuUtil.sortingMenu1();
+                                MenuUtil.sortingAscDec();
                                 int inputName = Keyboard.nextInt();
                                 handleDeadlift(lifterResult,inputName);
                                 break;

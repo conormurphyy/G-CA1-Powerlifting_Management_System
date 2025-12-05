@@ -25,7 +25,8 @@ public class CompetitionMenu {
         boolean isRunning = true;
         while (isRunning) {
             try {
-                System.out.println("Enter Option");
+                CompetitionMenuUtil.competitionsMenu();
+                System.out.print("Enter Option: ");
                 int input = keyboard.nextInt();
 
                 switch (input) {
@@ -33,7 +34,7 @@ public class CompetitionMenu {
                         boolean ascDescMenu = true;
                         while (ascDescMenu) {
                             try {
-                                MenuUtil.sortingMenu1();
+                                MenuUtil.sortingAscDec();
                                 int inputName = keyboard.nextInt();
                                 handleID(competitions, inputName);
                             } catch (Exception e) {
@@ -47,7 +48,7 @@ public class CompetitionMenu {
                         boolean ascDescMenu2 = true;
                         while (ascDescMenu2) {
                             try {
-                                MenuUtil.sortingMenu1();
+                                MenuUtil.sortingAscDec();
                                 int inputName = keyboard.nextInt();
                                 handleName(competitions, inputName);
                                 break;
@@ -62,7 +63,7 @@ public class CompetitionMenu {
                         boolean ascDescMenu3 = true;
                         while (ascDescMenu3) {
                             try {
-                                MenuUtil.sortingMenu1();
+                                MenuUtil.sortingAscDec();
                                 int inputName = keyboard.nextInt();
                                 handleDate(competitions, inputName);
                                 break;

@@ -12,11 +12,7 @@ import static org.powerliftingManagementSystem.FileUtil.FileUtils.readLiftersDat
 
 public class LifterMenu {
     public static void run() {
-
-        System.out.println("Menu");
         new LifterMenu().start();
-        System.out.println("end");
-
     }
 
     public void start() {
@@ -27,6 +23,7 @@ public class LifterMenu {
         while (isRunning) {
             //Call Options here
             try {
+                LifterMenuUtil.lifterMenu();
                 System.out.print("Enter Option: ");
                 int input = keyboard.nextInt();
 
@@ -36,7 +33,7 @@ public class LifterMenu {
                         boolean ascDecMenu = true;
                         while (ascDecMenu) {
                             try {
-                                MenuUtil.sortingMenu1();
+                                MenuUtil.sortingAscDec();
                                 int inputName = keyboard.nextInt();
                                 handleName(lifters, inputName);
                                 break;
@@ -52,7 +49,7 @@ public class LifterMenu {
                         boolean ascDecMenu2 = true;
                         while (ascDecMenu2) {
                             try {
-                                MenuUtil.sortingMenu1();
+                                MenuUtil.sortingAscDec();
                                 int inputClubName = keyboard.nextInt();
                                 handleClubName(lifters, inputClubName);
                                 break;
@@ -67,7 +64,7 @@ public class LifterMenu {
                         boolean ascDecMenu3 = true;
                         while (ascDecMenu3) {
                             try {
-                                MenuUtil.sortingMenu1();
+                                MenuUtil.sortingAscDec();
                                 int inputAge = keyboard.nextInt();
                                 handleAge(lifters, inputAge);
                                 break;
@@ -81,7 +78,7 @@ public class LifterMenu {
                         boolean ascDecMenu4 = true;
                         while (ascDecMenu4) {
                             try {
-                                MenuUtil.sortingMenu1();
+                                MenuUtil.sortingAscDec();
                                 int inputBodyweight = keyboard.nextInt();
                                 handleBodyweight(lifters, inputBodyweight);
                                 break;

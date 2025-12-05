@@ -33,6 +33,9 @@ public class MainMenu {
                     case 3:
                         LifterResultMenu.run();
                         break;
+                    case 4:
+                        //View Leaderboard
+                        break;
                     case 0:
                         //exit
                         running = false;
