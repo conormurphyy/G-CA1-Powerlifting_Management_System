@@ -2,6 +2,7 @@ package org.powerliftingManagementSystem.Menu;
 
 import org.powerliftingManagementSystem.Lifter.Lifter;
 import org.powerliftingManagementSystem.Lifter.LifterSort;
+import org.powerliftingManagementSystem.Menu.MenuUtil.ErrorMessage;
 import org.powerliftingManagementSystem.Menu.MenuUtil.LifterMenuUtil;
 import org.powerliftingManagementSystem.Menu.MenuUtil.MenuUtil;
 
@@ -39,7 +40,7 @@ public class LifterMenu {
                                 break;
                             }
                             catch (Exception e) {
-                                System.out.println("Invalid Option");
+                                ErrorMessage.ascDesc();
                                 keyboard.nextLine();
                             }
                         }
@@ -55,7 +56,7 @@ public class LifterMenu {
                                 break;
                             }
                             catch (Exception e) {
-                                System.out.println("Invalid Option");
+                                ErrorMessage.ascDesc();
                                 keyboard.nextLine();
                             }
                         }
@@ -70,8 +71,9 @@ public class LifterMenu {
                                 break;
                             }
                             catch (Exception e) {
-                            System.out.println("Invalid Option");}
-                            keyboard.nextLine();
+                                ErrorMessage.ascDesc();
+                                keyboard.nextLine();
+                            }
                         }
                         break;
                     case 4:
@@ -84,7 +86,7 @@ public class LifterMenu {
                                 break;
                             }
                             catch (Exception e) {
-                                System.out.println("Invalid Option");
+                                ErrorMessage.ascDesc();
                                 keyboard.nextLine();
                             }
                         }
@@ -93,7 +95,7 @@ public class LifterMenu {
                         System.out.println("Exit");
                         isRunning = false;
                     default:
-                        System.out.println("Invalid Option");
+                        ErrorMessage.invalidOptionLifterMenu();
                 }
             }
             catch (Exception e) {
@@ -114,6 +116,8 @@ public class LifterMenu {
                 lifters.sort(LifterSort.sortNameDescending);
                 LifterMenuUtil.printLifters(lifters);
                 break;
+            case 0:
+
         }
     }
 

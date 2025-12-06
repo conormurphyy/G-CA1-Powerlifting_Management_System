@@ -2,6 +2,7 @@ package org.powerliftingManagementSystem.Menu;
 
 import org.powerliftingManagementSystem.Lifter.Lifter;
 import org.powerliftingManagementSystem.LifterResult.Placement;
+import org.powerliftingManagementSystem.Menu.MenuUtil.ErrorMessage;
 import org.powerliftingManagementSystem.Menu.MenuUtil.MainMenuUtil;
 import org.powerliftingManagementSystem.Menu.MenuUtil.MenuUtil;
 
@@ -39,12 +40,13 @@ public class MainMenu {
                     case 0:
                         //exit
                         running = false;
-                    default: //invalid input
-
+                    default:
+                        ErrorMessage.invalidOptionLifterMenu();
                 }
             }
             catch (InputMismatchException e) {
-
+                System.out.println("Invalid input. Enter an integer");
+                keyboard.nextLine();
             }
             catch (FileNotFoundException e) {
                 throw new RuntimeException(e);
