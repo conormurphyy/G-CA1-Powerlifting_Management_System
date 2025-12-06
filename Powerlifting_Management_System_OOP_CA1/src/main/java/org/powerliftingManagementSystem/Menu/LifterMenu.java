@@ -115,7 +115,7 @@ public class LifterMenu {
                         handleNameSearch(lifters);
                         break;
                     case 6:
-                        //search by club
+                        handleClubNameSearch(lifters);
                     case 0:
                         MenuUtil.ExitToMainMenu();
                         isRunning = false;
@@ -217,6 +217,25 @@ public class LifterMenu {
             }
         }
         LifterMenuUtil.printLifters(searchedLifter);
+    }
+    private void handleClubNameSearch(ArrayList<Lifter> lifters)
+    {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Enter club name:");
+        String clubName = keyboard.nextLine();
+        ArrayList<Lifter> searchedClub = new ArrayList<>();
+        String iClubName;
+        for (Lifter l : lifters)
+        {
+            iClubName =l.getClubName();
+            iClubName = FileUtils.formatName(iClubName);
+            clubName = FileUtils.formatName(clubName);
+            if (iClubName.equals(clubName))
+            {
+                searchedClub.add(l);
+            }
+        }
+        LifterMenuUtil.printLifters(searchedClub);
     }
 
 }
