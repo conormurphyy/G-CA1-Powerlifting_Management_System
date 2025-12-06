@@ -37,6 +37,7 @@ public class CompetitionMenu {
                                 MenuUtil.sortingAscDec();
                                 int inputName = keyboard.nextInt();
                                 handleID(competitions, inputName);
+                                break;
                             } catch (Exception e) {
                                 System.out.println("Invalid Input");
                                 keyboard.nextLine();
