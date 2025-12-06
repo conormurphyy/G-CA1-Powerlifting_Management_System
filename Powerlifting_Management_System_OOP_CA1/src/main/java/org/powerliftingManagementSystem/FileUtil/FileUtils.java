@@ -66,7 +66,7 @@ public class FileUtils {
                 String ageClass = Lifter.findAgeClass(age);
                 String weightClass = Lifter.findWeightClass(bodyweight, gender);
 
-                Lifter lifter = new Lifter(id, name, clubName, gender, bodyweight, dob, isSponsored, age, weightClass, equipment, ageClass);
+                Lifter lifter = new Lifter(id, name, clubName, gender, bodyweight, dob, isSponsored, age, ageClass, equipment, weightClass);
 
                 lifters.add(lifter);
 
