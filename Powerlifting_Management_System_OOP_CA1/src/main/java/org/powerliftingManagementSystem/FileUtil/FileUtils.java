@@ -143,7 +143,7 @@ public class FileUtils {
         for (String part : parts) {
             finalName += part.substring(0, 1).toUpperCase() + part.substring(1) + " ";
         }
-        return finalName;
+        return finalName.trim();
     }
     /*
     public static ArrayList<Equipment> readEquipmentsData(String filename, String delimiter) throws FileNotFoundException {
