@@ -77,8 +77,13 @@ public class LifterMenu {
                             try {
                                 MenuUtil.sortingAscDec();
                                 int inputAge = keyboard.nextInt();
-                                handleAge(lifters, inputAge);
-                                break;
+                                if (inputAge==1 || inputAge==2 || inputAge==0) {
+                                    handleAge(lifters, inputAge);
+                                    ascDecMenu3 = false;
+                                }
+                                else {
+                                    ErrorMessage.ascDesc();
+                                }
                             }
                             catch (Exception e) {
                                 ErrorMessage.ascDesc();
@@ -92,8 +97,12 @@ public class LifterMenu {
                             try {
                                 MenuUtil.sortingAscDec();
                                 int inputBodyweight = keyboard.nextInt();
-                                handleBodyweight(lifters, inputBodyweight);
-                                break;
+                                if (inputBodyweight==1 || inputBodyweight==2 || inputBodyweight==0) {
+                                    handleBodyweight(lifters, inputBodyweight);
+                                }
+                                else {
+                                    ErrorMessage.ascDesc();
+                                }
                             }
                             catch (Exception e) {
                                 ErrorMessage.ascDesc();

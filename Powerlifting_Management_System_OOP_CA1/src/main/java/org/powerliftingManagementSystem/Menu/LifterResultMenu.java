@@ -3,6 +3,7 @@ package org.powerliftingManagementSystem.Menu;
 import org.powerliftingManagementSystem.Lifter.Lifter;
 import org.powerliftingManagementSystem.LifterResult.LifterResult;
 import org.powerliftingManagementSystem.LifterResult.LifterResultSort;
+import org.powerliftingManagementSystem.Menu.MenuUtil.ErrorMessage;
 import org.powerliftingManagementSystem.Menu.MenuUtil.LifterResultMenuUtil;
 import org.powerliftingManagementSystem.Menu.MenuUtil.MenuUtil;
 
@@ -54,8 +55,13 @@ public class LifterResultMenu {
                             try{
                                 MenuUtil.sortingAscDec();
                                 int inputName = Keyboard.nextInt();
-                                handleTotal(lifterResult,inputName);
-                                break;
+                                if (inputName == 1 || inputName == 2 || inputName == 0) {
+                                    handleTotal(lifterResult,inputName);
+                                    ascDescMenu2 = false;
+                                }
+                                else {
+                                    ErrorMessage.ascDesc();
+                                }
                             }
                             catch (Exception e){
                                 System.out.println("Invalid Option");
@@ -70,8 +76,13 @@ public class LifterResultMenu {
                             try{
                                 MenuUtil.sortingAscDec();
                                 int inputName = Keyboard.nextInt();
-                                handleSquat(lifterResult,inputName);
-                                break;
+                                if (inputName == 1 || inputName == 2 || inputName == 0) {
+                                    handleSquat(lifterResult,inputName);
+                                    ascDescMenu3 = false;
+                                }
+                                else {
+                                    ErrorMessage.ascDesc();
+                                }
                             }
                             catch (Exception e){
                                 System.out.println("Invalid Option");
@@ -85,8 +96,13 @@ public class LifterResultMenu {
                             try{
                                 MenuUtil.sortingAscDec();
                                 int inputName = Keyboard.nextInt();
-                                handleBench(lifterResult,inputName);
-                                break;
+                                if (inputName == 1 || inputName == 2 || inputName == 0) {
+                                    handleBench(lifterResult,inputName);
+                                    ascDescMenu4 = false;
+                                }
+                                else {
+                                    ErrorMessage.ascDesc();
+                                }
                             }
                             catch (Exception e){
                                 System.out.println("Invalid Option");
@@ -100,8 +116,13 @@ public class LifterResultMenu {
                             try{
                                 MenuUtil.sortingAscDec();
                                 int inputName = Keyboard.nextInt();
-                                handleDeadlift(lifterResult,inputName);
-                                break;
+                                if (inputName == 1 || inputName == 2 || inputName == 0) {
+                                    handleDeadlift(lifterResult,inputName);
+                                    ascDescMenu5 = false;
+                                }
+                                else {
+                                    ErrorMessage.ascDesc();
+                                }
                             }
                             catch (Exception e){
                                 System.out.println("Invalid Option");
