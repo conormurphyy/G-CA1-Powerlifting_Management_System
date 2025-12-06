@@ -79,20 +79,12 @@ public class Lifter {
         return dateOfBirth;
     }
 
-    public boolean isSponsored() {
-        return isSponsored;
-    }
-
     public int getAge() {
         return age;
     }
 
     public String getAgeClass() {
         return ageClass;
-    }
-
-    public String[] getEquipmentUsedType() {
-        return equipmentUsedType;
     }
 
     public Equipment getEquipment() {
@@ -108,47 +100,6 @@ public class Lifter {
     public void setName(String name) {
         this.name = name;
     }
-
-    public void setClubName(String clubName) {
-        this.clubName = clubName;
-    }
-
-    public void setGender(char gender) {
-        this.gender = gender;
-    }
-
-    public void setBodyweight(double bodyweight) {
-        this.bodyweight = bodyweight;
-    }
-
-    public void setWeightClass(String weightClass) {
-        this.weightClass = weightClass;
-    }
-
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    public void setSponsored(boolean sponsored) {
-        isSponsored = sponsored;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public void setAgeClass(String ageClass) {
-        this.ageClass = ageClass;
-    }
-
-    public void setEquipmentUsedType(String[] equipmentUsedType) {
-        this.equipmentUsedType = equipmentUsedType;
-    }
-
-    public void setEquipment(Equipment equipment) {
-        this.equipment = equipment;
-    }
-
     //#endregion
     //#region ToString()
     @Override

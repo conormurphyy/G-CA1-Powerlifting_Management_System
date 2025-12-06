@@ -1,4 +1,4 @@
-package org.powerliftingManagementSystem.Menu.MenuUtil.LifterTest;
+package org.powerliftingManagementSystem.Menu.MenuUtil.Lifter;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -10,6 +10,14 @@ import java.time.Period;
 import static org.junit.jupiter.api.Assertions.*;
 
 class LifterTest {
+
+
+
+    @Test
+    void testGetters() {
+        LocalDate dob = LocalDate.of(1990, 1, 1);
+        Lifter lifter = new Lifter (1,"Mark John","Strong Men",'M',101.08,dob,false,19,);
+    }
     //#region findAge() Tests:
     //#region Test 1: findAge(): Valid Age and Valid Date
     @Test
@@ -250,6 +258,14 @@ class LifterTest {
         String actual = Lifter.findWeightClass(weight, gender);
         assertEquals(expectedClass, actual);
     }
+
+
+
+
+
+
+
+
     //#endregion
     //#endregion
 }
