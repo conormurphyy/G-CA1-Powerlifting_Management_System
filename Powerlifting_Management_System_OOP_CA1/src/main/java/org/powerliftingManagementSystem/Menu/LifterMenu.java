@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import static org.powerliftingManagementSystem.FileUtil.FileUtils.readLiftersData;
+import static org.powerliftingManagementSystem.Menu.MenuUtil.LifterMenuUtil.printLiftersEquipment;
 
 public class LifterMenu {
     public static void run() {
@@ -116,6 +117,10 @@ public class LifterMenu {
                         break;
                     case 6:
                         handleClubNameSearch(lifters);
+                        break;
+                    case 7:
+                        printLiftersEquipment(lifters);
+                        break;
                     case 0:
                         MenuUtil.ExitToMainMenu();
                         isRunning = false;

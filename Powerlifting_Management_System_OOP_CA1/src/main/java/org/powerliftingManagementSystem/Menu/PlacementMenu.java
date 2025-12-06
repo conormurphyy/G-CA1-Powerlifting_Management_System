@@ -39,11 +39,6 @@ public class PlacementMenu {
             }
         }
 
-        if (selectedComp == null) {
-            System.out.println("Competition not found.");
-            return;
-        }
-
         Placement.calculatePlacement(selectedComp, lifterResult);
 
     }
