@@ -3,6 +3,7 @@ package org.powerliftingManagementSystem.Competition;
 import org.powerliftingManagementSystem.Lifter.Lifter;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Competition {
     //#region Fields
@@ -79,5 +80,15 @@ public class Competition {
         }
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Competition other)) return false;
+        return this.id == other.id;
+    }
 }

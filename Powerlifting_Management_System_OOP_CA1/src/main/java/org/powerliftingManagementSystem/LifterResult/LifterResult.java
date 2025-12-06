@@ -2,6 +2,8 @@ package org.powerliftingManagementSystem.LifterResult;
 
 import org.powerliftingManagementSystem.Lifter.Lifter;
 
+import java.util.Objects;
+
 public class LifterResult {
     //#region Fields
     private Lifter lifter;
@@ -124,5 +126,15 @@ public class LifterResult {
 
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof LifterResult other)) return false;
+        return this.id == other.id;
+    }
 }

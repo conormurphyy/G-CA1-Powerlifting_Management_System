@@ -21,13 +21,6 @@ import static org.powerliftingManagementSystem.FileUtil.FileUtils.*;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        //Menu.menuOptions(lifters);
-        //LifterResultMenuUtil.printLiftersInCompResults(lifterResult);
-        //LifterResultMenuUtil.printTop3Dots(lifterResult);
-        //LifterResultMenuUtil.printTop3DeadLift(lifterResult);
-        //LifterMenuUtil.printLiftersEquipment(lifters);
-        //Placement.calculatePlacement(competitions, lifterResult);
-
         readFilesAndAssign();
         MainMenuUtil.welcome();
         MainMenu.run();

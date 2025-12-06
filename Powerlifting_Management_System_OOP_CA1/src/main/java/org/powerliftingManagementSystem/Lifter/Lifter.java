@@ -8,6 +8,7 @@ import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
 
 public class Lifter {
@@ -253,6 +254,18 @@ public class Lifter {
                 }
             }
         }
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Lifter other)) return false;
+        return this.id == other.id;
     }
 }
 

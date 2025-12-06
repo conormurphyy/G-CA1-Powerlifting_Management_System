@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class FileUtils {
@@ -41,8 +42,10 @@ public class FileUtils {
     }
 
     public static ArrayList<Lifter> readLiftersData(String fileName, String delimiter) {
-        ArrayList<Lifter> lifters = new ArrayList<>();
+        ArrayList<Lifter> liftersDups = new ArrayList<>();
+        HashSet<Lifter> lifterSet = new HashSet<>(liftersDups);
 
+        ArrayList<Lifter> lifters = new ArrayList<>();
         try (Scanner scanner = new Scanner(new File(fileName))) {
 
             while (scanner.hasNextLine()) {
@@ -68,7 +71,9 @@ public class FileUtils {
 
                 Lifter lifter = new Lifter(id, name, clubName, gender, bodyweight, dob, isSponsored, age, ageClass, equipment, weightClass);
 
-                lifters.add(lifter);
+                lifterSet.add(lifter);
+                lifters = new ArrayList<>(lifterSet);
+
 
             }
 
@@ -81,6 +86,9 @@ public class FileUtils {
     }
 
     public static ArrayList<Competition> readCompetitionsData(String filename, String delimiter) throws FileNotFoundException {
+        ArrayList<Competition> competitionsDups = new ArrayList<>();
+        HashSet<Competition> competitionSet = new HashSet<>(competitionsDups);
+
         ArrayList<Competition> competitions = new ArrayList<>();
         try (Scanner scanner = new Scanner(new File(filename))) {
             while (scanner.hasNextLine()) {
@@ -95,7 +103,8 @@ public class FileUtils {
 
                 Competition comp = new Competition(id, name, location, date, new ArrayList<>());
 
-                competitions.add(comp);
+                competitionSet.add(comp);
+                competitions = new ArrayList<>(competitionSet);
             }
         } catch (FileNotFoundException e) {
             System.out.println("File not found: " + filename);
@@ -104,7 +113,10 @@ public class FileUtils {
     }
 
     public static ArrayList<LifterResult> readCompetitionResults(String filename, String delimiter) throws FileNotFoundException {
-        ArrayList<LifterResult> competitionResults = new ArrayList<>();
+        ArrayList<LifterResult> lifterResultDups = new ArrayList<>();
+        HashSet<LifterResult> lifterResultSet = new HashSet<>(lifterResultDups);
+        ArrayList<LifterResult> lifterResults = new ArrayList<>();
+
         try (Scanner scanner = new Scanner(new File(filename))) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
@@ -116,10 +128,12 @@ public class FileUtils {
                 double deadlift = Double.parseDouble(parts[3]);
                 LifterResult lifterResult = new LifterResult(id, squat, bench, deadlift);
 
-                competitionResults.add(lifterResult);
+                lifterResultSet.add(lifterResult);
+
+                lifterResults = new ArrayList<>(lifterResultSet);
             }
         }
-        return competitionResults;
+        return lifterResults;
     }
 
     public static String formatName(String name) {
