@@ -97,6 +97,10 @@ public class CompetitionMenu {
                     handleNameSearch(competitions);
                     break;
 
+                    case 5:
+                    handleLocationSearch(competitions);
+                    break;
+
                     case 0:
                         CompetitionMenuUtil.exitToCompetitionMenu();
                         isRunning = false;
@@ -168,6 +172,26 @@ public class CompetitionMenu {
 
         }
         CompetitionMenuUtil.printCompetitionsTable(searchedComp);
+    }
+    private void handleLocationSearch(ArrayList<Competition> competitions)
+    {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Enter location name: ");
+        String location = keyboard.nextLine();
+        ArrayList <Competition> searchedComp = new ArrayList();
+        String iLocation;
+        for(Competition comp : competitions)
+        {
+            iLocation = comp.getLocation();
+            iLocation = FileUtils.formatName(iLocation);
+            location = FileUtils.formatName(location);
+            if (location.equals(iLocation))
+            {
+                searchedComp.add(comp);
+            }
+        }
+        CompetitionMenuUtil.printCompetitionsTable(searchedComp);
+
     }
 
 }
