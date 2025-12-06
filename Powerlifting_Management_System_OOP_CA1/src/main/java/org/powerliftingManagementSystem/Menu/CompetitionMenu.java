@@ -2,8 +2,10 @@ package org.powerliftingManagementSystem.Menu;
 
 import org.powerliftingManagementSystem.Competition.Competition;
 import org.powerliftingManagementSystem.Competition.CompetitionSort;
+import org.powerliftingManagementSystem.FileUtil.FileUtils;
 import org.powerliftingManagementSystem.Menu.MenuUtil.CompetitionMenuUtil;
 import org.powerliftingManagementSystem.Menu.MenuUtil.ErrorMessage;
+import org.powerliftingManagementSystem.Menu.MenuUtil.LifterMenuUtil;
 import org.powerliftingManagementSystem.Menu.MenuUtil.MenuUtil;
 
 import java.io.FileNotFoundException;
@@ -91,6 +93,13 @@ public class CompetitionMenu {
                             }
                             break;
                         }
+                    case 4:
+                    handleNameSearch(competitions);
+                    break;
+
+                    case 5:
+                    handleLocationSearch(competitions);
+                    break;
 
                     case 0:
                         CompetitionMenuUtil.exitToCompetitionMenu();
@@ -143,6 +152,46 @@ public class CompetitionMenu {
                 CompetitionMenuUtil.printCompetitionsTable(competitions);
                 break;
         }
+    }
+    private void handleNameSearch(ArrayList<Competition> competitions)
+    {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Enter competition name: ");
+        String name = keyboard.nextLine();
+        ArrayList <Competition> searchedComp = new ArrayList();
+        String iname;
+        for(Competition comp : competitions)
+        {
+            iname = comp.getName();
+            iname = FileUtils.formatName(iname);
+            name = FileUtils.formatName(name);
+            if (name.equals(iname))
+            {
+                searchedComp.add(comp);
+            }
+
+        }
+        CompetitionMenuUtil.printCompetitionsTable(searchedComp);
+    }
+    private void handleLocationSearch(ArrayList<Competition> competitions)
+    {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Enter location name: ");
+        String location = keyboard.nextLine();
+        ArrayList <Competition> searchedComp = new ArrayList();
+        String iLocation;
+        for(Competition comp : competitions)
+        {
+            iLocation = comp.getLocation();
+            iLocation = FileUtils.formatName(iLocation);
+            location = FileUtils.formatName(location);
+            if (location.equals(iLocation))
+            {
+                searchedComp.add(comp);
+            }
+        }
+        CompetitionMenuUtil.printCompetitionsTable(searchedComp);
+
     }
 
 }

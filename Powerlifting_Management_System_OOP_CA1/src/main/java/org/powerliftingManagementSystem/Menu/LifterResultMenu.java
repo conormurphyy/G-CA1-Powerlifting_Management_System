@@ -1,12 +1,10 @@
 package org.powerliftingManagementSystem.Menu;
 
+import org.powerliftingManagementSystem.FileUtil.FileUtils;
 import org.powerliftingManagementSystem.Lifter.Lifter;
 import org.powerliftingManagementSystem.LifterResult.LifterResult;
 import org.powerliftingManagementSystem.LifterResult.LifterResultSort;
-import org.powerliftingManagementSystem.Menu.MenuUtil.CompetitionMenuUtil;
-import org.powerliftingManagementSystem.Menu.MenuUtil.ErrorMessage;
-import org.powerliftingManagementSystem.Menu.MenuUtil.LifterResultMenuUtil;
-import org.powerliftingManagementSystem.Menu.MenuUtil.MenuUtil;
+import org.powerliftingManagementSystem.Menu.MenuUtil.*;
 
 import java.io.FileNotFoundException;
 import java.lang.reflect.Array;
@@ -132,9 +130,11 @@ public class LifterResultMenu {
                         }
                         break;
                     case 6:
-                        //search by name
+                        handleNameSearch(lifterResult);
+                        break;
                     case 7:
-                        //search by clubname
+                        handleClubNameSearch(lifterResult);
+                        break;
                     case 0:
                     {
 
@@ -233,6 +233,45 @@ public class LifterResultMenu {
                 LifterResultMenuUtil.exitToLifterResultMenu();
                 break;
         }
+    }
+    private void handleNameSearch(ArrayList<LifterResult> lifters)
+    {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Enter  name:");
+        String name = keyboard.nextLine();
+        ArrayList<LifterResult> searchedLifter = new ArrayList<>();
+        String iName;
+        for (LifterResult l : lifters)
+        {
+            iName =l.getLifter().getName();
+            iName = FileUtils.formatName(iName);
+            name = FileUtils.formatName(name);
+            if (iName.equals(name))
+            {
+                searchedLifter.add(l);
+            }
+        }
+        LifterResultMenuUtil.printLiftersInCompResults(searchedLifter);
+    }
+
+    private void handleClubNameSearch(ArrayList<LifterResult> lifters)
+    {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Enter club name:");
+        String clubName = keyboard.nextLine();
+        ArrayList<LifterResult> searchedClub = new ArrayList<>();
+        String iClubName;
+        for (LifterResult l : lifters)
+        {
+            iClubName =l.getLifter().getClubName();
+            iClubName = FileUtils.formatName(iClubName);
+            clubName = FileUtils.formatName(clubName);
+            if (iClubName.equals(clubName))
+            {
+                searchedClub.add(l);
+            }
+        }
+        LifterResultMenuUtil.printLiftersInCompResults(searchedClub);
     }
 
 }
