@@ -6,8 +6,7 @@ import org.powerliftingManagementSystem.Lifter.Lifter;
 import java.util.ArrayList;
 
 public class Placement {
-    public static void calculatePlacement(ArrayList<Competition> competitions, ArrayList<LifterResult> results) {
-        for (Competition comp : competitions) {
+    public static void calculatePlacement(Competition comp, ArrayList<LifterResult> results) {
             System.out.println("\n==========================================");
             System.out.println("COMPETITION: " + comp.getName());
             System.out.println("==========================================");
@@ -57,35 +56,12 @@ public class Placement {
             System.out.println("-------------------------------------------------------------");
 
             for (LifterResult r : compResults) {
-                String category = r.getLifter().getAgeClass() + " " + r.getLifter().getWeightClass();
                 System.out.printf("%-20s %-20s %-10.1f %d%n",
                         r.getLifter().getName(),
-                        category,
+                        r.getLifter().getAgeClass() + " " + r.getLifter().getWeightClass(),
                         r.getTotal(),
                         r.getPlacement());
 
             }
-        }
-    }
-
-    public static void leaderBoardDots(ArrayList<Competition> competitions, ArrayList<LifterResult> results) {
-            results.sort(LifterResultSort.byDotsDesc);
-
-            System.out.println("");
-            System.out.printf(
-                    "%-6s %-20s %-20s %-6s %-10s %-10s%n",
-                    "ID", "Name", "Club", "Gender", "Weight", "DOTS"
-            );
-        for (LifterResult res : results) {
-            System.out.printf(
-                    "%-6d %-20s %-20s %-6c %-10.2f %-10.2f%n",
-                    res.getLifter().getId(),
-                    res.getLifter().getName(),
-                    res.getLifter().getClubName(),
-                    res.getLifter().getGender(),
-                    res.getLifter().getBodyweight(),
-                    res.getDots()
-            );
-        }
     }
 }

@@ -46,7 +46,7 @@ public class CompetitionMenu {
                                     ErrorMessage.ascDesc();
                                 }
                             } catch (Exception e) {
-                                System.out.println("Invalid Input");
+                                ErrorMessage.invalidInput();
                                 keyboard.nextLine();
                             }
 
@@ -66,7 +66,7 @@ public class CompetitionMenu {
                                     ErrorMessage.ascDesc();
                                 }
                             } catch (Exception e) {
-                                System.out.println("Invalid Input");
+                                ErrorMessage.invalidInput();
                                 keyboard.nextLine();
                             }
 
@@ -86,21 +86,21 @@ public class CompetitionMenu {
                                     ErrorMessage.ascDesc();
                                 }
                             } catch (Exception e) {
-                                System.out.println("Invalid Input");
+                                ErrorMessage.invalidInput();
                                 keyboard.nextLine();
                             }
                             break;
                         }
 
                     case 0:
-                        System.out.println("Exit");
+                        CompetitionMenuUtil.exitToCompetitionMenu();
                         isRunning = false;
 
                     default:
-                        System.out.println("Invalid Input");
+                        ErrorMessage.invalidInput();
                 }
             } catch (Exception e) {
-                System.out.println("Error");
+                ErrorMessage.invalidInput();
                 keyboard.nextLine();
             }
         }

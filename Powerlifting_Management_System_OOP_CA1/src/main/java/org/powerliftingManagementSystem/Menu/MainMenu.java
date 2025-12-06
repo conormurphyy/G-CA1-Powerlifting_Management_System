@@ -37,6 +37,8 @@ public class MainMenu {
                     case 4:
                         LeaderboardMenu.run();
                         break;
+                    case 5:
+                        PlacementMenu.run();
                     case 0:
                         MenuUtil.ExitProgram();
                         running = false;
