@@ -36,8 +36,13 @@ public class LifterMenu {
                             try {
                                 MenuUtil.sortingAscDec();
                                 int inputName = keyboard.nextInt();
-                                handleName(lifters, inputName);
-                                break;
+                                if(inputName==1 || inputName==2 || inputName==0){
+                                    handleName(lifters, inputName);
+                                    ascDecMenu = false;
+                                }
+                                else {
+                                    ErrorMessage.ascDesc();
+                                }
                             }
                             catch (Exception e) {
                                 ErrorMessage.ascDesc();
@@ -52,8 +57,13 @@ public class LifterMenu {
                             try {
                                 MenuUtil.sortingAscDec();
                                 int inputClubName = keyboard.nextInt();
-                                handleClubName(lifters, inputClubName);
-                                break;
+                                if (inputClubName==1 || inputClubName==2  || inputClubName==0) {
+                                    handleClubName(lifters, inputClubName);
+                                    ascDecMenu2 = false;
+                                }
+                                else {
+                                    ErrorMessage.ascDesc();
+                                }
                             }
                             catch (Exception e) {
                                 ErrorMessage.ascDesc();
@@ -117,8 +127,11 @@ public class LifterMenu {
                 LifterMenuUtil.printLifters(lifters);
                 break;
             case 0:
-
+                System.out.println("Exit");
+                break;
         }
+
+
     }
 
     private void handleClubName(ArrayList<Lifter> lifters, int ascDesc) {
