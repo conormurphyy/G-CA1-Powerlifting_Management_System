@@ -35,17 +35,17 @@ public class MainMenu {
                         LifterResultMenu.run();
                         break;
                     case 4:
-                        //View Leaderboard
+                        LeaderboardMenu.run();
                         break;
                     case 0:
-                        //exit
+                        MenuUtil.ExitProgram();
                         running = false;
                     default:
                         ErrorMessage.invalidOptionLifterMenu();
                 }
             }
             catch (InputMismatchException e) {
-                System.out.println("Invalid input. Enter an integer");
+                ErrorMessage.invalidInput();
                 keyboard.nextLine();
             }
             catch (FileNotFoundException e) {

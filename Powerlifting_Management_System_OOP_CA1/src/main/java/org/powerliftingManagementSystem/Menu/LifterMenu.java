@@ -110,15 +110,19 @@ public class LifterMenu {
                             }
                         }
                         break;
+                    case 5:
+                        //search by name
+                    case 6:
+                        //search by club
                     case 0:
-                        System.out.println("Exit");
+                        MenuUtil.ExitToMainMenu();
                         isRunning = false;
                     default:
                         ErrorMessage.invalidOptionLifterMenu();
                 }
             }
             catch (Exception e) {
-                System.out.println("error");
+                ErrorMessage.error();
                 keyboard.nextLine();
             }
         }
@@ -136,7 +140,7 @@ public class LifterMenu {
                 LifterMenuUtil.printLifters(lifters);
                 break;
             case 0:
-                System.out.println("Exit");
+                LifterMenuUtil.exitToLifterMenu();
                 break;
         }
 
@@ -154,6 +158,9 @@ public class LifterMenu {
                 lifters.sort(LifterSort.sortClubNameDescending);
                 LifterMenuUtil.printLifters(lifters);
                 break;
+            case 0:
+                LifterMenuUtil.exitToLifterMenu();
+                break;
         }
     }
 
@@ -168,6 +175,9 @@ public class LifterMenu {
                 lifters.sort(LifterSort.sortAgeDescending);
                 LifterMenuUtil.printLifters(lifters);
                 break;
+            case 0:
+                LifterMenuUtil.exitToLifterMenu();
+                break;
         }
     }
 
@@ -181,6 +191,9 @@ public class LifterMenu {
             case 2:
                 lifters.sort(LifterSort.sortBodyweightDescending);
                 LifterMenuUtil.printLifters(lifters);
+                break;
+            case 0:
+                LifterMenuUtil.exitToLifterMenu();
                 break;
         }
     }

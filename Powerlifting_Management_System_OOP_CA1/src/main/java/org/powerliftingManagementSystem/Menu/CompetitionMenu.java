@@ -3,6 +3,8 @@ package org.powerliftingManagementSystem.Menu;
 import org.powerliftingManagementSystem.Competition.Competition;
 import org.powerliftingManagementSystem.Competition.CompetitionSort;
 import org.powerliftingManagementSystem.Menu.MenuUtil.CompetitionMenuUtil;
+import org.powerliftingManagementSystem.Menu.MenuUtil.ErrorMessage;
+import org.powerliftingManagementSystem.Menu.MenuUtil.LifterMenuUtil;
 import org.powerliftingManagementSystem.Menu.MenuUtil.MenuUtil;
 
 import java.io.FileNotFoundException;
@@ -39,7 +41,7 @@ public class CompetitionMenu {
                                 handleID(competitions, inputName);
                                 break;
                             } catch (Exception e) {
-                                System.out.println("Invalid Input");
+                                ErrorMessage.invalidInput();
                                 keyboard.nextLine();
                             }
 
@@ -54,7 +56,7 @@ public class CompetitionMenu {
                                 handleName(competitions, inputName);
                                 break;
                             } catch (Exception e) {
-                                System.out.println("Invalid Input");
+                                ErrorMessage.invalidInput();
                                 keyboard.nextLine();
                             }
 
@@ -69,21 +71,24 @@ public class CompetitionMenu {
                                 handleDate(competitions, inputName);
                                 break;
                             } catch (Exception e) {
-                                System.out.println("Invalid Input");
+                                ErrorMessage.invalidInput();
                                 keyboard.nextLine();
                             }
                             break;
                         }
-
+                    case 4:
+                        //search by name
+                    case 5:
+                        //search location
                     case 0:
-                        System.out.println("Exit");
+                        MenuUtil.ExitToMainMenu();
                         isRunning = false;
 
                     default:
-                        System.out.println("Invalid Input");
+                        ErrorMessage.invalidOptionCompetitionMenu();
                 }
             } catch (Exception e) {
-                System.out.println("Error");
+                ErrorMessage.error();
                 keyboard.nextLine();
             }
         }
@@ -99,6 +104,9 @@ public class CompetitionMenu {
                 competitions.sort(CompetitionSort.sortIdDescending);
                 CompetitionMenuUtil.printCompetitionsTable(competitions);
                 break;
+            case 0:
+                CompetitionMenuUtil.exitToCompetitionMenu();
+                break;
         }
     }
 
@@ -112,6 +120,9 @@ public class CompetitionMenu {
                 competitions.sort(CompetitionSort.sortNameDescending);
                 CompetitionMenuUtil.printCompetitionsTable(competitions);
                 break;
+            case 0:
+                CompetitionMenuUtil.exitToCompetitionMenu();
+                break;
         }
     }
 
@@ -124,6 +135,9 @@ public class CompetitionMenu {
             case 2:
                 competitions.sort(CompetitionSort.sortDateDescending);
                 CompetitionMenuUtil.printCompetitionsTable(competitions);
+                break;
+            case 0:
+                CompetitionMenuUtil.exitToCompetitionMenu();
                 break;
         }
     }

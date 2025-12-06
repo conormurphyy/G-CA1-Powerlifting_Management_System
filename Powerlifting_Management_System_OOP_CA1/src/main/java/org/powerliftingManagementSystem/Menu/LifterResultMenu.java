@@ -3,6 +3,7 @@ package org.powerliftingManagementSystem.Menu;
 import org.powerliftingManagementSystem.Lifter.Lifter;
 import org.powerliftingManagementSystem.LifterResult.LifterResult;
 import org.powerliftingManagementSystem.LifterResult.LifterResultSort;
+import org.powerliftingManagementSystem.Menu.MenuUtil.CompetitionMenuUtil;
 import org.powerliftingManagementSystem.Menu.MenuUtil.ErrorMessage;
 import org.powerliftingManagementSystem.Menu.MenuUtil.LifterResultMenuUtil;
 import org.powerliftingManagementSystem.Menu.MenuUtil.MenuUtil;
@@ -44,7 +45,7 @@ public class LifterResultMenu {
                                 break;
                             }
                             catch (Exception e){
-                                System.out.println("Invalid Option");
+                                ErrorMessage.invalidInput();
                                 Keyboard.nextLine();
                             }
                         }
@@ -64,7 +65,7 @@ public class LifterResultMenu {
                                 }
                             }
                             catch (Exception e){
-                                System.out.println("Invalid Option");
+                                ErrorMessage.invalidInput();
                                 Keyboard.nextLine();
                             }
                         }
@@ -85,7 +86,7 @@ public class LifterResultMenu {
                                 }
                             }
                             catch (Exception e){
-                                System.out.println("Invalid Option");
+                                ErrorMessage.invalidInput();
                                 Keyboard.nextLine();
                             }
                         }
@@ -105,7 +106,7 @@ public class LifterResultMenu {
                                 }
                             }
                             catch (Exception e){
-                                System.out.println("Invalid Option");
+                                ErrorMessage.invalidInput();
                                 Keyboard.nextLine();
                             }
                         }
@@ -125,24 +126,29 @@ public class LifterResultMenu {
                                 }
                             }
                             catch (Exception e){
-                                System.out.println("Invalid Option");
+                                ErrorMessage.invalidInput();
                                 Keyboard.nextLine();
                             }
                         }
                         break;
+                    case 6:
+                        //search by name
+                    case 7:
+                        //search by clubname
                     case 0:
                     {
-                        System.out.println("Exit");
+
+                        MenuUtil.ExitToMainMenu();
                         isRunning = false;
                     }
                         default:
-                            System.out.println("Invalid Option");
+                            ErrorMessage.invalidInput();
 
                 }
             }
             catch(Exception e)
             {
-                System.out.println("Error");
+                ErrorMessage.error();
                 Keyboard.nextLine();
             }
 
@@ -159,6 +165,9 @@ public class LifterResultMenu {
             lifterResults.sort(LifterResultSort.byDotsDesc);
             LifterResultMenuUtil.printLiftersInCompResults(lifterResults);
             break;
+            case 0:
+                LifterResultMenuUtil.exitToLifterResultMenu();
+                break;
         }
     }
     private void handleTotal (ArrayList<LifterResult> lifterResults, int ascDesc)
@@ -171,6 +180,9 @@ public class LifterResultMenu {
             case 2:
                 lifterResults.sort(LifterResultSort.byTotalDesc);
                 LifterResultMenuUtil.printLiftersInCompResults(lifterResults);
+                break;
+            case 0:
+                LifterResultMenuUtil.exitToLifterResultMenu();
                 break;
         }
     }
@@ -185,6 +197,9 @@ public class LifterResultMenu {
                 lifterResults.sort(LifterResultSort.bySquatDesc);
                 LifterResultMenuUtil.printLiftersInCompResults(lifterResults);
                 break;
+            case 0:
+                LifterResultMenuUtil.exitToLifterResultMenu();
+                break;
         }
     }
     private void handleBench (ArrayList<LifterResult> lifterResults, int ascDesc)
@@ -198,6 +213,9 @@ public class LifterResultMenu {
                 lifterResults.sort(LifterResultSort.byBenchDesc);
                 LifterResultMenuUtil.printLiftersInCompResults(lifterResults);
                 break;
+            case 0:
+                LifterResultMenuUtil.exitToLifterResultMenu();
+                break;
         }
     }
     private void handleDeadlift (ArrayList<LifterResult> lifterResults, int ascDesc)
@@ -210,6 +228,9 @@ public class LifterResultMenu {
             case 2:
                 lifterResults.sort(LifterResultSort.byDeadliftDesc);
                 LifterResultMenuUtil.printLiftersInCompResults(lifterResults);
+                break;
+            case 0:
+                LifterResultMenuUtil.exitToLifterResultMenu();
                 break;
         }
     }
