@@ -1,5 +1,6 @@
 package org.powerliftingManagementSystem.Menu;
 
+import org.powerliftingManagementSystem.FileUtil.FileUtils;
 import org.powerliftingManagementSystem.Lifter.Lifter;
 import org.powerliftingManagementSystem.Lifter.LifterSort;
 import org.powerliftingManagementSystem.Menu.MenuUtil.ErrorMessage;
@@ -111,9 +112,10 @@ public class LifterMenu {
                         }
                         break;
                     case 5:
-                        //search by name
+                        handleNameSearch(lifters);
+                        break;
                     case 6:
-                        //search by club
+                        handleClubNameSearch(lifters);
                     case 0:
                         MenuUtil.ExitToMainMenu();
                         isRunning = false;
@@ -196,6 +198,44 @@ public class LifterMenu {
                 LifterMenuUtil.exitToLifterMenu();
                 break;
         }
+    }
+    private void handleNameSearch(ArrayList<Lifter> lifters)
+    {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Enter  name:");
+        String name = keyboard.nextLine();
+        ArrayList<Lifter> searchedLifter = new ArrayList<>();
+        String iName;
+        for (Lifter l : lifters)
+        {
+            iName =l.getName();
+            iName = FileUtils.formatName(iName);
+            name = FileUtils.formatName(name);
+            if (iName.equals(name))
+            {
+                searchedLifter.add(l);
+            }
+        }
+        LifterMenuUtil.printLifters(searchedLifter);
+    }
+    private void handleClubNameSearch(ArrayList<Lifter> lifters)
+    {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Enter club name:");
+        String clubName = keyboard.nextLine();
+        ArrayList<Lifter> searchedClub = new ArrayList<>();
+        String iClubName;
+        for (Lifter l : lifters)
+        {
+            iClubName =l.getClubName();
+            iClubName = FileUtils.formatName(iClubName);
+            clubName = FileUtils.formatName(clubName);
+            if (iClubName.equals(clubName))
+            {
+                searchedClub.add(l);
+            }
+        }
+        LifterMenuUtil.printLifters(searchedClub);
     }
 
 }
