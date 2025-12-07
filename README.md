@@ -205,7 +205,7 @@ public Contact format(Contact input) {
 
 | Component | Implemented? | Notes |
 |---|:--:|---|
-| Extended Dataset (1000 rows) | YES | 4 csv files all with 1000 lines of data  |
+| Extended Dataset (1000 rows) | YES | 4 csv files all with 1000 lines of data e.g competition, equipment, lifter and results  |
 | Entity Enhancements |  |  |
 | Collections & Lookup |  |  |
 | Equality & Hashing |YES  | Hashing used to remove any possible duplicate entries into dataset |
