@@ -260,6 +260,23 @@ while (isRunning) {
 ```
 <br>
 
+```java
+if (otherLifterResult.getTotal() > lifterResult.getTotal()) {
+                            place++;
+                        } else if (otherLifterResult.getTotal() == lifterResult.getTotal()) {
+                            if (otherLifter.getBodyweight() < currentLifter.getBodyweight()) {
+                                place++;
+                            }
+                        }
+```
+In the code we applied an if statement in case lifters totals are the same, to see who would win the tiebreaker. So we made the lighest lifter to go up a place instead of both lifters sharing the same place. This is a real world example of how tiebreakers would work in a powerlifting competition so it is revelant to our project.
+
+```java
+if (age < 0) throw new IllegalArgumentException("Age is invalid");
+        if (age < 13) throw new IllegalArgumentException("You must be at least 13 years old to compete!");
+```
+We check the age before allowing them to become a lifter. If the age is under 13 or if the age is invalid. It will throw an exception. This is a good example of defensive coding as most federations require the lifter to be at least 13 years of age and it wouldn't be effective if we allowed negative ages to get into our program.
+
 In this Leaderboard menu snippet, you can see that we have a try and catch that will show a predefined error message on the event that the code doesnt execute as planned , rather than a crash. We also have a default for our cases so if none of the valid cases get selected it has something to default towards. This is a feature of defensive coding as it prevents errors and/or crashes
 ## 4. Reflections (150–250 words)
 <!-- student fills -->
