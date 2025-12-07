@@ -36,6 +36,10 @@ public class Placement {
                     boolean sameAgeClass = currentLifter.getAgeClass().equals(otherLifter.getAgeClass());
                     boolean sameWeightClass = currentLifter.getWeightClass().equals(otherLifter.getWeightClass());
 
+                    //Enusre lifter doesnt get compared by itself
+                    if (currentLifter == otherLifter) {
+                        continue;
+                    }
                     if (sameGender && sameAgeClass && sameWeightClass) {
 
                         if (otherLifterResult.getTotal() > lifterResult.getTotal()) {
