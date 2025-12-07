@@ -153,6 +153,7 @@ As seen above, the method takes in a user input and then runs through the lifter
 <br>
 We were unable to do testing for certain classes such as our menus as we were unsure how to conduct these tests. However the classes we did test got great coverage and we found it easier to fix bugs and have the full functionality that we intended for our main methods. 
 ### Some examples of tests:
+
 ```java
 @Test
     void parseDOBTest() {
@@ -162,6 +163,7 @@ We were unable to do testing for certain classes such as our menus as we were un
         assertEquals(expectedDOB,actualDOB);
     }
 ```
+
 We tested to ensure that our dates as a string were being parsed correclty into a LocalDate.
 <br>
 ```java
