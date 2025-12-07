@@ -28,7 +28,6 @@ public class Main {
 
     public static void readFilesAndAssign() throws FileNotFoundException {
         ArrayList<Lifter> lifters = readLiftersData("liftersData.csv",",");
-        //Menu.menuOptions(lifters);
         ArrayList<Competition> competitions = readCompetitionsData("competitionsampledata.csv", ",");
 
         Competition.assignLiftersToCompetition(lifters, competitions);

@@ -7,9 +7,9 @@ import java.util.ArrayList;
 
 public class Placement {
     public static void calculatePlacement(Competition comp, ArrayList<LifterResult> results) {
-            System.out.println("\n==========================================");
-            System.out.println("COMPETITION: " + comp.getName());
-            System.out.println("==========================================");
+            System.out.println("+========================================+");
+            System.out.println("     COMPETITION: " + comp.getName());
+            System.out.println("+========================================+");
 
             ArrayList<LifterResult> compResults = new ArrayList<>();
             for (LifterResult r : results) {
