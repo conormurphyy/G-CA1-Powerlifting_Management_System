@@ -22,9 +22,11 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 | weightClass        | String    | Based of gender and weight      | "U-74KG Men"                                  |
 ---
 ### :two: :gear: Entity: Equiptment
+The "Equiptment" class represents each lifters equiptment that they used in their compeitition.
+
 | Field              | Type      |Decription                                           | Example                                       |
 |:--                 |:--        |:--                                                  |:--                                            |
-| id                 | int       | Unique ID for each lifters list of equiptmnet       | 12                                            |
+| id                 | int       | Unique ID for each lifters result                   | 12                                            |
 | belt               | String    | Lifter's belt                                       | "A7 Belt"                                     |
 | singlet            | String    | Lifter's singlet                                    | "SBD Singlet"                                 |
 | compTee            | String    | Lifter's comp t-shirt                               | "Strength Shop T-Shirt"                       |
@@ -34,7 +36,9 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 | deadliftSocks      | String    | Lifter's deadlift socks                             | "SBD Deadlift Socks"                          |
 | shoes              | String    | Lifter's shoes                                      | "Notorious Lift"                              |
 ---
-## :three: 🥇 Entity: Competition
+### :three: 🥇 Entity: Competition
+The "Competition" class represents each competition and its details, it also contains all the lifters in that competition.
+
 | Field              | Type                  |Decription                                           | Example                          |
 |:--                 |:--                    |:--                                                  |:--                               |
 | id                 | int                   | Unique ID for each lifters list of equiptmnet       | 1                                |
@@ -43,7 +47,9 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 | date               | String                | Date of competition                                 | "12-12-25"                       |
 | lifters            | ArrayList<Lifter      | All lifters in the compeition                       | [{"John Murphy}{"Conor Adams"}   |
 ---
-## :four: 🏋️ Entity: Lifter Result
+### :four: 🏋️ Entity: Lifter Result
+The "Lifter Result" class represents each lifters result that they achieved. 
+
 | Field              | Type                  |Decription                                                 | Example                          |
 |:--                 |:--                    |:--                                                        |:--                               |
 | lifter             | Lifter                | Each Lifter                                               | Lifter lifter1                   |
@@ -54,8 +60,7 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 | total              | double                | Lifter's total result: squat + bench + deadlift           | 577.5                            |
 | dots               | double                | Lifter's dots result: Calulated with bodyweight and total | 452.00                           |
 ---
-### :two: 🔍 Lifter Overview
-#### :two:.:one:  :deciduous_tree: Strucutre Tree of Lifter Folder
+### :deciduous_tree: Strucutre Tree of Lifter Folder
 ```
 \-powerliftingManagementSystem
              |   Main.java
@@ -99,18 +104,6 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 ```
 
 ---
-#### References 📘 <br/>
-##### Code 💻 <br/>
-CSV File Generation: www.chatgpt.com <br/>
-LocalDate formatting (turning string into LocalDate)://https://www.digitalocean.com/community/tutorials/java-simpledateformat-java-date-format <br/>
-LocalDate docs: //https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html <br/>
-##### General Research 🗺️ <br/>
-Maximum Age Recorded: //https://www.washington.edu/news/2021/07/01/how-long-can-a-person-live-the-21st-century-may-see-a-record-breaker/ <br/>
-Maximum Weight Recorded (Man) : //https://en.wikipedia.org/wiki/Jon_Brower_Minnoch <br/>
-Maximum Weight Recorded (Woman) : //https://en.wikipedia.org/wiki/Carol_Yager <br/>
-
-
-
 # Stage 2 Report – Implementation & Verification
 ## COMP C8Z03 — Object-Oriented Programming (GCA1)
 ## Conor Murphy, Conor McCracken
@@ -144,7 +137,53 @@ private void handleNameSearch(ArrayList<Lifter> lifters)
 As seen above, the method takes in a user input and then runs through the lifters dataset in a loop and compares it to every name using .equals and if it returns true, it adds it to a subset of lifters that match the search condition. And then prints it.
 
 ## 2. Testing Summary (180–300 words)
-<!-- student fills -->
+<img src="images/htmlreport.png">
+<br>
+We were unable to do testing for certain classes such as our menus as we were unsure how to conduct these tests. However the classes we did test got great coverage and we found it easier to fix bugs and have the full functionality that we intended for our main methods. We also encountered problems within intelliJ that slowed down the process of our testing but once that was fixed by editing some settings in intelliJ, our testing was on track until we lost a lot of tests in an error with github not pushing the code. Other than that the testing process was fairly smooth and we didnt actually encounter too many failed tests that were related to problems with our code, it was moreso testing errors. 
+
+### Some examples of tests:
+
+```java
+@Test
+    void parseDOBTest() {
+        String dob = "01-01-1999";
+        LocalDate expectedDOB = LocalDate.of(1999, 1, 1);
+        LocalDate actualDOB = Lifter.parseDateOfBirth(dob);
+        assertEquals(expectedDOB,actualDOB);
+    }
+```
+
+We tested to ensure that our dates as a string were being parsed correclty into a LocalDate. This made it easier for us to verify that this functionality was working as we can look at it at a smaller scale and identify if there is any problems in the logic and/or code
+
+<br>
+
+```java
+@Test
+    void formatName2() {
+        String name = "JAMES       mcardle";
+        String actual = FileUtils.formatName(name);
+        String expected = "James Mcardle";
+        assertEquals(expected, actual);
+    }
+```
+    
+We did this to ensure that our names were correctly formatted. ie spaces being cut, and capitalisation where appropiate.This ensured that the data was used in a presentable manner and we could verify that names were OK as it would have been inefficent to manually go through the csv files and compare the data in their against what was being output in our programme.
+
+<br>
+
+```java
+@Test
+    void assignResultsToLifterTest() {
+        Lifter lifter1 = new Lifter(1);
+        LifterResult lifterResult1 = new LifterResult(1);
+        ArrayList<Lifter> lifter = new ArrayList<>();
+        ArrayList<LifterResult> lifterResult = new ArrayList<>();
+        lifter.add(lifter1);
+        lifterResult.add(lifterResult1);
+        assignResultsToLifter(lifterResult,lifter);
+    }
+```
+This test was done to ensure that the lifters results was being correctly assigned to the lifter with the same id. In the beginning the lifter was not being assigned correclty, after we implemented this test we were able to see exaclty what was going wrong which was that we never added a for loop for lifters which resulted in everyone getting the same result. This was useful as we could then rectify our errors without having to look at it in the grand scale of our code, this isolated the problem and made it easier to rectify.
 
 ## 3. Defensive Coding 2 (4–6 examples, 240–420 words total)
 <!-- student fills -->
@@ -152,26 +191,107 @@ As seen above, the method takes in a user input and then runs through the lifter
 > Here is an example us null checking in our solution. Obviously, you need to replace the code below with your own examples.
 
 ```java
-public Contact format(Contact input) {
-        String email = input.getEmail();
-        if (email == null || email.isBlank()) {
-            return input;
+public static String formatName(String name) {
+        name = name.trim().toLowerCase();
+        String[] parts = name.split("\\s+"); 
+        String finalName = "";
+        for (String part : parts) {
+            finalName += part.substring(0, 1).toUpperCase() + part.substring(1) + " ";
         }
-
-        String trimmed = email.trim();
-        String html = "<a href=\"mailto:" + trimmed + "\">" + trimmed + "</a>";
-        return input.withEmail(html);
+        return finalName.trim();
     }
+    
 ```
+<br>
+  In this snippet , we have a method that takes in the name of a lifter/club and remove any spaces at the end or start , ensures its lower case and then splits it at the space or multiple spaces using a regular expression. Then loops through the array of parts and seperates it into a clear first and second name with the first letter of each being capitalized. In particular the removal of spaces improved our search functionality and allowed it to run with out errors as if we hadnt of done this and a users name was accidentally inputted with two spaces , the search wouldnt have found it if the term was with just the one space. This also generally made our data cleaner to use and look at.
+<br>
+<br>
+
+```java
+while (isRunning) {
+            try {
+                LeaderboardMenuUtil.leaderboardMenu();
+                System.out.print("Enter Option: ");
+                int input = keyboard.nextInt();
+
+                switch (input) {
+                    case 1:
+                        Leaderboard.printTop3Dots(lifterResult);
+                        break;
+                    case 2:
+                        Leaderboard.printTop3Total(lifterResult);
+                        break;
+                    case 3:
+                        Leaderboard.printTop3Squat(lifterResult);
+                        break;
+
+                    case 4:
+                        Leaderboard.printTop3Bench(lifterResult);
+                        break;
+                    case 5:
+                        Leaderboard.printTop3DeadLift(lifterResult);
+                        break;
+                    case 0:
+                        MenuUtil.ExitToMainMenu();
+                        isRunning = false;
+                        break;
+
+                    default:
+                        ErrorMessage.invalidOptionLeaderboardMenu();
+                }
+                break;
+            } catch (Exception e) {
+                ErrorMessage.error();
+                keyboard.nextLine();
+            }
+        }
+```
+<br>
+In this Leaderboard menu snippet, you can see that we have a try and catch that will show a predefined error message on the event that the code doesnt execute as planned , rather than a crash. We also have a default for our cases so if none of the valid cases get selected it has something to default towards. This is a feature of defensive coding as it prevents errors and/or crashes
+<br>
+
+```java
+if (otherLifterResult.getTotal() > lifterResult.getTotal()) {
+                            place++;
+                        } else if (otherLifterResult.getTotal() == lifterResult.getTotal()) {
+                            if (otherLifter.getBodyweight() < currentLifter.getBodyweight()) {
+                                place++;
+                            }
+                        }
+```
+In the code we applied an if statement in case lifters totals are the same, to see who would win the tiebreaker. So we made the lighest lifter to go up a place instead of both lifters sharing the same place. This is a real world example of how tiebreakers would work in a powerlifting competition so it is revelant to our project.
+
+```java
+if (age < 0) throw new IllegalArgumentException("Age is invalid");
+        if (age < 13) throw new IllegalArgumentException("You must be at least 13 years old to compete!");
+```
+We check the age before allowing them to become a lifter. If the age is under 13 or if the age is invalid. It will throw an exception. This is a good example of defensive coding as most federations require the lifter to be at least 13 years of age and it wouldn't be effective if we allowed negative ages to get into our program.
+
 
 ## 4. Reflections (150–250 words)
-<!-- student fills -->
+### Group Reflection
+For us, this project made us increasingly better java programmers. We felt that our skills were tested and we gained a good amount of knowledge not only in programming but on a larger scale , team work on programming projects. We felt that we worked well as a team as our work ethic is quite similar and we spent a lot of time on Voice calls , discussing our code and what to do next. Through conversation and planning diagrams on draw.io, we believe this helped us progress through the project successfully.  A good portion of our code was worked on collaboratively and we felt this benefitted us as we both got another point of view. On the other hand , we think we struggled initially with visualising the project and the direction we would take it in. This led to us maybe wasting times on less important things at times but as the project went on , we became a lot more focused on the end goal. We are quite satisfied with how the project went and we are proud of the end product we have produced.
 
 ## 5. Commit Contributions (60–120 words)
 <!-- student fills -->
+<img src = images/githubcommit.png>
+<br>
+We had a significant amount of commits each , this is because we were commiting work as we were on call together and would often pass work from one person to the other but, also a good portion of these commits come from the creation of the MD report file which required alot of commiting and going back out to check how it looks etc as is the nature of an MD File and trying to perfect it. We did 90% of the code together on voice calls and would discuss almost anything before either of us made a change to the code. This ensured that we weren't doing the same thing twice and that we both had a good sense of the code that was being written. We found the usage of github to be very convenient for sharing code aswell as having a backup in event of a error. This did save us a lot of headaches as the project grew in size and we found ourselves having a very significant amount of classes. We got into a good practice of regular commits and found that while there was a few setbacks with merging , overall github was a useful addition for us in this project.
 
 ## 6. Final References (Harvard style)
-<!-- student fills -->
+#### References 📘 <br/>
+##### Code 💻 <br/>
+CSV File Generation: www.chatgpt.com <br/>
+LocalDate formatting (turning string into LocalDate): Digital Ocean 2025. _Simple Date Format._ [online] Avaialble from: //https://www.digitalocean.com/community/tutorials/java-simpledateformat-java-date-format <br/>
+LocalDate docs: Oracle 2025. _Local Date_. [online] Avaiable from: //https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html <br/>
+Methods in enums: Stackover Flow 2025. _Java enum method_. [online] Avaiable from: //https://stackoverflow.com/questions/18883646/java-enum-methods-return-opposite-direction-enum <br>
+Finding Duplicates using HashSet: Strategio 2025. _Find Duplicates Using a Hashset_ [online] Available from: //https://medium.com/strategio/find-duplicates-using-a-hashset-88c4cee12f96 <br>
+
+##### General Research 🗺️ <br/>
+Maximum Age Recorded: Washington.edu 2025. _How long can a person live_. [online] Available from: //https://www.washington.edu/news/2021/07/01/how-long-can-a-person-live-the-21st-century-may-see-a-record-breaker/ <br/>
+Maximum Weight Recorded (Man) : Wikipedia 2025. _Jon Brower Minnoch_. [online] Avaiable from: //https://en.wikipedia.org/wiki/Jon_Brower_Minnoch <br/>
+Maximum Weight Recorded (Woman) : Wikipedia 2025. _Carol Yager_. [online] Available from: //https://en.wikipedia.org/wiki/Carol_Yager <br/>
+IPF Dots Formula: International Powerlifting Federation (IPF) 2025. _ipf formula_ [online] Available from: https://www.powerlifting.sport/fileadmin/ipf/data/ipf-formula/Models_Evaluation-I-2020.pdf <br>
 
 ## 7. Implementation Matrix (Y/N)
 

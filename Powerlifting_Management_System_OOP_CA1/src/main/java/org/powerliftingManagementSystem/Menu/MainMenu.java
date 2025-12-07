@@ -51,7 +51,7 @@ public class MainMenu {
                 keyboard.nextLine();
             }
             catch (FileNotFoundException e) {
-                throw new RuntimeException(e);
+                System.out.println("File not found");;
             }
         }
     }
