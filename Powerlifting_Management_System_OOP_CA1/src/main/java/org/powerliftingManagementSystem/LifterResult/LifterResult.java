@@ -25,6 +25,10 @@ public class LifterResult {
         this.dots = calculateDots();
     }
 
+    public LifterResult (int id) {
+        this.id = id;
+    }
+
     public LifterResult(int id, double squat, double bench, double deadlift) {
         this.id = id;
         this.squat = squat;

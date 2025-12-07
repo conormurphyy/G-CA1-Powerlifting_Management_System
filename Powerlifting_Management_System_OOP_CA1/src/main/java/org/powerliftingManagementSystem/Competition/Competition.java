@@ -22,6 +22,13 @@ public class Competition {
         this.date = date;
         this.lifters = lifters;
     }
+
+    public Competition(int id, String name, String location, String date) {
+        this.id = id;
+        this.name = name;
+        this.location = location;
+        this.date = date;
+    }
     //#endregion
 
     //#region Getters

@@ -42,12 +42,8 @@ public class Lifter {
         this.weightClass = weightClass;
     }
 
-    //FOR JUNIT TESTING
-    public Lifter(int id, String name, char gender, double bodyweight) {
+    public Lifter(int id) {
         this.id = id;
-        this.name = name;
-        this.gender = gender;
-        this.bodyweight = bodyweight;
     }
 
     //#region Getters
@@ -77,6 +73,10 @@ public class Lifter {
 
     public LocalDate getDateOfBirth() {
         return dateOfBirth;
+    }
+
+    public boolean isSponsored() {
+        return isSponsored;
     }
 
     public int getAge() {
@@ -115,7 +115,6 @@ public class Lifter {
                 ", isSponsored=" + isSponsored +
                 ", age=" + age +
                 ", ageClass='" + ageClass + '\'' +
-                ", equipmentUsedType=" + Arrays.toString(equipmentUsedType) +
                 '}';
     }
     //endregion

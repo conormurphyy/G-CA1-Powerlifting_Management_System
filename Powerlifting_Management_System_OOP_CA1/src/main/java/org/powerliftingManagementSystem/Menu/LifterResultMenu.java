@@ -270,6 +270,10 @@ public class LifterResultMenu {
             {
                 searchedClub.add(l);
             }
+            else
+            {
+
+            }
         }
         LifterResultMenuUtil.printLiftersInCompResults(searchedClub);
     }
