@@ -281,7 +281,8 @@ We check the age before allowing them to become a lifter. If the age is under 13
 
 
 ## 4. Reflections (150–250 words)
-<!-- student fills -->
+### Group Reflection
+For us, this project made us increasingly better java programmers. We felt that our skills were tested and we gained a good amount of knowledge not only in programming but on a larger scale , team work on programming projects. We felt that we worked well as a team as our work ethic is quite similar and we spent a lot of time on Voice calls , discussing our code and what to do next. Through conversation and planning diagrams on draw.io, we believe this helped us progress through the project successfully.  A good portion of our code was worked on collaboratively and we felt this benefitted us as we both got another point of view. On the other hand , we think we struggled initially with visualising the project and the direction we would take it in. This led to us maybe wasting times on less important things at times but as the project went on , we became a lot more focused on the end goal. We are quite satisfied with how the project went and we are proud of the end product we have produced.
 
 ## 5. Commit Contributions (60–120 words)
 <!-- student fills -->
