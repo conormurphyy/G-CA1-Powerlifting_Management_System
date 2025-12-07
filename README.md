@@ -259,6 +259,8 @@ while (isRunning) {
         }
 ```
 <br>
+In this Leaderboard menu snippet, you can see that we have a try and catch that will show a predefined error message on the event that the code doesnt execute as planned , rather than a crash. We also have a default for our cases so if none of the valid cases get selected it has something to default towards. This is a feature of defensive coding as it prevents errors and/or crashes
+<br>
 
 ```java
 if (otherLifterResult.getTotal() > lifterResult.getTotal()) {
@@ -277,7 +279,7 @@ if (age < 0) throw new IllegalArgumentException("Age is invalid");
 ```
 We check the age before allowing them to become a lifter. If the age is under 13 or if the age is invalid. It will throw an exception. This is a good example of defensive coding as most federations require the lifter to be at least 13 years of age and it wouldn't be effective if we allowed negative ages to get into our program.
 
-In this Leaderboard menu snippet, you can see that we have a try and catch that will show a predefined error message on the event that the code doesnt execute as planned , rather than a crash. We also have a default for our cases so if none of the valid cases get selected it has something to default towards. This is a feature of defensive coding as it prevents errors and/or crashes
+
 ## 4. Reflections (150–250 words)
 <!-- student fills -->
 
