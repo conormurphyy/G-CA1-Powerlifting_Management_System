@@ -40,8 +40,42 @@ class LifterResultTest {
         double actualDots = lifterTest.calculateDots();
         assertEquals(expectedDots, actualDots);
     }
+    @Test
+
+        void testGetters()
+        {
+            LocalDate dob = LocalDate.of(1990, 1, 1);
+            Equipment equipment = new Equipment(1,"SBD Belt", "SBD Singlet", "SBD Tee", "SBD Wrist Wraps", "SBD KneeSleeves", "Cool Socks", "Cool Deadlift Socks", "Nike");
+            LifterResult lifterResult = new LifterResult(1,123.39,237.12,139.12,420.12,200);
+            Lifter lifter = new Lifter (1,"Mark John","Strong Men",'M',101.08,dob,false,19,"Junior",equipment,"U-83 Men");
+            lifterResult.setLifter(lifter);
+
+            int expectedID=1;
+            int actualID = lifterResult.getId();
+            assertEquals(expectedID,actualID);
+
+            double expectedSquat =123.39;
+            double actualSquat = lifterResult.getSquat();
+            assertEquals(expectedSquat,actualSquat);
+
+            double expectedBench=237.12;
+            double actualBench =lifterResult.getBench();
+            assertEquals(expectedBench,actualBench);
+
+            double expectedDeadlift = 139.12;
+            double actualDeadlift = lifterResult.getDeadlift();
+            assertEquals(expectedDeadlift,actualDeadlift);
+
+            double expectedDots=lifterResult.calculateDots();
+            double actualDots = lifterResult.getDots();
+            assertEquals(expectedDots,actualDots);
+
+            double expectedTotal=expectedSquat+expectedBench+expectedDeadlift;
+            double actualTotal = lifterResult.getTotal();
+            assertEquals(expectedTotal,actualTotal);
+        }
+    }
 
 
 
 
-}
