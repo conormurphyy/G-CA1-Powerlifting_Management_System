@@ -166,8 +166,9 @@ We were unable to do testing for certain classes such as our menus as we were un
 ```
 
 We tested to ensure that our dates as a string were being parsed correclty into a LocalDate.
----
+
 <br>
+
 ```java
 @Test
     void formatName2() {
@@ -179,7 +180,7 @@ We tested to ensure that our dates as a string were being parsed correclty into 
 ```
     
 We did this to ensure that our names were correctly formatted. ie spaces being cut, and capitalisation where appropiate.
----
+
 <br>
 
 ```java
