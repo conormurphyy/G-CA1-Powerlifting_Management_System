@@ -215,7 +215,46 @@ public static String formatName(String name) {
     
 ```
   In this snippet , we have a method that takes in the name of a lifter/club and remove any spaces at the end or start , ensures its lower case and then splits it at the space or multiple spaces using a regular expression. Then loops through the array of parts and seperates it into a clear first and second name with the first letter of each being capitalized. In particular the removal of spaces improved our search functionality and allowed it to run with out errors as if we hadnt of done this and a users name was accidentally inputted with two spaces , the search wouldnt have found it if the term was with just the one space. This also generally made our data cleaner to use and look at.
+<br>
+```java
+while (isRunning) {
+            try {
+                LeaderboardMenuUtil.leaderboardMenu();
+                System.out.print("Enter Option: ");
+                int input = keyboard.nextInt();
 
+                switch (input) {
+                    case 1:
+                        Leaderboard.printTop3Dots(lifterResult);
+                        break;
+                    case 2:
+                        Leaderboard.printTop3Total(lifterResult);
+                        break;
+                    case 3:
+                        Leaderboard.printTop3Squat(lifterResult);
+                        break;
+
+                    case 4:
+                        Leaderboard.printTop3Bench(lifterResult);
+                        break;
+                    case 5:
+                        Leaderboard.printTop3DeadLift(lifterResult);
+                        break;
+                    case 0:
+                        MenuUtil.ExitToMainMenu();
+                        isRunning = false;
+                        break;
+
+                    default:
+                        ErrorMessage.invalidOptionLeaderboardMenu();
+                }
+                break;
+            } catch (Exception e) {
+                ErrorMessage.error();
+                keyboard.nextLine();
+            }
+        }
+```
 ## 4. Reflections (150–250 words)
 <!-- student fills -->
 
