@@ -209,9 +209,9 @@ public Contact format(Contact input) {
 | Entity Enhancements |  |  |
 | Collections & Lookup |  |  |
 | Equality & Hashing |YES  |  |
-| Advanced Queries | YES |  |
+| Advanced Queries | YES | Implemented queries that can show specific pieces of data ie. top 3 dead lifters, lifters dot scores  |
 | CSV Export | NO |  |
-| Testing (JUnit + Coverage) | YES  |  |
+| Testing (JUnit + Coverage) | YES  | Implemented testing where possible for methods that their output can be reasonably tested |
 | Defensive Coding | YES | Implemented error checking and catches errors in input |
 
 ## 8. Appendix (Optional)
