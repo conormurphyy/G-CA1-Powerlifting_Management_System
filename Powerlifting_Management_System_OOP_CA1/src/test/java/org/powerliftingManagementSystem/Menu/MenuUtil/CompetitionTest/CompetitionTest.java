@@ -38,6 +38,11 @@ class CompetitionTest {
       String actualDate=competition.getDate();
       assertEquals(expectedDate,actualDate);
 
+      Lifter expectedLifter = lifter;
+      Lifter actualLifter = competition.getLifters().get(0);
+      assertEquals(expectedLifter,actualLifter);
+
+
 
   }
   @Test
@@ -69,6 +74,11 @@ class CompetitionTest {
       competition.setDate(expectedDate);
       String actualDate=competition.getDate();
       assertEquals(expectedDate,actualDate);
+
+      Lifter expectedLifter = lifter;
+      competition.setLifters();
+      Lifter actualLifter = competition.getLifters().get(0);
+      assertEquals(expectedLifter,actualLifter);
   }
 
     @Test
