@@ -172,7 +172,8 @@ We tested to ensure that our dates as a string were being parsed correclty into 
         String expected = "James Mcardle";
         assertEquals(expected, actual);
     }
-    ```
+```
+    
 We did this to ensure that our names were correctly formatted. ie spaces being cut, and capitalisation where appropiate.
 
 ```java
