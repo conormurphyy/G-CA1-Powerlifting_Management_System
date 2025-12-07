@@ -212,7 +212,7 @@ public Contact format(Contact input) {
 | Advanced Queries | YES | Implemented queries that can show specific pieces of data ie. top 3 dead lifters, lifters dot scores  |
 | CSV Export | NO | N/A |
 | Testing (JUnit + Coverage) | YES  | Implemented testing where possible for methods that their output can be reasonably tested |
-| Defensive Coding | YES | Implemented error checking and catches errors in input |
+| Defensive Coding | YES | Implemented error checking and catches errors in input. Use of trim() and ignoreCase() when searching. If line is empty in csv we use continue. |
 
 ## 8. Appendix (Optional)
 <!-- optional section -->
