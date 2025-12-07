@@ -286,6 +286,7 @@ For us, this project made us increasingly better java programmers. We felt that 
 
 ## 5. Commit Contributions (60–120 words)
 <!-- student fills -->
+<img src = img/githubcommit.png>
 
 ## 6. Final References (Harvard style)
 #### References 📘 <br/>
