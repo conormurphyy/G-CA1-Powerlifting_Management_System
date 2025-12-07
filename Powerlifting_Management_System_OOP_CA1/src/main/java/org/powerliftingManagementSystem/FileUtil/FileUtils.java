@@ -42,6 +42,7 @@ public class FileUtils {
     }
 
     public static ArrayList<Lifter> readLiftersData(String fileName, String delimiter) {
+        //https://medium.com/strategio/find-duplicates-using-a-hashset-88c4cee12f96
         ArrayList<Lifter> liftersDups = new ArrayList<>();
         HashSet<Lifter> lifterSet = new HashSet<>(liftersDups);
 
@@ -78,7 +79,7 @@ public class FileUtils {
             }
 
         } catch (FileNotFoundException e) {
-            System.out.println("File not found: " + fileName);
+            System.out.println("File not found");
             return null;
         }
 
@@ -86,6 +87,7 @@ public class FileUtils {
     }
 
     public static ArrayList<Competition> readCompetitionsData(String filename, String delimiter) throws FileNotFoundException {
+        //https://medium.com/strategio/find-duplicates-using-a-hashset-88c4cee12f96
         ArrayList<Competition> competitionsDups = new ArrayList<>();
         HashSet<Competition> competitionSet = new HashSet<>(competitionsDups);
 
@@ -107,12 +109,13 @@ public class FileUtils {
                 competitions = new ArrayList<>(competitionSet);
             }
         } catch (FileNotFoundException e) {
-            System.out.println("File not found: " + filename);
+            System.out.println("File not found");
         }
         return competitions;
     }
 
     public static ArrayList<LifterResult> readCompetitionResults(String filename, String delimiter) throws FileNotFoundException {
+        //https://medium.com/strategio/find-duplicates-using-a-hashset-88c4cee12f96
         ArrayList<LifterResult> lifterResultDups = new ArrayList<>();
         HashSet<LifterResult> lifterResultSet = new HashSet<>(lifterResultDups);
         ArrayList<LifterResult> lifterResults = new ArrayList<>();

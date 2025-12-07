@@ -3,26 +3,11 @@ package org.powerliftingManagementSystem.Menu.MenuUtil.FileUtilTest;
 import org.junit.jupiter.api.Test;
 import org.powerliftingManagementSystem.FileUtil.FileUtils;
 
+import java.io.File;
+
 import static org.junit.Assert.assertEquals;
 
 class FileUtilsTest {
-
-    @Test
-    void readLiftersEquipment() {
-    }
-
-    @Test
-    void readLiftersData() {
-    }
-
-    @Test
-    void readCompetitionsData() {
-    }
-
-    @Test
-    void readCompetitionResults() {
-    }
-
     @Test
     void formatName1() {
         String name = "aLeX  mUrpHy";
