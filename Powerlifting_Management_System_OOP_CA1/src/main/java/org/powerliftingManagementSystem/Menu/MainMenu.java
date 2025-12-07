@@ -43,7 +43,7 @@ public class MainMenu {
                         MenuUtil.ExitProgram();
                         running = false;
                     default:
-                        ErrorMessage.invalidOptionLifterMenu();
+                        ErrorMessage.invalidOptionLeaderboardMenu();
                 }
             }
             catch (InputMismatchException e) {
