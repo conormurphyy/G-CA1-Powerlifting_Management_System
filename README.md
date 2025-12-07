@@ -149,7 +149,7 @@ private void handleNameSearch(ArrayList<Lifter> lifters)
 As seen above, the method takes in a user input and then runs through the lifters dataset in a loop and compares it to every name using .equals and if it returns true, it adds it to a subset of lifters that match the search condition. And then prints it.
 
 ## 2. Testing Summary (180–300 words)
-<!-- student fills -->
+<img src="images/htmlreport.png">
 
 ## 3. Defensive Coding 2 (4–6 examples, 240–420 words total)
 <!-- student fills -->
