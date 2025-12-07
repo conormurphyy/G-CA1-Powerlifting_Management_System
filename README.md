@@ -120,6 +120,28 @@ Maximum Weight Recorded (Woman) : //https://en.wikipedia.org/wiki/Carol_Yager <b
 
 ## 1. Equality & Hashing Rationale (180–300 words)
 <!-- student fills -->
+```java
+private void handleNameSearch(ArrayList<Lifter> lifters)
+    {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Enter  name:");
+        String name = keyboard.nextLine();
+        ArrayList<Lifter> searchedLifter = new ArrayList<>();
+        String iName;
+        for (Lifter l : lifters)
+        {
+            iName =l.getName();
+            iName = FileUtils.formatName(iName);
+            name = FileUtils.formatName(name);
+            if (iName.equals(name))
+            {
+                searchedLifter.add(l);
+            }
+        }
+        LifterMenuUtil.printLifters(searchedLifter);
+    }
+```
+As seen above, the method takes in a user input and then runs through the lifters dataset in a loop and compares it to every name using .equals and if it returns true, it adds it to a subset of lifters that match the search condition. And then prints it.
 
 ## 2. Testing Summary (180–300 words)
 <!-- student fills -->
