@@ -29,6 +29,11 @@ public class Competition {
         this.location = location;
         this.date = date;
     }
+
+    public Competition(int id, ArrayList<Lifter> lifters) {
+        this.id = id;
+        this.lifters = lifters;
+    }
     //#endregion
 
     //#region Getters

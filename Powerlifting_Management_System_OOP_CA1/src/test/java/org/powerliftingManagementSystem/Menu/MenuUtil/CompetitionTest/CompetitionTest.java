@@ -1,5 +1,6 @@
 package org.powerliftingManagementSystem.Menu.MenuUtil.CompetitionTest;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.powerliftingManagementSystem.Competition.Competition;
 import org.powerliftingManagementSystem.Equipment.Equipment;
@@ -9,6 +10,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class CompetitionTest {
 
@@ -70,7 +72,7 @@ class CompetitionTest {
       String actualLocation=competition.getLocation();
       assertEquals(expectedLocation,actualLocation);
 
-      String expectedDate="19 December 2025";
+      String expectedDate="19-12-2025";
       competition.setDate(expectedDate);
       String actualDate=competition.getDate();
       assertEquals(expectedDate,actualDate);
@@ -83,5 +85,31 @@ class CompetitionTest {
 
     @Test
     void assignLiftersToCompetition() {
+        ArrayList<Lifter> lifters = new ArrayList<>();
+        Lifter lifter = new Lifter(1);
+        lifters.add(lifter);
+
+        ArrayList<Competition> competitions = new ArrayList<>();
+        Competition competition = new Competition(1,lifters);
+        competitions.add(competition);
+
+        Competition.assignLiftersToCompetition(lifters,competitions);
+    }
+
+    @Test
+    void testEqualsAndHashCode() {
+        Competition comp1 = new Competition(1,"Cool Comp","Ireland","12-12-12",null);
+        Competition comp2 = new Competition(1,"Cool Comp","Ireland","12-12-12",null);
+        Competition comp3 = new Competition(3,"Cool Comp3","Ireland","14-12-12",null);
+
+        assertEquals(comp1, comp1);
+        assertEquals(comp1.hashCode(), comp1.hashCode());
+
+        assertEquals(comp1, comp2);
+        assertEquals(comp1.hashCode(), comp2.hashCode());
+
+        assertNotEquals(comp1, comp3);
+        assertNotEquals(comp1.hashCode(), comp3.hashCode());
+
     }
 }

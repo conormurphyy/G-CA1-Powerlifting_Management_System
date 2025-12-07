@@ -38,8 +38,6 @@ public class MenuUtil {
                         l.getDateOfBirth(),
                         l.getAge(),
                         l.getAgeClass()
-                        //dots
-                        //Arrays.toString(l.getEquipmentUsedType())
                 );
             }
 
