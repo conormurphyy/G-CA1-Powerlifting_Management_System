@@ -104,18 +104,6 @@ The "Lifter Result" class represents each lifters result that they achieved.
 ```
 
 ---
-#### References 📘 <br/>
-##### Code 💻 <br/>
-CSV File Generation: www.chatgpt.com <br/>
-LocalDate formatting (turning string into LocalDate)://https://www.digitalocean.com/community/tutorials/java-simpledateformat-java-date-format <br/>
-LocalDate docs: //https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html <br/>
-##### General Research 🗺️ <br/>
-Maximum Age Recorded: //https://www.washington.edu/news/2021/07/01/how-long-can-a-person-live-the-21st-century-may-see-a-record-breaker/ <br/>
-Maximum Weight Recorded (Man) : //https://en.wikipedia.org/wiki/Jon_Brower_Minnoch <br/>
-Maximum Weight Recorded (Woman) : //https://en.wikipedia.org/wiki/Carol_Yager <br/>
-
-
-
 # Stage 2 Report – Implementation & Verification
 ## COMP C8Z03 — Object-Oriented Programming (GCA1)
 ## Conor Murphy, Conor McCracken
@@ -294,12 +282,16 @@ We had a significant amount of commits each , this is because we were commiting 
 #### References 📘 <br/>
 ##### Code 💻 <br/>
 CSV File Generation: www.chatgpt.com <br/>
-LocalDate formatting (turning string into LocalDate)://https://www.digitalocean.com/community/tutorials/java-simpledateformat-java-date-format <br/>
-LocalDate docs: //https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html <br/>
+LocalDate formatting (turning string into LocalDate): Digital Ocean 2025. _Simple Date Format._ [online] Avaialble from: //https://www.digitalocean.com/community/tutorials/java-simpledateformat-java-date-format <br/>
+LocalDate docs: Oracle 2025. _Local Date_. [online] Avaiable from: //https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html <br/>
+Methods in enums: Stackover Flow 2025. _Java enum method_. [online] Avaiable from: //https://stackoverflow.com/questions/18883646/java-enum-methods-return-opposite-direction-enum <br>
+Finding Duplicates using HashSet: Strategio 2025. _Find Duplicates Using a Hashset_ [online] Available from: //https://medium.com/strategio/find-duplicates-using-a-hashset-88c4cee12f96 <br>
+
 ##### General Research 🗺️ <br/>
-Maximum Age Recorded: //https://www.washington.edu/news/2021/07/01/how-long-can-a-person-live-the-21st-century-may-see-a-record-breaker/ <br/>
-Maximum Weight Recorded (Man) : //https://en.wikipedia.org/wiki/Jon_Brower_Minnoch <br/>
-Maximum Weight Recorded (Woman) : //https://en.wikipedia.org/wiki/Carol_Yager <br/>
+Maximum Age Recorded: Washington.edu 2025. _How long can a person live_. [online] Available from: //https://www.washington.edu/news/2021/07/01/how-long-can-a-person-live-the-21st-century-may-see-a-record-breaker/ <br/>
+Maximum Weight Recorded (Man) : Wikipedia 2025. _Jon Brower Minnoch_. [online] Avaiable from: //https://en.wikipedia.org/wiki/Jon_Brower_Minnoch <br/>
+Maximum Weight Recorded (Woman) : Wikipedia 2025. _Carol Yager_. [online] Available from: //https://en.wikipedia.org/wiki/Carol_Yager <br/>
+IPF Dots Formula: International Powerlifting Federation (IPF) 2025. _ipf formula_ [online] Available from: https://www.powerlifting.sport/fileadmin/ipf/data/ipf-formula/Models_Evaluation-I-2020.pdf <br>
 
 ## 7. Implementation Matrix (Y/N)
 
