@@ -32,9 +32,6 @@ public class Placement {
                     LifterResult otherLifterResult = results.get(j);
                     Lifter otherLifter = otherLifterResult.getLifter();
 
-                    if(lifterResult == otherLifterResult) {
-                        continue;
-                    }
                     boolean sameGender = currentLifter.getGender() == otherLifter.getGender();
                     boolean sameAgeClass = currentLifter.getAgeClass().equals(otherLifter.getAgeClass());
                     boolean sameWeightClass = currentLifter.getWeightClass().equals(otherLifter.getWeightClass());

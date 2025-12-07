@@ -148,8 +148,4 @@ public class FileUtils {
         }
         return finalName.trim();
     }
-    /*
-    public static ArrayList<Equipment> readEquipmentsData(String filename, String delimiter) throws FileNotFoundException {
-        Equipment lifterEquiptment = new Equipment(formatName(parts[1]);,formatName(parts[1]);,formatName(parts[1]);,formatName(parts[1]);)
-    }*/
 }

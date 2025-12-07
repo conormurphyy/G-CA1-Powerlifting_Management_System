@@ -125,8 +125,8 @@ public class LifterResult {
              e = -57.96288;
         }
 
-        double denom = a*Math.pow(bw,4) + b*Math.pow(bw,3) + c*Math.pow(bw,2) + d*bw + e;
-        return total * (500/ denom);
+        double calculation = a*Math.pow(bw,4) + b*Math.pow(bw,3) + c*Math.pow(bw,2) + d*bw + e;
+        return total * (500/ calculation);
 
     }
 

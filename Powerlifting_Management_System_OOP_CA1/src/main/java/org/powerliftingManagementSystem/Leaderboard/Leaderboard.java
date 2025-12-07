@@ -10,7 +10,7 @@ public class Leaderboard {
 
         results.sort(LifterResultSort.byDeadliftDesc);
 
-// print top 3
+        // print top 3
         System.out.println("Top 3 Lifters by DeadLift");
         System.out.printf(
                 "%-6s %-20s %-20s %-6s %-10s %-10s%n",
@@ -36,7 +36,7 @@ public class Leaderboard {
 
         results.sort(LifterResultSort.byDotsDesc);
 
-// print top 3
+        // print top 3
         System.out.println("Top 3 Lifters by Bench");
         System.out.printf(
                 "%-6s %-20s %-20s %-6s %-10s %-10s%n",
@@ -62,7 +62,7 @@ public class Leaderboard {
 
         results.sort(LifterResultSort.bySquatDesc);
 
-// print top 3
+        // print top 3
         System.out.println("Top 3 Lifters by Squat");
         System.out.printf(
                 "%-6s %-20s %-20s %-6s %-10s %-10s%n",
@@ -88,7 +88,7 @@ public class Leaderboard {
 
         results.sort(LifterResultSort.byTotalDesc);
 
-// print top 3
+        // print top 3
         System.out.println("Top 3 Lifters by Total");
         System.out.printf(
                 "%-6s %-20s %-20s %-6s %-10s %-10s%n",
@@ -114,7 +114,7 @@ public class Leaderboard {
 
         results.sort(LifterResultSort.byDotsDesc);
 
-// print top 3
+        // print top 3
         System.out.println("Top 3 Lifters by DOTS");
         System.out.printf(
                 "%-6s %-20s %-20s %-6s %-10s %-10s%n",
