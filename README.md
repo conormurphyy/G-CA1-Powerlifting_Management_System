@@ -205,14 +205,14 @@ public Contact format(Contact input) {
 
 | Component | Implemented? | Notes |
 |---|:--:|---|
-| Extended Dataset (1000 rows) |  |  |
+| Extended Dataset (1000 rows) | YES |  |
 | Entity Enhancements |  |  |
 | Collections & Lookup |  |  |
-| Equality & Hashing |  |  |
-| Advanced Queries |  |  |
-| CSV Export |  |  |
-| Testing (JUnit + Coverage) |  |  |
-| Defensive Coding |  |  |
+| Equality & Hashing |YES  |  |
+| Advanced Queries | YES |  |
+| CSV Export | NO |  |
+| Testing (JUnit + Coverage) | YES  |  |
+| Defensive Coding | YES |  |
 
 ## 8. Appendix (Optional)
 <!-- optional section -->
