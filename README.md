@@ -206,11 +206,11 @@ public Contact format(Contact input) {
 | Component | Implemented? | Notes |
 |---|:--:|---|
 | Extended Dataset (1000 rows) | YES | 4 csv files all with 1000 lines of data e.g competition, equipment, lifter and results  |
-| Entity Enhancements |  |  |
-| Collections & Lookup |  |  |
-| Equality & Hashing |YES  | Hashing used to remove any possible duplicate entries into dataset |
+| Entity Enhancements | YES  | Added LifterResults to see the lifter squat,bench and deadlift in competition. Added compeitions. Added Leaderboard. Added Equiptment. Added placement. |
+| Collections & Lookup | YES | HashSet to remove duplicate lifter IDs, Compeittion IDs and lifter Result IDs. |
+| Equality & Hashing |YES  | .equals used to implement search functionality |
 | Advanced Queries | YES | Implemented queries that can show specific pieces of data ie. top 3 dead lifters, lifters dot scores  |
-| CSV Export | NO |  |
+| CSV Export | NO | N/A |
 | Testing (JUnit + Coverage) | YES  | Implemented testing where possible for methods that their output can be reasonably tested |
 | Defensive Coding | YES | Implemented error checking and catches errors in input |
 
