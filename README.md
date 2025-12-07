@@ -151,7 +151,7 @@ As seen above, the method takes in a user input and then runs through the lifter
 ## 2. Testing Summary (180–300 words)
 <img src="images/htmlreport.png">
 <br>
-We were unable to do testing for certain classes such as our menus as we were unsure how to conduct these tests. However the classes we did test got great coverage and we found it easier to fix bugs and have the full functionality that we intended for our main methods. 
+We were unable to do testing for certain classes such as our menus as we were unsure how to conduct these tests. However the classes we did test got great coverage and we found it easier to fix bugs and have the full functionality that we intended for our main methods. We also encountered problems within intelliJ that slowed down the process of our testing but once that was fixed by editing some settings in intelliJ, our testing was on track until we lost a lot of tests in an error with github not pushing the code. Other than that the testing process was fairly smooth and we didnt actually encounter too many failed tests that were related to problems with our code, it was moreso testing errors. 
 
 ### Some examples of tests:
 
@@ -165,7 +165,7 @@ We were unable to do testing for certain classes such as our menus as we were un
     }
 ```
 
-We tested to ensure that our dates as a string were being parsed correclty into a LocalDate.
+We tested to ensure that our dates as a string were being parsed correclty into a LocalDate. This made it easier for us to verify that this functionality was working as we can look at it at a smaller scale and identify if there is any problems in the logic and/or code
 
 <br>
 
@@ -179,7 +179,7 @@ We tested to ensure that our dates as a string were being parsed correclty into 
     }
 ```
     
-We did this to ensure that our names were correctly formatted. ie spaces being cut, and capitalisation where appropiate.
+We did this to ensure that our names were correctly formatted. ie spaces being cut, and capitalisation where appropiate.This ensured that the data was used in a presentable manner and we could verify that names were OK as it would have been inefficent to manually go through the csv files and compare the data in their against what was being output in our programme.
 
 <br>
 
@@ -195,7 +195,7 @@ We did this to ensure that our names were correctly formatted. ie spaces being c
         assignResultsToLifter(lifterResult,lifter);
     }
 ```
-This test was done to ensure that the lifters results was being correctly assigned to the lifter with the same id. In the beginning the lifter was not being assigned correclty, after we implemented this test we were able to see exaclty what was going wrong which was that we never added a for loop for lifters which resulted in everyone getting the same result.
+This test was done to ensure that the lifters results was being correctly assigned to the lifter with the same id. In the beginning the lifter was not being assigned correclty, after we implemented this test we were able to see exaclty what was going wrong which was that we never added a for loop for lifters which resulted in everyone getting the same result. This was useful as we could then rectify our errors without having to look at it in the grand scale of our code, this isolated the problem and made it easier to rectify.
 
 ## 3. Defensive Coding 2 (4–6 examples, 240–420 words total)
 <!-- student fills -->
