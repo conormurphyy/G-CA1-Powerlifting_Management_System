@@ -150,6 +150,44 @@ As seen above, the method takes in a user input and then runs through the lifter
 
 ## 2. Testing Summary (180–300 words)
 <img src="images/htmlreport.png">
+<br>
+We were unable to do testing for certain classes such as our menus as we were unsure how to conduct these tests. However the classes we did test got great coverage and we found it easier to fix bugs and have the full functionality that we intended for our main methods. 
+### Some examples of tests:
+```java
+@Test
+    void parseDOBTest() {
+        String dob = "01-01-1999";
+        LocalDate expectedDOB = LocalDate.of(1999, 1, 1);
+        LocalDate actualDOB = Lifter.parseDateOfBirth(dob);
+        assertEquals(expectedDOB,actualDOB);
+    }
+```
+We tested to ensure that our dates as a string were being parsed correclty into a LocalDate.
+<br>
+```java
+@Test
+    void formatName2() {
+        String name = "JAMES       mcardle";
+        String actual = FileUtils.formatName(name);
+        String expected = "James Mcardle";
+        assertEquals(expected, actual);
+    }
+    ```
+We did this to ensure that our names were correctly formatted. ie spaces being cut, and capitalisation where appropiate.
+
+```java
+@Test
+    void assignResultsToLifterTest() {
+        Lifter lifter1 = new Lifter(1);
+        LifterResult lifterResult1 = new LifterResult(1);
+        ArrayList<Lifter> lifter = new ArrayList<>();
+        ArrayList<LifterResult> lifterResult = new ArrayList<>();
+        lifter.add(lifter1);
+        lifterResult.add(lifterResult1);
+        assignResultsToLifter(lifterResult,lifter);
+    }
+```
+This test was done to ensure that the lifters results was being correctly assigned to the lifter with the same id. In the beginning the lifter was not being assigned correclty, after we implemented this test we were able to see exaclty what was going wrong which was that we never added a for loop for lifters which resulted in everyone getting the same result.
 
 ## 3. Defensive Coding 2 (4–6 examples, 240–420 words total)
 <!-- student fills -->
