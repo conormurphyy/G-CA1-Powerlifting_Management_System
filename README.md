@@ -22,9 +22,11 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 | weightClass        | String    | Based of gender and weight      | "U-74KG Men"                                  |
 ---
 ### :two: :gear: Entity: Equiptment
+The "Equiptment" class represents each lifters equiptment that they used in their compeitition.
+
 | Field              | Type      |Decription                                           | Example                                       |
 |:--                 |:--        |:--                                                  |:--                                            |
-| id                 | int       | Unique ID for each lifters list of equiptmnet       | 12                                            |
+| id                 | int       | Unique ID for each lifters result                   | 12                                            |
 | belt               | String    | Lifter's belt                                       | "A7 Belt"                                     |
 | singlet            | String    | Lifter's singlet                                    | "SBD Singlet"                                 |
 | compTee            | String    | Lifter's comp t-shirt                               | "Strength Shop T-Shirt"                       |
@@ -34,7 +36,9 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 | deadliftSocks      | String    | Lifter's deadlift socks                             | "SBD Deadlift Socks"                          |
 | shoes              | String    | Lifter's shoes                                      | "Notorious Lift"                              |
 ---
-## :three: 🥇 Entity: Competition
+### :three: 🥇 Entity: Competition
+The "Competition" class represents each competition and its details, it also contains all the lifters in that competition.
+
 | Field              | Type                  |Decription                                           | Example                          |
 |:--                 |:--                    |:--                                                  |:--                               |
 | id                 | int                   | Unique ID for each lifters list of equiptmnet       | 1                                |
@@ -43,7 +47,9 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 | date               | String                | Date of competition                                 | "12-12-25"                       |
 | lifters            | ArrayList<Lifter      | All lifters in the compeition                       | [{"John Murphy}{"Conor Adams"}   |
 ---
-## :four: 🏋️ Entity: Lifter Result
+### :four: 🏋️ Entity: Lifter Result
+The "Lifter Result" class represents each lifters result that they achieved. 
+
 | Field              | Type                  |Decription                                                 | Example                          |
 |:--                 |:--                    |:--                                                        |:--                               |
 | lifter             | Lifter                | Each Lifter                                               | Lifter lifter1                   |
@@ -54,8 +60,7 @@ The "Lifter" entity represents each lifter in a powerlifting competition. This c
 | total              | double                | Lifter's total result: squat + bench + deadlift           | 577.5                            |
 | dots               | double                | Lifter's dots result: Calulated with bodyweight and total | 452.00                           |
 ---
-### :two: 🔍 Lifter Overview
-#### :two:.:one:  :deciduous_tree: Strucutre Tree of Lifter Folder
+### :deciduous_tree: Strucutre Tree of Lifter Folder
 ```
 \-powerliftingManagementSystem
              |   Main.java
@@ -171,7 +176,15 @@ public Contact format(Contact input) {
 <!-- student fills -->
 
 ## 6. Final References (Harvard style)
-<!-- student fills -->
+#### References 📘 <br/>
+##### Code 💻 <br/>
+CSV File Generation: www.chatgpt.com <br/>
+LocalDate formatting (turning string into LocalDate)://https://www.digitalocean.com/community/tutorials/java-simpledateformat-java-date-format <br/>
+LocalDate docs: //https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html <br/>
+##### General Research 🗺️ <br/>
+Maximum Age Recorded: //https://www.washington.edu/news/2021/07/01/how-long-can-a-person-live-the-21st-century-may-see-a-record-breaker/ <br/>
+Maximum Weight Recorded (Man) : //https://en.wikipedia.org/wiki/Jon_Brower_Minnoch <br/>
+Maximum Weight Recorded (Woman) : //https://en.wikipedia.org/wiki/Carol_Yager <br/>
 
 ## 7. Implementation Matrix (Y/N)
 
