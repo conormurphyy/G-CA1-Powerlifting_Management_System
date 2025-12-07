@@ -203,17 +203,18 @@ This test was done to ensure that the lifters results was being correctly assign
 > Here is an example us null checking in our solution. Obviously, you need to replace the code below with your own examples.
 
 ```java
-public Contact format(Contact input) {
-        String email = input.getEmail();
-        if (email == null || email.isBlank()) {
-            return input;
+public static String formatName(String name) {
+        name = name.trim().toLowerCase();
+        String[] parts = name.split("\\s+"); 
+        String finalName = "";
+        for (String part : parts) {
+            finalName += part.substring(0, 1).toUpperCase() + part.substring(1) + " ";
         }
-
-        String trimmed = email.trim();
-        String html = "<a href=\"mailto:" + trimmed + "\">" + trimmed + "</a>";
-        return input.withEmail(html);
+        return finalName.trim();
     }
+    
 ```
+  In this snippet , we have a method that takes in the name of a lifter/club and remove any spaces at the end or start , ensures its lower case and then splits it at the space or multiple spaces using a regular expression. Then loops through the array of parts and seperates it into a clear first and second name with the first letter of each being capitalized. In particular the removal of spaces improved our search functionality and allowed it to run with out errors as if we hadnt of done this and a users name was accidentally inputted with two spaces , the search wouldnt have found it if the term was with just the one space. This also generally made our data cleaner to use and look at.
 
 ## 4. Reflections (150–250 words)
 <!-- student fills -->
