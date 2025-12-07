@@ -163,7 +163,7 @@ Maximum Weight Recorded (Woman) : //https://en.wikipedia.org/wiki/Carol_Yager <b
 
 # Stage 2 Report – Implementation & Verification
 ## COMP C8Z03 — Object-Oriented Programming (GCA1)
-## Student Name A, Student Name B
+## Conor Murphy, Conor McCracken
 
 <!-- Code blocks or figures are now included in your word count.
 -->
