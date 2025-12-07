@@ -287,6 +287,8 @@ For us, this project made us increasingly better java programmers. We felt that 
 ## 5. Commit Contributions (60–120 words)
 <!-- student fills -->
 <img src = img/githubcommit.png>
+<br>
+We had a significant amount of commits each , this is because we were commiting work as we were on call together and would often pass work from one person to the other. We did 90% of the code together on voice calls and would discuss almost anything before either of us made a change to the code. This ensured that we weren't doing the same thing twice and that we both had a good sense of the code that was being written. We found the usage of github to be very convenient for sharing code aswell as having a backup in event of a error. This did save us a lot of headaches as the project grew in size and we found ourselves having a very significant amount of classes. We got into a good practice of regular commits and found that while there was a few setbacks with merging , overall github was a useful addition for us in this project.
 
 ## 6. Final References (Harvard style)
 #### References 📘 <br/>
