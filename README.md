@@ -208,7 +208,7 @@ public Contact format(Contact input) {
 | Extended Dataset (1000 rows) | YES | 4 csv files all with 1000 lines of data  |
 | Entity Enhancements |  |  |
 | Collections & Lookup |  |  |
-| Equality & Hashing |YES  |  |
+| Equality & Hashing |YES  | Hashing used to remove any possible duplicate entries into dataset |
 | Advanced Queries | YES | Implemented queries that can show specific pieces of data ie. top 3 dead lifters, lifters dot scores  |
 | CSV Export | NO |  |
 | Testing (JUnit + Coverage) | YES  | Implemented testing where possible for methods that their output can be reasonably tested |
