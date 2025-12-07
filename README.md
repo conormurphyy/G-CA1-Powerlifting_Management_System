@@ -255,6 +255,8 @@ while (isRunning) {
             }
         }
 ```
+
+In this Leaderboard menu snippet, you can see that we have a try and catch that will show a predefined error message on the event that the code doesnt execute as planned , rather than a crash. We also have a default for our cases so if none of the valid cases get selected it has something to default towards. This is a feature of defensive coding as it prevents errors and/or crashes
 ## 4. Reflections (150–250 words)
 <!-- student fills -->
 
